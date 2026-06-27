@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { useLang } from '../context/LangContext'
+import { useAuth } from '../context/AuthContext'
 
 // ── Bilingual data ──────────────────────────────────────────────────────────
 const DATA = {
@@ -165,10 +166,13 @@ function AnimatedCounter({ raw }) {
 
 // ── Page ────────────────────────────────────────────────────────────────────
 export default function Landing() {
+  const { user, loading } = useAuth()
   const { lang } = useLang()
   const d = DATA[lang]
 
   const { scrollY } = useScroll()
+
+  if (!loading && user) return <Navigate to="/dashboard" replace />
   const heroOpacity = useTransform(scrollY, [0, 400], [1, 0])
   const heroY = useTransform(scrollY, [0, 400], [0, -80])
   const [activeTestimonial, setActiveTestimonial] = useState(0)

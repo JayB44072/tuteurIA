@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, Navigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Moon, Sun, Globe, Bot } from 'lucide-react'
 import { useAuth } from '../../context/AuthContext'
@@ -10,8 +10,10 @@ export default function Signup() {
   const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' })
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  const { signup } = useAuth()
+  const { signup, user, loading: authLoading } = useAuth()
   const navigate = useNavigate()
+
+  if (!authLoading && user) return <Navigate to="/dashboard" replace />
   const { darkMode, toggleDarkMode } = useTheme()
   const { lang, toggleLang } = useLang()
 

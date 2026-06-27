@@ -5,6 +5,8 @@ import { ArrowLeft, X, CheckCircle, XCircle, Lightbulb, Clock, RotateCcw } from 
 import { getQuiz } from '../data/quizzes'
 import { SUBJECTS } from '../data/subjects'
 import { useLang } from '../context/LangContext'
+import { useAuth } from '../context/AuthContext'
+import { supabase } from '../lib/supabase'
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D']
 
@@ -12,6 +14,7 @@ export default function QCMTake() {
   const { id } = useParams()
   const navigate = useNavigate()
   const { t } = useLang()
+  const { user } = useAuth()
   const quiz = getQuiz(id)
 
   const [step, setStep] = useState('start')
@@ -60,9 +63,29 @@ export default function QCMTake() {
     setAnswers(prev => [...prev, { questionId: question.id, selected: idx, correct: idx === question.correct }])
   }
 
+  const saveResult = async (finalAnswers) => {
+    if (!user) return
+    const correct = finalAnswers.filter(a => a.correct).length
+    const pct = Math.round((correct / quiz.questions.length) * 100)
+    const taken = startTime ? Math.floor((Date.now() - startTime) / 1000) : 0
+    await supabase.from('quiz_results').insert({
+      user_id:      user.id,
+      quiz_id:      quiz.id,
+      subject_id:   quiz.subjectId,
+      score:        pct,
+      total_q:      quiz.questions.length,
+      correct_q:    correct,
+      time_taken:   taken,
+    })
+  }
+
   const handleNext = () => {
-    if (current + 1 >= quiz.questions.length) { setStep('results') }
-    else { setCurrent(c => c + 1); setSelected(null); setShowExplain(false) }
+    if (current + 1 >= quiz.questions.length) {
+      saveResult([...answers])
+      setStep('results')
+    } else {
+      setCurrent(c => c + 1); setSelected(null); setShowExplain(false)
+    }
   }
 
   const formatTime = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`

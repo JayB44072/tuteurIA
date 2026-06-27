@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Bot, Send, Sparkles, RotateCcw, AlertCircle } from 'lucide-react'
+import { Bot, Send, Sparkles, RotateCcw, AlertCircle, ArrowLeft } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
+import { Link } from 'react-router-dom'
 
 const SUGGESTIONS = [
   'Explique le théorème de Pythagore',
@@ -135,6 +136,9 @@ export default function AiTutor() {
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} className="flex items-center justify-between mb-4 flex-shrink-0">
         <div className="flex items-center gap-3">
+          <Link to="/dashboard" className="w-8 h-8 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-sky-600 dark:hover:text-sky-400 transition-colors flex-shrink-0">
+            <ArrowLeft size={16} />
+          </Link>
           <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-500/20">
             <Bot size={20} className="text-white" />
           </div>

@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import {
   Users, ShieldCheck, BarChart2, BookOpen, PenSquare,
   Search, Ban, Trash2, Crown, RefreshCw, X, CheckCircle,
-  AlertTriangle, Eye, TrendingUp, UserCheck, UserX, ChevronDown,
+  AlertTriangle, Eye, TrendingUp, UserCheck, UserX, ChevronDown, ArrowLeft,
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { useAuth } from '../../context/AuthContext'
 
@@ -144,31 +145,58 @@ export default function AdminDashboard() {
   // ── Fetch utilisateurs ───────────────────────────────────────────────────────
   const fetchUsers = useCallback(async () => {
     setLoading(true)
-    const { data, error } = await supabase
-      .from('profiles')
-      .select(`
-        id, email, full_name, level, is_admin, is_blocked,
-        blocked_at, block_reason, created_at,
-        quiz_results(id, score, completed_at)
-      `)
-      .order('created_at', { ascending: false })
 
+    // Lire depuis la vue admin_users_view (joint auth.users pour l'email)
+    // + récupérer les quiz_results séparément pour l'activité détaillée
+    const [viewRes, quizRes] = await Promise.all([
+      supabase
+        .from('admin_users_view')
+        .select('*')
+        .order('created_at', { ascending: false }),
+      supabase
+        .from('quiz_results')
+        .select('user_id, score, completed_at'),
+    ])
+
+    const error = viewRes.error
     if (error) {
-      setToast({ msg: 'Erreur lors du chargement des utilisateurs', type: 'error' })
-      setLoading(false)
-      return
+      // Fallback : lire profiles directement si la vue n'existe pas encore
+      const fallback = await supabase
+        .from('profiles')
+        .select('id, full_name, level, is_admin, is_blocked, blocked_at, block_reason, created_at')
+        .order('created_at', { ascending: false })
+
+      if (fallback.error) {
+        setToast({ msg: `Erreur chargement : ${fallback.error.message}`, type: 'error' })
+        setLoading(false)
+        return
+      }
+      // Enrichir avec auth.users pour l'email via RPC si disponible
+      viewRes.data = (fallback.data || []).map(p => ({ ...p, email: '—' }))
     }
 
-    const enriched = (data || []).map(u => ({
-      ...u,
-      totalQuizzes: u.quiz_results?.length || 0,
-      avgScore: u.quiz_results?.length
-        ? Math.round(u.quiz_results.reduce((a, q) => a + q.score, 0) / u.quiz_results.length)
-        : null,
-      lastActivity: u.quiz_results?.length
-        ? u.quiz_results.sort((a, b) => new Date(b.completed_at) - new Date(a.completed_at))[0]?.completed_at
-        : null,
-    }))
+    // Grouper les quiz_results par user
+    const quizByUser = {}
+    for (const qr of quizRes.data || []) {
+      if (!quizByUser[qr.user_id]) quizByUser[qr.user_id] = []
+      quizByUser[qr.user_id].push(qr)
+    }
+
+    const enriched = (viewRes.data || []).map(u => {
+      const userQuizzes = quizByUser[u.id] || []
+      return {
+        ...u,
+        totalQuizzes: u.total_quizzes ?? userQuizzes.length,
+        avgScore: u.avg_score !== undefined
+          ? (u.avg_score !== null ? Number(u.avg_score) : null)
+          : (userQuizzes.length
+              ? Math.round(userQuizzes.reduce((a, q) => a + q.score, 0) / userQuizzes.length)
+              : null),
+        lastActivity: userQuizzes.length
+          ? userQuizzes.sort((a, b) => new Date(b.completed_at) - new Date(a.completed_at))[0]?.completed_at
+          : null,
+      }
+    })
 
     setUsers(enriched)
     setStats({
@@ -255,6 +283,9 @@ export default function AdminDashboard() {
       {/* ── En-tête ──────────────────────────────────────────────────────────── */}
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8 flex items-center justify-between flex-wrap gap-4">
         <div>
+          <Link to="/dashboard" className="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 hover:text-sky-600 dark:hover:text-sky-400 transition-colors group mb-3">
+            <ArrowLeft size={15} className="group-hover:-translate-x-0.5 transition-transform" /> Tableau de bord
+          </Link>
           <div className="flex items-center gap-3 mb-1">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-700 flex items-center justify-center shadow-lg">
               <ShieldCheck size={20} className="text-white" />

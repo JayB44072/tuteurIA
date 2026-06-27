@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import * as pdfjsLib from 'pdfjs-dist'
 import mammoth from 'mammoth'
+import BackButton from '../components/BackButton'
 
 // Point vers le worker PDF.js fourni par le paquet
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -312,6 +313,7 @@ Règles IMPORTANTES :
   // ── UPLOAD STEP ────────────────────────────────────────────────
   if (step === 'upload') return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 pb-24 lg:pb-8">
+      <BackButton to="/dashboard" label="Tableau de bord" />
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-violet-500 to-pink-600 flex items-center justify-center shadow-lg shadow-violet-500/20">

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
@@ -9,6 +9,7 @@ import { useAuth } from '../context/AuthContext'
 import { useLang } from '../context/LangContext'
 import { SUBJECTS } from '../data/subjects'
 import { QUIZZES } from '../data/quizzes'
+import { supabase } from '../lib/supabase'
 
 export default function Dashboard() {
   const { user } = useAuth()
@@ -16,6 +17,34 @@ export default function Dashboard() {
 
   const recentQuizzes = QUIZZES.slice(0, 4)
   const subjectList = SUBJECTS.slice(0, 6)
+
+  const [subjectScores, setSubjectScores] = useState({})
+
+  useEffect(() => {
+    if (!user) return
+    fetchSubjectScores()
+  }, [user])
+
+  async function fetchSubjectScores() {
+    const { data } = await supabase
+      .from('quiz_results')
+      .select('subject_id, score')
+      .eq('user_id', user.id)
+
+    if (!data || !data.length) return
+
+    const bySubject = {}
+    for (const r of data) {
+      if (!r.subject_id) continue
+      if (!bySubject[r.subject_id]) bySubject[r.subject_id] = []
+      bySubject[r.subject_id].push(r.score)
+    }
+    const avgBySubject = {}
+    for (const [sid, scores] of Object.entries(bySubject)) {
+      avgBySubject[sid] = Math.round(scores.reduce((a, s) => a + s, 0) / scores.length)
+    }
+    setSubjectScores(avgBySubject)
+  }
 
   const QUICK_STATS = [
     { label: t('dashboard', 'subjects'),  value: '12',   Icon: BookOpen,   color: 'from-sky-500 to-sky-600' },
@@ -25,17 +54,24 @@ export default function Dashboard() {
   ]
 
   const QUICK_ACTIONS = [
-    { to: '/qcm',        Icon: PenSquare,   label: t('dashboard', 'doQCM'),      color: 'text-sky-600 dark:text-sky-400',     bg: 'bg-sky-50 dark:bg-sky-900/20' },
-    { to: '/ai-tuteur',  Icon: Bot,         label: t('dashboard', 'askAI'),      color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-900/20' },
-    { to: '/matieres',   Icon: BookOpen,    label: t('dashboard', 'studyCourse'),color: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
-    { to: '/doc-quiz',   Icon: FileText,    label: t('dashboard', 'importDoc'),  color: 'text-pink-600 dark:text-pink-400',   bg: 'bg-pink-50 dark:bg-pink-900/20' },
-    { to: '/progression',Icon: TrendingUp,  label: t('dashboard', 'seeProgress'),color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-900/20' },
+    { to: '/qcm',        Icon: PenSquare,   label: t('dashboard', 'doQCM'),       color: 'text-sky-600 dark:text-sky-400',       bg: 'bg-sky-50 dark:bg-sky-900/20' },
+    { to: '/ai-tuteur',  Icon: Bot,         label: t('dashboard', 'askAI'),       color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-900/20' },
+    { to: '/matieres',   Icon: BookOpen,    label: t('dashboard', 'studyCourse'), color: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
+    { to: '/doc-quiz',   Icon: FileText,    label: t('dashboard', 'importDoc'),   color: 'text-pink-600 dark:text-pink-400',     bg: 'bg-pink-50 dark:bg-pink-900/20' },
+    { to: '/progression',Icon: TrendingUp,  label: t('dashboard', 'seeProgress'), color: 'text-amber-600 dark:text-amber-400',   bg: 'bg-amber-50 dark:bg-amber-900/20' },
   ]
+
+  // Les 4 premières matières avec score réel (ou null si pas encore travaillée)
+  const progressSubjects = SUBJECTS.slice(0, 4).map(s => ({
+    ...s,
+    pct: subjectScores[s.id] ?? null,
+  }))
+  const hasAnyScore = progressSubjects.some(s => s.pct !== null)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
 
-      {/* Stats row */}
+      {/* Stats plateforme */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         {QUICK_STATS.map((s, i) => (
           <motion.div
@@ -55,7 +91,7 @@ export default function Dashboard() {
         ))}
       </div>
 
-      {/* Quote banner */}
+      {/* Citation */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -66,7 +102,7 @@ export default function Dashboard() {
           <Target size={80} />
         </div>
         <p className="text-white/70 text-xs mb-1 flex items-center gap-1.5">
-          <Flame size={13} /> {lang === 'fr' ? 'Citation du jour' : "Quote of the day"}
+          <Flame size={13} /> {lang === 'fr' ? 'Citation du jour' : 'Quote of the day'}
         </p>
         <p className="font-bold text-base sm:text-lg max-w-lg leading-snug">
           {t('dashboard', 'quote')}
@@ -75,10 +111,10 @@ export default function Dashboard() {
       </motion.div>
 
       <div className="grid lg:grid-cols-3 gap-5">
-        {/* Left / center col */}
+        {/* Colonne gauche */}
         <div className="lg:col-span-2 space-y-5">
 
-          {/* Subjects */}
+          {/* Matières */}
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.38 }}>
             <div className="flex items-center justify-between mb-3">
               <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
@@ -114,7 +150,7 @@ export default function Dashboard() {
             </div>
           </motion.div>
 
-          {/* Quick actions */}
+          {/* Actions rapides */}
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.46 }}>
             <h2 className="font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-3">
               <Target size={17} className="text-violet-500" /> {t('dashboard', 'quickActions')}
@@ -132,9 +168,9 @@ export default function Dashboard() {
           </motion.div>
         </div>
 
-        {/* Right col */}
+        {/* Colonne droite */}
         <div className="space-y-4">
-          {/* Suggested quizzes */}
+          {/* QCM suggérés */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.52 }}
             className="bg-white dark:bg-gray-900 rounded-2xl p-5 border border-gray-200 dark:border-gray-800">
             <div className="flex items-center justify-between mb-4">
@@ -186,35 +222,51 @@ export default function Dashboard() {
             </Link>
           </motion.div>
 
-          {/* Progress teaser */}
+          {/* Progression rapide — données réelles */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.66 }}
             className="bg-white dark:bg-gray-900 rounded-2xl p-5 border border-gray-200 dark:border-gray-800">
             <h3 className="font-bold text-gray-900 dark:text-white flex items-center gap-2 mb-4">
               <Award size={16} className="text-amber-500" /> {t('dashboard', 'fastProgress')}
             </h3>
-            <div className="space-y-3">
-              {SUBJECTS.slice(0, 4).map((s, i) => {
-                const pct = [72, 55, 88, 40][i]
-                return (
+
+            {!hasAnyScore ? (
+              <div className="text-center py-4">
+                <p className="text-sm text-gray-400 mb-3">Pas encore de QCM passés.</p>
+                <Link to="/qcm" className="inline-flex items-center gap-1.5 text-xs font-semibold bg-sky-500 text-white px-3 py-1.5 rounded-lg hover:bg-sky-600 transition-colors">
+                  <PenSquare size={12} /> Commencer un QCM
+                </Link>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {progressSubjects.map((s, i) => (
                   <div key={s.id}>
                     <div className="flex items-center justify-between text-xs mb-1">
                       <span className="text-gray-600 dark:text-gray-400 flex items-center gap-1">
                         {s.icon} {s.nom}
                       </span>
-                      <span className={`font-bold ${pct >= 70 ? 'text-green-500' : pct >= 50 ? 'text-amber-500' : 'text-red-400'}`}>{pct}%</span>
+                      {s.pct !== null ? (
+                        <span className={`font-bold ${s.pct >= 70 ? 'text-green-500' : s.pct >= 50 ? 'text-amber-500' : 'text-red-400'}`}>
+                          {s.pct}%
+                        </span>
+                      ) : (
+                        <span className="text-gray-300 dark:text-gray-600">—</span>
+                      )}
                     </div>
                     <div className="h-1.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${pct}%` }}
-                        transition={{ delay: 0.7 + i * 0.1, duration: 0.8 }}
-                        className={`h-full rounded-full ${pct >= 70 ? 'bg-green-400' : pct >= 50 ? 'bg-amber-400' : 'bg-red-400'}`}
-                      />
+                      {s.pct !== null && (
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${s.pct}%` }}
+                          transition={{ delay: 0.7 + i * 0.1, duration: 0.8 }}
+                          className={`h-full rounded-full ${s.pct >= 70 ? 'bg-green-400' : s.pct >= 50 ? 'bg-amber-400' : 'bg-red-400'}`}
+                        />
+                      )}
                     </div>
                   </div>
-                )
-              })}
-            </div>
+                ))}
+              </div>
+            )}
+
             <Link to="/progression" className="flex items-center justify-center gap-1 mt-4 text-xs text-sky-600 dark:text-sky-400 hover:underline">
               <TrendingUp size={12} /> {t('dashboard', 'seeDetail')}
             </Link>

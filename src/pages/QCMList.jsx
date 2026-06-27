@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Search, PenSquare, Clock, ChevronRight, SlidersHorizontal } from 'lucide-react'
 import { QUIZZES, DIFFICULTE_COLORS } from '../data/quizzes'
 import { SUBJECTS } from '../data/subjects'
+import BackButton from '../components/BackButton'
 
 const DIFFS = ['tous', 'facile', 'moyen', 'difficile']
 
@@ -24,6 +25,7 @@ export default function QCMList() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <BackButton to="/dashboard" label="Tableau de bord" />
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-7">
         <div className="flex items-center gap-3 mb-1">
