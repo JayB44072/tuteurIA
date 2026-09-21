@@ -17,6 +17,8 @@ import DocQuiz from './pages/DocQuiz'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AdminGuard from './components/AdminGuard'
 
+import ErrorBoundary from './components/ErrorBoundary'
+
 /* Pages with top navbar + mobile bottom nav */
 function AppLayout({ children }) {
   return (
@@ -32,35 +34,45 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <BrowserRouter>
-          {/* dark class on <html>, transition on root div */}
-          <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
-            <Routes>
-              {/* Public */}
-              <Route path="/"            element={<><Navbar /><Landing /></>} />
-              <Route path="/auth/login"  element={<Login />} />
-              <Route path="/auth/signup" element={<Signup />} />
+          <ErrorBoundary>
+            {/* dark class on <html>, transition on root div */}
+            <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
+              <Routes>
+                {/* Public */}
+                <Route path="/"            element={<><Navbar /><Landing /></>} />
+                <Route path="/auth/login"  element={<Login />} />
+                <Route path="/auth/signup" element={<Signup />} />
 
-              {/* App (requires auth via Navbar redirect logic) */}
-              <Route path="/dashboard"   element={<AppLayout><Dashboard /></AppLayout>} />
-              <Route path="/matieres"    element={<AppLayout><Subjects /></AppLayout>} />
-              <Route path="/matieres/:id" element={<AppLayout><SubjectDetail /></AppLayout>} />
-              <Route path="/qcm"         element={<AppLayout><QCMList /></AppLayout>} />
-              <Route path="/qcm/:id"     element={<AppLayout><QCMTake /></AppLayout>} />
-              <Route path="/doc-quiz"    element={<AppLayout><DocQuiz /></AppLayout>} />
-              <Route path="/ai-tuteur"   element={<AppLayout><AiTutor /></AppLayout>} />
-              <Route path="/progression" element={<AppLayout><Progress /></AppLayout>} />
-              <Route path="/profil"      element={<AppLayout><Profile /></AppLayout>} />
+                {/* App (requires auth via Navbar redirect logic) */}
+                <Route path="/dashboard"   element={<AppLayout><Dashboard /></AppLayout>} />
+                <Route path="/matieres"    element={<AppLayout><Subjects /></AppLayout>} />
+                <Route path="/matieres/:id" element={<AppLayout><SubjectDetail /></AppLayout>} />
+                <Route path="/qcm"         element={<AppLayout><QCMList /></AppLayout>} />
+                <Route path="/qcm/:id"     element={<AppLayout><QCMTake /></AppLayout>} />
+                <Route path="/doc-quiz"    element={<AppLayout><DocQuiz /></AppLayout>} />
+                <Route path="/ai-tuteur"   element={<AppLayout><AiTutor /></AppLayout>} />
+                <Route path="/progression" element={<AppLayout><Progress /></AppLayout>} />
+                <Route path="/profil"      element={<AppLayout><Profile /></AppLayout>} />
 
-              {/* Admin */}
-              <Route path="/admin" element={
-                <AdminGuard>
-                  <AppLayout><AdminDashboard /></AppLayout>
-                </AdminGuard>
-              } />
+                {/* English route aliases */}
+                <Route path="/courses"     element={<Navigate to="/matieres" replace />} />
+                <Route path="/courses/:id" element={<Navigate to="/matieres/:id" replace />} />
+                <Route path="/ai-tutor"    element={<Navigate to="/ai-tuteur" replace />} />
+                <Route path="/docquiz"     element={<Navigate to="/doc-quiz" replace />} />
+                <Route path="/progress"    element={<Navigate to="/progression" replace />} />
+                <Route path="/profile"     element={<Navigate to="/profil" replace />} />
 
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </div>
+                {/* Admin */}
+                <Route path="/admin" element={
+                  <AdminGuard>
+                    <AppLayout><AdminDashboard /></AppLayout>
+                  </AdminGuard>
+                } />
+
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </div>
+          </ErrorBoundary>
         </BrowserRouter>
       </AuthProvider>
     </ThemeProvider>

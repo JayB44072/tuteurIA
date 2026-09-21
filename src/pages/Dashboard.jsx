@@ -15,6 +15,14 @@ export default function Dashboard() {
   const { user } = useAuth()
   const { t, lang } = useLang()
 
+  const QUICK_ACTIONS = [
+    { to: '/ai-tuteur', Icon: Bot, label: t('nav', 'aiTutor') || 'Tuteur IA', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-900/20' },
+    { to: '/qcm', Icon: PenSquare, label: t('nav', 'qcm') || 'QCM Express', color: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
+    { to: '/doc-quiz', Icon: FileText, label: 'DocQuiz', color: 'text-sky-600 dark:text-sky-400', bg: 'bg-sky-50 dark:bg-sky-900/20' },
+    { to: '/matieres', Icon: BookOpen, label: t('nav', 'subjects') || 'Matières', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-50 dark:bg-amber-900/20' },
+    { to: '/progression', Icon: TrendingUp, label: t('nav', 'progress') || 'Progression', color: 'text-rose-600 dark:text-rose-400', bg: 'bg-rose-50 dark:bg-rose-900/20' },
+  ]
+
   const recentQuizzes = QUIZZES.slice(0, 4)
   const subjectList = SUBJECTS.slice(0, 6)
 

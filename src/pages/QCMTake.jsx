@@ -26,8 +26,8 @@ export default function QCMTake() {
   const [startTime, setStartTime] = useState(null)
 
   useEffect(() => {
-    if (step !== 'quiz') return
-    setTimeLeft(quiz.duree * 60)
+    if (step !== 'quiz' || !quiz) return
+    setTimeLeft((quiz.duree || 10) * 60)
     const interval = setInterval(() => {
       setTimeLeft(prev => {
         if (prev <= 1) { clearInterval(interval); setStep('results'); return 0 }
