@@ -1114,10 +1114,389 @@ export const QUIZZES = [
       },
       {
         id: 5,
+        id: 1,
+        question: 'La loi de la demande stipule que quand le prix augmente :',
+        options: ['La quantité demandée diminue', 'La quantité demandée augmente', 'L\'offre diminue', 'L\'offre augmente'],
+        correct: 0,
+        explication: 'Relation inverse prix-demande : à prix plus élevé, les consommateurs achètent moins (sauf biens Giffen).'
+      },
+      {
+        id: 2,
+        question: 'Le prix d\'équilibre est atteint quand :',
+        options: ['L\'offre = la demande', 'L\'offre > la demande', 'La demande > l\'offre', 'Le prix est fixé par l\'État'],
+        correct: 0,
+        explication: 'À l\'équilibre, la quantité offerte égalise la quantité demandée → prix d\'équilibre.'
+      },
+      {
+        id: 3,
+        question: 'Si P > P_équilibre, il y a :',
+        options: ['Un surplus (excès d\'offre)', 'Une pénurie (excès de demande)', 'L\'équilibre', 'Une augmentation de la demande'],
+        correct: 0,
+        explication: 'Prix trop élevé → producteurs veulent vendre plus que les consommateurs n\'achètent → surplus → pression à la baisse des prix.'
+      },
+      {
+        id: 4,
+        question: 'Des biens substituables sont des biens :',
+        options: ['Qui peuvent se remplacer (ex : beurre et margarine)', 'Qui se consomment ensemble (ex : voiture et essence)', 'Qui ont le même prix', 'Qui ont la même utilité marginale'],
+        correct: 0,
+        explication: 'Biens substituables : la hausse du prix de l\'un augmente la demande de l\'autre (ex : thé et café).'
+      },
+      {
+        id: 5,
+        question: 'Le PIB mesure :',
+        options: ['La valeur totale des biens et services produits dans un pays en un an', 'Le revenu des ménages', 'Les exportations nettes', 'La richesse totale accumulée'],
+        correct: 0,
+        explication: 'PIB = valeur ajoutée totale créée sur le territoire national au cours d\'une année.'
+      },
+      {
+        id: 6,
+        question: 'L\'inflation est :',
+        options: ['Une hausse générale et durable des prix', 'Une baisse générale des prix', 'Une hausse du chômage', 'Une augmentation du PIB'],
+        correct: 0,
+        explication: 'L\'inflation désigne une hausse persistante du niveau général des prix, mesurée par l\'IPC.'
+      }
+    ]
+  },
+
+  // ─── INFORMATIQUE ────────────────────────────────────────────────
+  {
+    id: 'info-algo-1',
+    subjectId: 'informatique',
+    titre: 'Algorithmique — Structures et complexité',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'La complexité d\'une boucle "Pour i de 1 à n" contenant une instruction O(1) est :',
+        options: ['O(n)', 'O(1)', 'O(n²)', 'O(log n)'],
+        correct: 0,
+        explication: 'Une boucle de n itérations avec opération constante → O(n) : complexité linéaire.'
+      },
+      {
+        id: 2,
+        question: 'Une structure de données LIFO (Last In, First Out) est :',
+        options: ['Une pile (stack)', 'Une file (queue)', 'Un tableau', 'Une liste chaînée'],
+        correct: 0,
+        explication: 'LIFO : le dernier entré est le premier sorti → Pile. Exemple : historique navigateur, pile d\'appels.'
+      },
+      {
+        id: 3,
+        question: 'Le tri rapide (Quicksort) a une complexité moyenne de :',
+        options: ['O(n log n)', 'O(n²)', 'O(n)', 'O(log n)'],
+        correct: 0,
+        explication: 'Quicksort : O(n log n) en moyenne, O(n²) dans le pire cas.'
+      },
+      {
+        id: 4,
+        question: 'La récursivité est :',
+        options: ['Une fonction qui s\'appelle elle-même', 'Une boucle infinie', 'Une structure conditionnelle', 'Un type de données'],
+        correct: 0,
+        explication: 'Une fonction récursive s\'appelle elle-même avec un cas de base pour arrêter les appels.'
+      },
+      {
+        id: 5,
+        question: 'En binaire, 1010 représente en décimal :',
+        options: ['10', '12', '8', '15'],
+        correct: 0,
+        explication: '1×2³ + 0×2² + 1×2¹ + 0×2⁰ = 8 + 0 + 2 + 0 = 10'
+      },
+      {
+        id: 6,
+        question: 'Une adresse IP de type 192.168.1.0/24 indique :',
+        options: ['Un réseau de 256 adresses dont 254 utilisables', 'Une seule adresse', '24 réseaux', 'Un réseau de classe A'],
+        correct: 0,
+        explication: '/24 = 24 bits de masque → 8 bits pour les hôtes → 2⁸ = 256 adresses (254 utilisables : réseau + diffusion exclus).'
+      }
+    ]
+  },
+
+  // ─── ANGLAIS ──────────────────────────────────────────────────────
+  {
+    id: 'anglais-grammar-1',
+    subjectId: 'anglais',
+    titre: 'English Grammar — Tenses and Structures',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'Choose the correct form: "She ___ in Yaoundé for five years."',
+        options: ['has lived', 'lived', 'is living', 'lives'],
+        correct: 0,
+        explication: 'Present Perfect is used for actions that started in the past and continue to the present. "for five years" is the clue.'
+      },
+      {
+        id: 2,
+        question: 'The passive voice of "They built this house in 1990" is:',
+        options: ['This house was built in 1990', 'This house is built in 1990', 'This house built in 1990', 'This house has been built in 1990'],
+        correct: 0,
+        explication: 'Simple past passive: Subject + was/were + past participle. "built" is the past participle of "build".'
+      },
+      {
+        id: 3,
+        question: 'Which sentence uses the conditional correctly?',
+        options: ['If I had money, I would travel', 'If I have money, I would travel', 'If I had money, I will travel', 'If I would have money, I travel'],
+        correct: 0,
+        explication: 'Second conditional (unreal present): If + past simple, would + base verb.'
+      },
+      {
+        id: 4,
+        question: '"Despite being tired, she continued working." — "despite" expresses:',
+        options: ['Concession', 'Cause', 'Result', 'Condition'],
+        correct: 0,
+        explication: '"Despite" introduces a concession: something happens in spite of an opposing factor.'
+      },
+      {
+        id: 5,
+        question: 'The plural of "phenomenon" is:',
+        options: ['phenomena', 'phenomenons', 'phenomenas', 'phenomenen'],
+        correct: 0,
+        explication: '"Phenomenon" has a Greek origin. Its plural follows Greek rules: phenomena.'
+      },
+      {
+        id: 6,
+        question: 'Choose the correct reported speech: He said "I am happy" → He said that:',
+        options: ['he was happy', 'he is happy', 'he were happy', 'he has been happy'],
+        correct: 0,
+        explication: 'Backshift in reported speech: present simple → past simple. "am" → "was".'
+      },
+      {
+        id: 7,
+        question: '"The book ___ by Chinua Achebe" — Complete with the correct passive:',
+        options: ['was written', 'was wrote', 'is wrote', 'wrote'],
+        correct: 0,
+        explication: 'Past passive: was/were + past participle. "written" is the past participle of "write".'
+      }
+    ]
+  },
+
+  // ─── ESPAGNOL ─────────────────────────────────────────────────────
+  {
+    id: 'espagnol-verbos-1',
+    subjectId: 'espagnol',
+    titre: 'Gramática — Los tiempos verbales',
+    difficulte: 'facile',
+    duree: 15,
+    questions: [
+      {
+        id: 1,
+        question: 'Conjugue "hablar" au présent, 1ère personne du singulier :',
+        options: ['Hablo', 'Hablas', 'Habla', 'Hablamos'],
+        correct: 0,
+        explication: 'Les verbes en -AR : yo hablo, tú hablas, él habla, nosotros hablamos...'
+      },
+      {
+        id: 2,
+        question: '"¿Cómo ___ tú?" (estar) :',
+        options: ['estás', 'eres', 'está', 'soy'],
+        correct: 0,
+        explication: 'Estar pour les états temporaires. "¿Cómo estás?" = Comment vas-tu ? (tú estás)'
+      },
+      {
+        id: 3,
+        question: 'La différence entre "ser" et "estar" :',
+        options: ['Ser = caractéristiques permanentes, Estar = états temporaires', 'Ser = lieu, Estar = origine', 'Ils sont synonymes', 'Ser = pluriel, Estar = singulier'],
+        correct: 0,
+        explication: 'Ser : origine, profession, caractère (permanent). Estar : humeur, lieu, état (temporaire).'
+      },
+      {
+        id: 4,
+        question: 'Le prétérit indéfini de "ir" à la 3ème personne du pluriel est :',
+        options: ['fueron', 'iban', 'van', 'irán'],
+        correct: 0,
+        explication: 'Ir au prétérit indéfini : fui, fuiste, fue, fuimos, fuisteis, fueron (irrégulier, identique à ser).'
+      },
+      {
+        id: 5,
         question: '"Quiero que tú ___ la verdad." (decir - subjonctif) :',
         options: ['digas', 'dices', 'decir', 'dijeras'],
         correct: 0,
         explication: 'Après "querer que", le subjonctif présent s\'impose. "Decir" au subjonctif : diga, digas, diga...'
+      }
+    ]
+  },
+
+  // ─── GCE A-LEVEL (CAMEROON GCE BOARD) ───────────────────────────
+  {
+    id: 'gce-maths-1',
+    subjectId: 'gce-maths',
+    titre: 'Pure Maths — Calculus & Stationary Points',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'What is the derivative of y = x · e^(2x) with respect to x?',
+        options: ['e^(2x) (1 + 2x)', '2x · e^(2x)', 'e^(2x)', '2 · e^(2x)'],
+        correct: 0,
+        explication: 'By the product rule: d/dx[x · e^(2x)] = 1 · e^(2x) + x · (2e^(2x)) = e^(2x)(1 + 2x).'
+      },
+      {
+        id: 2,
+        question: 'At a stationary point of a curve y = f(x), if dy/dx = 0 and d²y/dx² < 0, the point is a:',
+        options: ['Local Maximum', 'Local Minimum', 'Point of Inflexion', 'Asymptote'],
+        correct: 0,
+        explication: 'A negative second derivative indicates concavity downwards, hence a local maximum.'
+      },
+      {
+        id: 3,
+        question: 'What is the integral of (2x + 3) / (x² + 3x + 5) dx?',
+        options: ['ln|x² + 3x + 5| + C', '2 ln|x² + 3x + 5| + C', '1 / (x² + 3x + 5) + C', '(x² + 3x + 5)² + C'],
+        correct: 0,
+        explication: 'The numerator is the exact derivative of the denominator (f\'/f), so the integral is ln|f(x)| + C.'
+      },
+      {
+        id: 4,
+        question: 'A particle on a rough inclined plane of angle θ is in limiting equilibrium. The coefficient of friction μ equals:',
+        options: ['tan(θ)', 'sin(θ)', 'cos(θ)', 'cot(θ)'],
+        correct: 0,
+        explication: 'At limiting equilibrium down the plane, mg sin(θ) = μ mg cos(θ) => μ = tan(θ).'
+      }
+    ]
+  },
+  {
+    id: 'gce-physics-1',
+    subjectId: 'gce-physics',
+    titre: 'GCE Physics — Wave Superposition & Double Slit',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'In Young\'s double-slit experiment, if the slit separation d is doubled, the fringe spacing y will:',
+        options: ['Halve', 'Double', 'Quadruple', 'Remain unchanged'],
+        correct: 0,
+        explication: 'Fringe separation y = λD/d is inversely proportional to slit separation d.'
+      },
+      {
+        id: 2,
+        question: 'Two light sources are said to be coherent when they have:',
+        options: ['A constant phase difference and identical frequency', 'Equal intensities only', 'Opposite polarisations', 'Different speeds'],
+        correct: 0,
+        explication: 'Coherence requires waves to maintain a constant phase relationship and the same frequency.'
+      },
+      {
+        id: 3,
+        question: 'The path difference for the 2nd dark fringe from the central maximum is:',
+        options: ['1.5 λ', '0.5 λ', '2.0 λ', '2.5 λ'],
+        correct: 0,
+        explication: 'Dark fringes occur at (n + 0.5)λ. For n=1 (the second dark fringe), path difference = 1.5λ.'
+      }
+    ]
+  },
+  {
+    id: 'gce-chemistry-1',
+    subjectId: 'gce-chemistry',
+    titre: 'GCE Chemistry — Nucleophilic Substitution Mechanisms',
+    difficulte: 'difficile',
+    duree: 25,
+    questions: [
+      {
+        id: 1,
+        question: 'Which type of halogenoalkane predominantly undergoes hydrolysis via the SN1 mechanism?',
+        options: ['Tertiary (3°) halogenoalkane', 'Primary (1°) halogenoalkane', 'Methyl halide', 'Secondary exclusively'],
+        correct: 0,
+        explication: 'Tertiary carbocations are stabilized by the electron-donating inductive effect of 3 alkyl groups, favouring SN1.'
+      },
+      {
+        id: 2,
+        question: 'The stereochemical consequence of an SN2 reaction at an asymmetric carbon centre is:',
+        options: ['Complete inversion of configuration (Walden inversion)', 'Racemisation (50% retention, 50% inversion)', 'Retention of configuration', 'Loss of all chirality'],
+        correct: 0,
+        explication: 'SN2 involves backside attack by the nucleophile opposite to the leaving group, causing an inversion of configuration.'
+      }
+    ]
+  },
+  {
+    id: 'gce-biology-1',
+    subjectId: 'gce-biology',
+    titre: 'GCE Biology — Molecular Genetics & DNA Replication',
+    difficulte: 'facile',
+    duree: 15,
+    questions: [
+      {
+        id: 1,
+        question: 'The enzyme responsible for unzipping the DNA double helix during replication is:',
+        options: ['DNA Helicase', 'DNA Polymerase', 'DNA Ligase', 'RNA Primase'],
+        correct: 0,
+        explication: 'DNA Helicase breaks hydrogen bonds between complementary base pairs to unwind the helix.'
+      },
+      {
+        id: 2,
+        question: 'During transcription, which nitrogenous base pairs with Adenine on the DNA template?',
+        options: ['Uracil (U)', 'Thymine (T)', 'Cytosine (C)', 'Guanine (G)'],
+        correct: 0,
+        explication: 'In RNA synthesis (transcription), Uracil (U) pairs with Adenine on the DNA template strand.'
+      }
+    ]
+  },
+  {
+    id: 'gce-history-1',
+    subjectId: 'gce-history',
+    titre: 'Cameroon History — 1884 Treaty & 1961 Plebiscite',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'The Germano-Duala Treaty establishing the German protectorate over Kamerun was signed on:',
+        options: ['July 12, 1884', 'January 1, 1960', 'October 1, 1961', 'June 28, 1919'],
+        correct: 0,
+        explication: 'The treaty was signed on July 12, 1884, between King Bell, King Akwa and representatives of German firms.'
+      },
+      {
+        id: 2,
+        question: 'In the UN Plebiscite of February 11, 1961, the people of Southern Cameroons voted to:',
+        options: ['Achieve independence by joining the Republic of Cameroun', 'Join the Federation of Nigeria', 'Remain a British Colony', 'Declare an immediate separate independence'],
+        correct: 0,
+        explication: 'By 233,571 to 97,741 votes, Southern Cameroons voted to join the independent Republic of Cameroun.'
+      }
+    ]
+  },
+  {
+    id: 'gce-economics-1',
+    subjectId: 'gce-economics',
+    titre: 'GCE Economics — Inflation & Balance of Payments',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'Inflation resulting from an outward shift in Aggregate Demand beyond potential output is termed:',
+        options: ['Demand-Pull inflation', 'Cost-Push inflation', 'Imported inflation', 'Structural inflation'],
+        correct: 0,
+        explication: 'Demand-pull inflation arises when total demand exceeds the productive capacity of the economy.'
+      },
+      {
+        id: 2,
+        question: 'Which BOP account records receipts and payments from trade in goods and services and remittances?',
+        options: ['Current Account', 'Capital Account', 'Financial Account', 'Official Reserves Account'],
+        correct: 0,
+        explication: 'Trade in goods, services, primary and secondary income are all components of the Current Account.'
+      }
+    ]
+  },
+  {
+    id: 'gce-computer-science-1',
+    subjectId: 'gce-computer-science',
+    titre: 'GCE Computer Science — Algorithms & Big-O Notation',
+    difficulte: 'moyen',
+    duree: 20,
+    questions: [
+      {
+        id: 1,
+        question: 'What is the precondition required before executing a Binary Search algorithm?',
+        options: ['The list must be sorted in order', 'The list must contain only positive integers', 'The list size must be a power of two', 'The list must be implemented as a linked list'],
+        correct: 0,
+        explication: 'Binary search repeatedly halves the search interval and strictly requires a sorted dataset.'
+      },
+      {
+        id: 2,
+        question: 'What is the average-case time complexity of Merge Sort?',
+        options: ['O(n log n)', 'O(n²)', 'O(n)', 'O(log n)'],
+        correct: 0,
+        explication: 'Merge Sort divides the array into halves and merges them, guaranteeing O(n log n) in all cases.'
       }
     ]
   }

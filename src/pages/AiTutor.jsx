@@ -59,17 +59,36 @@ function Message({ msg }) {
 export default function AiTutor() {
   const [messages, setMessages] = useState([{
     role: 'assistant',
-    content: `Salut ! Je suis ton tuteur IA, disponible pour toutes tes matières du Bac et GCE A-Level. 🎓\n\nPose-moi n'importe quelle question sur les mathématiques, la physique, l'histoire, la littérature, la philosophie...\n\nJe suis là pour expliquer, résumer et t'aider à comprendre ! 💪`
+    content: `Salut ! Je suis ton tuteur IA propulsé par Groq, disponible 24h/24 pour toutes tes matières du Baccalauréat et GCE A-Level. 🎓\n\nPose-moi tes questions sur les cours, les méthodes de résolution d'exercices, les formules ou la rédaction.\n\nQue souhaites-tu travailler aujourd'hui ? 💪`
   }])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [showKeyModal, setShowKeyModal] = useState(false)
+  const [apiKeyInput, setApiKeyInput] = useState('')
   const bottomRef = useRef()
   const inputRef = useRef()
-  const GROQ_KEY = import.meta.env.VITE_GROQ_API_KEY
+
+  const [activeKey, setActiveKey] = useState(() => {
+    return import.meta.env.VITE_GROQ_API_KEY || localStorage.getItem('tuteuria_groq_api_key') || ''
+  })
+
+  const GROQ_MODEL = import.meta.env.VITE_GROQ_MODEL || 'openai/gpt-oss-20b'
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
   }, [messages, loading])
+
+  const saveApiKey = (key) => {
+    const trimmed = key.trim()
+    if (trimmed) {
+      localStorage.setItem('tuteuria_groq_api_key', trimmed)
+      setActiveKey(trimmed)
+    } else {
+      localStorage.removeItem('tuteuria_groq_api_key')
+      setActiveKey(import.meta.env.VITE_GROQ_API_KEY || '')
+    }
+    setShowKeyModal(false)
+  }
 
   const sendMessage = async (text = input) => {
     const trimmed = text.trim()
@@ -81,7 +100,7 @@ export default function AiTutor() {
 
     try {
       let aiResponse = ''
-      if (GROQ_KEY) {
+      if (activeKey) {
         const history = [...messages, userMsg].map(m => ({
           role: m.role === 'user' ? 'user' : 'assistant',
           content: m.content,
@@ -90,30 +109,43 @@ export default function AiTutor() {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${GROQ_KEY}`,
+            'Authorization': `Bearer ${activeKey}`,
           },
           body: JSON.stringify({
-            model: 'llama-3.3-70b-versatile',
+            model: GROQ_MODEL,
             messages: [
               {
                 role: 'system',
-                content: "Tu es un tuteur IA expert pour la préparation au Baccalauréat et GCE A-Level en Afrique francophone. Réponds toujours en français sauf si l'élève écrit en anglais. Sois pédagogique, clair, bienveillant. Utilise des exemples concrets africains quand c'est pertinent. Structure tes réponses avec des titres (##) quand la réponse est longue.",
+                content: "Tu es un tuteur d'excellence pour les élèves préparant le Baccalauréat (programme francophone africain / camerounais) et le GCE A-Level (Cameroon GCE Board). Adapte ta langue à celle de l'élève (Français pour Bac, Anglais pour GCE). Sois très clair, méthodique, encourageant et rigoureux sur les démonstrations scientifiques, formules et analyses de textes. Utilise des titres markdown et des puces pour bien aérer tes explications.",
               },
               ...history,
             ],
-            temperature: 0.7,
-            max_tokens: 1024,
+            temperature: 0.6,
+            max_tokens: 1500,
           }),
         })
+
+        if (!res.ok) {
+          const errData = await res.json().catch(() => ({}))
+          const errorMsg = errData?.error?.message || `Erreur HTTP ${res.status}`
+          throw new Error(`[Groq ${GROQ_MODEL}] ${errorMsg}`)
+        }
+
         const data = await res.json()
-        aiResponse = data.choices?.[0]?.message?.content || "Désolé, je n'ai pas pu générer une réponse."
+        aiResponse = data.choices?.[0]?.message?.content || "Désolé, aucune réponse générée par l'IA."
       } else {
-        await new Promise(r => setTimeout(r, 1200))
+        await new Promise(r => setTimeout(r, 1000))
         aiResponse = generateFallbackResponse(trimmed)
       }
       setMessages(prev => [...prev, { role: 'assistant', content: aiResponse }])
     } catch (err) {
-      setMessages(prev => [...prev, { role: 'assistant', content: generateFallbackResponse(trimmed) }])
+      console.error('Groq API error:', err)
+      const isKeyErr = err.message?.includes('401') || err.message?.includes('API key')
+      const isModelErr = err.message?.includes('model')
+      setMessages(prev => [...prev, {
+        role: 'assistant',
+        content: `⚠️ **Problème de communication avec Groq :**\n\n${err.message}\n\n${isKeyErr ? "👉 Ta clé API Groq semble invalide ou expirée. Clique sur 'Configurer clé Groq' ci-dessus pour la mettre à jour." : isModelErr ? `👉 Le modèle configuré (${GROQ_MODEL}) n'est pas accessible avec cette clé. Vérifie les modèles autorisés sur ton compte Groq.` : "👉 Vérifie ta connexion internet ou réessaie dans un instant."}\n\n*(Une réponse locale de secours est disponible si besoin).*`
+      }])
     } finally {
       setLoading(false)
       inputRef.current?.focus()
@@ -145,22 +177,71 @@ export default function AiTutor() {
           <div>
             <h1 className="text-lg font-black text-gray-900 dark:text-white">Tuteur IA</h1>
             <div className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-              Disponible 24/7
+              <span className={`w-1.5 h-1.5 rounded-full ${activeKey ? 'bg-green-400 animate-pulse' : 'bg-amber-400'}`} />
+              <span>Modèle : <strong className="font-semibold text-emerald-600 dark:text-emerald-400">{GROQ_MODEL}</strong></span>
             </div>
           </div>
         </div>
         <div className="flex items-center gap-2">
-          {!GROQ_KEY && (
-            <div className="flex items-center gap-1.5 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 text-amber-600 dark:text-amber-400 text-xs px-2.5 py-1.5 rounded-lg">
-              <AlertCircle size={12} /> Mode démo
-            </div>
-          )}
+          <button
+            onClick={() => { setApiKeyInput(activeKey); setShowKeyModal(true) }}
+            className={`flex items-center gap-1.5 text-xs px-2.5 py-1.5 rounded-lg border transition-colors ${
+              activeKey
+                ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300'
+                : 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-800 text-amber-700 dark:text-amber-400'
+            }`}
+          >
+            <Sparkles size={12} />
+            {activeKey ? 'Groq activé' : 'Configurer clé Groq'}
+          </button>
           <button onClick={clearChat} className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-lg transition-colors">
             <RotateCcw size={13} /> Nouvelle conv.
           </button>
         </div>
       </motion.div>
+
+      {/* Modal configuration Clé Groq */}
+      <AnimatePresence>
+        {showKeyModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+            <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.95, opacity: 0 }} className="bg-white dark:bg-gray-900 rounded-2xl p-6 w-full max-w-md border border-gray-200 dark:border-gray-800 shadow-2xl">
+              <h3 className="text-base font-black text-gray-900 dark:text-white mb-1">Configuration Groq API</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+                Le Tuteur IA utilise exclusivement l'API Groq avec le modèle <strong className="text-emerald-600 dark:text-emerald-400">{GROQ_MODEL}</strong>.
+              </p>
+              <div className="mb-4">
+                <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                  Clé API Groq (gsk_...)
+                </label>
+                <input
+                  type="password"
+                  value={apiKeyInput}
+                  onChange={e => setApiKeyInput(e.target.value)}
+                  placeholder="gsk_..."
+                  className="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-emerald-500"
+                />
+                <p className="text-[11px] text-gray-400 mt-1">
+                  Obtenez une clé gratuite sur <a href="https://console.groq.com/keys" target="_blank" rel="noreferrer" className="text-emerald-500 underline">console.groq.com</a>.
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setShowKeyModal(false)}
+                  className="flex-1 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200"
+                >
+                  Annuler
+                </button>
+                <button
+                  onClick={() => saveApiKey(apiKeyInput)}
+                  className="flex-1 py-2 text-xs font-semibold text-white bg-emerald-600 rounded-xl hover:bg-emerald-500"
+                >
+                  Enregistrer
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* Messages */}
       <div className="flex-1 overflow-y-auto space-y-3 pb-3 min-h-0">

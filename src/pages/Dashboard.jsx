@@ -18,55 +18,106 @@ export default function Dashboard() {
   const recentQuizzes = QUIZZES.slice(0, 4)
   const subjectList = SUBJECTS.slice(0, 6)
 
-  const [subjectScores, setSubjectScores] = useState({})
+  const [userStats, setUserStats] = useState({ total: 0, avgScore: 0, subjects: 0, successRate: 0 })
+  const [progressSubjects, setProgressSubjects] = useState([])
+  const [hasAnyScore, setHasAnyScore] = useState(false)
 
   useEffect(() => {
-    if (!user) return
-    fetchSubjectScores()
+    fetchRealProgress()
   }, [user])
 
-  async function fetchSubjectScores() {
-    const { data } = await supabase
-      .from('quiz_results')
-      .select('subject_id, score')
-      .eq('user_id', user.id)
+  async function fetchRealProgress() {
+    let combined = []
 
-    if (!data || !data.length) return
+    // 1. Charger depuis le cache local (mode démo ou hors-ligne)
+    try {
+      const local = JSON.parse(localStorage.getItem('tuteuria_quiz_results') || '[]')
+      if (Array.isArray(local)) combined = [...local]
+    } catch {}
 
-    const bySubject = {}
-    for (const r of data) {
-      if (!r.subject_id) continue
-      if (!bySubject[r.subject_id]) bySubject[r.subject_id] = []
-      bySubject[r.subject_id].push(r.score)
+    // 2. Charger depuis Supabase si connecté
+    if (user && user.id !== 'demo-user-id') {
+      try {
+        const { data, error } = await supabase
+          .from('quiz_results')
+          .select('quiz_id, subject_id, score, correct_q, total_q, completed_at')
+          .eq('user_id', user.id)
+          .order('completed_at', { ascending: false })
+
+        if (!error && data && data.length) {
+          const keys = new Set(data.map(d => `${d.quiz_id}_${d.completed_at}`))
+          const uniqueLocal = combined.filter(l => !keys.has(`${l.quiz_id}_${l.completed_at}`))
+          combined = [...data, ...uniqueLocal]
+        }
+      } catch (e) {
+        console.warn('Dashboard fetch error, using local data:', e)
+      }
     }
+
+    if (!combined.length) {
+      setHasAnyScore(false)
+      setProgressSubjects(SUBJECTS.slice(0, 4).map(s => ({ ...s, pct: null })))
+      return
+    }
+
+    // Calculer les scores réels par matière (strictement bornés 0-100%)
+    const bySubject = {}
+    const subjectOrder = []
+    for (const r of combined) {
+      if (!r.subject_id) continue
+      const totalQ = Number(r.total_q) || 0
+      const correctQ = Number(r.correct_q) || 0
+      const pct = totalQ > 0 ? Math.round((correctQ / totalQ) * 100) : Number(r.score) || 0
+      const clampedPct = Math.min(100, Math.max(0, pct))
+
+      if (!bySubject[r.subject_id]) {
+        bySubject[r.subject_id] = []
+        subjectOrder.push(r.subject_id)
+      }
+      bySubject[r.subject_id].push(clampedPct)
+    }
+
     const avgBySubject = {}
     for (const [sid, scores] of Object.entries(bySubject)) {
-      avgBySubject[sid] = Math.round(scores.reduce((a, s) => a + s, 0) / scores.length)
+      avgBySubject[sid] = Math.min(100, Math.max(0, Math.round(scores.reduce((a, s) => a + s, 0) / scores.length)))
     }
-    setSubjectScores(avgBySubject)
+
+    const allScores = Object.values(avgBySubject)
+    const avgScore = allScores.length ? Math.min(100, Math.max(0, Math.round(allScores.reduce((a, s) => a + s, 0) / allScores.length))) : 0
+    const successRate = combined.length ? Math.min(100, Math.max(0, Math.round(combined.filter(r => (r.score || 0) >= 50).length / combined.length * 100))) : 0
+
+    setUserStats({
+      total: combined.length,
+      avgScore,
+      subjects: Object.keys(bySubject).length,
+      successRate,
+    })
+
+    // Construire la liste des matières réellement travaillées en priorité
+    const workedList = subjectOrder.map(sid => {
+      const s = SUBJECTS.find(sub => sub.id === sid)
+      return s ? { ...s, pct: avgBySubject[sid] } : null
+    }).filter(Boolean)
+
+    // Compléter avec d'autres matières si moins de 4 travaillées
+    const remaining = SUBJECTS.filter(s => !bySubject[s.id]).map(s => ({ ...s, pct: null }))
+    const finalList = [...workedList, ...remaining].slice(0, 4)
+
+    setProgressSubjects(finalList)
+    setHasAnyScore(workedList.length > 0)
   }
 
-  const QUICK_STATS = [
-    { label: t('dashboard', 'subjects'),  value: '12',   Icon: BookOpen,   color: 'from-sky-500 to-sky-600' },
-    { label: t('dashboard', 'quizzes'),   value: '200+', Icon: PenSquare,  color: 'from-violet-500 to-violet-600' },
-    { label: t('dashboard', 'lessons'),   value: '50+',  Icon: FileText,   color: 'from-emerald-500 to-emerald-600' },
-    { label: t('dashboard', 'aiTutor'),   value: '24/7', Icon: Bot,        color: 'from-amber-500 to-amber-600' },
+  const QUICK_STATS = hasAnyScore ? [
+    { label: t('dashboard', 'quizzes'),   value: `${userStats.total} complété${userStats.total > 1 ? 's' : ''}`, Icon: PenSquare,  color: 'from-sky-500 to-sky-600' },
+    { label: 'Score moyen réel',          value: `${userStats.avgScore}%`, Icon: Target,     color: 'from-violet-500 to-violet-600' },
+    { label: 'Matières travaillées',      value: `${userStats.subjects} / ${SUBJECTS.length}`,   Icon: BookOpen,   color: 'from-emerald-500 to-emerald-600' },
+    { label: 'Taux de réussite',          value: `${userStats.successRate}%`, Icon: Award,      color: 'from-amber-500 to-amber-600' },
+  ] : [
+    { label: t('dashboard', 'subjects'),  value: `${SUBJECTS.length}`,   Icon: BookOpen,   color: 'from-sky-500 to-sky-600' },
+    { label: t('dashboard', 'quizzes'),   value: '200+',                 Icon: PenSquare,  color: 'from-violet-500 to-violet-600' },
+    { label: t('dashboard', 'lessons'),   value: '60+',                  Icon: FileText,   color: 'from-emerald-500 to-emerald-600' },
+    { label: t('dashboard', 'aiTutor'),   value: 'Groq 24/7',            Icon: Bot,        color: 'from-amber-500 to-amber-600' },
   ]
-
-  const QUICK_ACTIONS = [
-    { to: '/qcm',        Icon: PenSquare,   label: t('dashboard', 'doQCM'),       color: 'text-sky-600 dark:text-sky-400',       bg: 'bg-sky-50 dark:bg-sky-900/20' },
-    { to: '/ai-tuteur',  Icon: Bot,         label: t('dashboard', 'askAI'),       color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-50 dark:bg-violet-900/20' },
-    { to: '/matieres',   Icon: BookOpen,    label: t('dashboard', 'studyCourse'), color: 'text-emerald-600 dark:text-emerald-400', bg: 'bg-emerald-50 dark:bg-emerald-900/20' },
-    { to: '/doc-quiz',   Icon: FileText,    label: t('dashboard', 'importDoc'),   color: 'text-pink-600 dark:text-pink-400',     bg: 'bg-pink-50 dark:bg-pink-900/20' },
-    { to: '/progression',Icon: TrendingUp,  label: t('dashboard', 'seeProgress'), color: 'text-amber-600 dark:text-amber-400',   bg: 'bg-amber-50 dark:bg-amber-900/20' },
-  ]
-
-  // Les 4 premières matières avec score réel (ou null si pas encore travaillée)
-  const progressSubjects = SUBJECTS.slice(0, 4).map(s => ({
-    ...s,
-    pct: subjectScores[s.id] ?? null,
-  }))
-  const hasAnyScore = progressSubjects.some(s => s.pct !== null)
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

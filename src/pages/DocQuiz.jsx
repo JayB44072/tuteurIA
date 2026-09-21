@@ -8,6 +8,8 @@ import {
 import * as pdfjsLib from 'pdfjs-dist'
 import mammoth from 'mammoth'
 import BackButton from '../components/BackButton'
+import { useAuth } from '../context/AuthContext'
+import { supabase } from '../lib/supabase'
 
 // Point vers le worker PDF.js fourni par le paquet
 pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
@@ -122,6 +124,7 @@ function parseQuizzesFromAI(text) {
 const OPTION_LETTERS = ['A', 'B', 'C', 'D']
 
 export default function DocQuiz() {
+  const { user } = useAuth()
   const [file, setFile] = useState(null)
   const [dragOver, setDragOver] = useState(false)
   const [step, setStep] = useState('upload') // upload | analyzing | quiz | results
@@ -137,9 +140,27 @@ export default function DocQuiz() {
   const [preview, setPreview] = useState('')      // aperçu texte extrait
   const [previewing, setPreviewing] = useState(false)
   const [analyzeStep, setAnalyzeStep] = useState(0) // 0=lecture, 1=analyse, 2=génération
+  const [showKeyModal, setShowKeyModal] = useState(false)
+  const [apiKeyInput, setApiKeyInput] = useState('')
   const fileRef = useRef()
 
-  const GROQ_KEY = import.meta.env.VITE_GROQ_API_KEY
+  const [activeKey, setActiveKey] = useState(() => {
+    return import.meta.env.VITE_GROQ_API_KEY || localStorage.getItem('tuteuria_groq_api_key') || ''
+  })
+
+  const GROQ_MODEL = import.meta.env.VITE_GROQ_MODEL || 'openai/gpt-oss-20b'
+
+  const saveApiKey = (key) => {
+    const trimmed = key.trim()
+    if (trimmed) {
+      localStorage.setItem('tuteuria_groq_api_key', trimmed)
+      setActiveKey(trimmed)
+    } else {
+      localStorage.removeItem('tuteuria_groq_api_key')
+      setActiveKey(import.meta.env.VITE_GROQ_API_KEY || '')
+    }
+    setShowKeyModal(false)
+  }
 
   const handleDrop = useCallback((e) => {
     e.preventDefault()
@@ -166,6 +187,45 @@ export default function DocQuiz() {
     } catch {}
   }
 
+  const saveDocQuizResult = async (correctCount, totalCount) => {
+    const pct = totalCount > 0 ? Math.min(100, Math.max(0, Math.round((correctCount / totalCount) * 100))) : 0
+    const nowIso = new Date().toISOString()
+    const record = {
+      id: 'doc_' + Date.now(),
+      quiz_id: 'doc-quiz',
+      subject_id: 'doc-quiz',
+      score: pct,
+      total_q: totalCount,
+      correct_q: correctCount,
+      time_taken: 60,
+      completed_at: nowIso,
+    }
+
+    try {
+      const existing = JSON.parse(localStorage.getItem('tuteuria_quiz_results') || '[]')
+      existing.unshift(record)
+      localStorage.setItem('tuteuria_quiz_results', JSON.stringify(existing.slice(0, 100)))
+    } catch (e) {
+      console.warn('LocalStorage save error:', e)
+    }
+
+    if (user && user.id !== 'demo-user-id') {
+      try {
+        await supabase.from('quiz_results').insert({
+          user_id: user.id,
+          quiz_id: 'doc-quiz',
+          subject_id: 'doc-quiz',
+          score: pct,
+          total_q: totalCount,
+          correct_q: correctCount,
+          time_taken: 60,
+        })
+      } catch (e) {
+        console.warn('Supabase save error:', e)
+      }
+    }
+  }
+
   const analyzeDocument = async () => {
     if (!file) return
     setStep('analyzing')
@@ -190,49 +250,49 @@ export default function DocQuiz() {
       setExtractedText(text)
       setAnalyzeStep(1)
 
-      // ── 2. Prompt Groq ────────────────────────────────────────────
-      const prompt = `Tu es un expert en création de QCM pédagogiques. Tu vas lire attentivement le document ci-dessous et créer exactement ${numQ} questions à choix multiples de niveau ${difficulty} UNIQUEMENT basées sur le contenu réel de ce document.
+      // ── 2. Prompt Groq STRICTEMENT AXÉ SUR LE CONTENU ─────────────
+      const prompt = `Tu es un concepteur pédagogique expert pour les examens du Baccalauréat et du GCE A-Level.
+Tu dois analyser le cours/document ci-dessous et créer exactement ${numQ} questions à choix multiples (QCM) de niveau ${difficulty} pour évaluer la compréhension approfondie du FOND et des SAVOIRS enseignés.
 
 DOCUMENT :
 """
 ${text}
 """
 
-Génère ${numQ} questions au format JSON strictement comme ceci :
+RÈGLES IMPÉRATIVES :
+1. INTERDICTION FORMELLE : Ne pose JAMAIS de question portant sur la forme, le format de fichier (.pdf/.docx/.txt), la taille, l'auteur, le titre du fichier ou la méthodologie générale de lecture.
+2. TOUTES les questions doivent porter EXCLUSIVEMENT sur les NOTIONS DU COURS : théorèmes, lois scientifiques, définitions conceptuelles, formules, réactions chimiques, dates et faits historiques, règles ou principes expliqués dans le texte.
+3. Chaque question doit proposer exactement 4 choix (A, B, C, D). Une seule option est correcte. Les 3 autres options doivent être des distracteurs plausibles mais inexacts selon le document.
+4. "correct" est l'index entier de la bonne réponse (0 pour la 1ère option, 1 pour la 2ème, 2 pour la 3ème, 3 pour la 4ème).
+5. "explication" doit citer ou expliquer clairement pourquoi cette réponse est vraie en se basant sur le document.
+
+Réponds STRICTEMENT avec un tableau JSON valide au format exact suivant, sans aucun commentaire :
 \`\`\`json
 [
   {
-    "question": "Question précise tirée du document ?",
+    "question": "Question portant sur une notion du texte ?",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "correct": 0,
-    "explication": "Explication basée sur le document."
+    "explication": "Justification basée sur le cours."
   }
 ]
-\`\`\`
-
-Règles IMPORTANTES :
-- Toutes les questions DOIVENT être tirées du contenu du document fourni
-- "correct" est l'index (0=A, 1=B, 2=C, 3=D) de la bonne réponse
-- Les mauvaises options doivent être plausibles mais clairement incorrectes selon le document
-- Les questions doivent couvrir différentes parties du document
-- Niveau : ${difficulty === 'facile' ? 'compréhension directe' : difficulty === 'moyen' ? 'analyse et application' : 'synthèse et esprit critique'}
-- Réponds UNIQUEMENT avec le bloc JSON, sans aucun texte avant ou après.`
+\`\`\``
 
       let rawQuestions = []
 
-      if (GROQ_KEY) {
+      if (activeKey) {
         const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${GROQ_KEY}`,
+            'Authorization': `Bearer ${activeKey}`,
           },
           body: JSON.stringify({
-            model: 'llama-3.3-70b-versatile',
+            model: GROQ_MODEL,
             messages: [
               {
                 role: 'system',
-                content: 'Tu es un expert en création de QCM pédagogiques. Tu génères des questions EXCLUSIVEMENT basées sur le document fourni par l\'utilisateur. Tu réponds UNIQUEMENT avec un bloc JSON valide, sans texte avant ni après.',
+                content: 'Tu es un générateur de QCM pédagogiques. Tu crées des questions rigoureusement centrées sur le contenu conceptuel et théorique du document. Tu ne poses JAMAIS de questions sur la forme ou la nature du fichier. Tu réponds UNIQUEMENT avec un bloc JSON valide.',
               },
               { role: 'user', content: prompt },
             ],
@@ -243,7 +303,7 @@ Règles IMPORTANTES :
 
         if (!res.ok) {
           const errData = await res.json().catch(() => ({}))
-          throw new Error(`Erreur API Groq (${res.status}) : ${errData?.error?.message || res.statusText}`)
+          throw new Error(`[Groq ${GROQ_MODEL}] (${res.status}) : ${errData?.error?.message || res.statusText}`)
         }
 
         setAnalyzeStep(2)
@@ -252,7 +312,6 @@ Règles IMPORTANTES :
         rawQuestions = parseQuizzesFromAI(aiText)
 
         if (rawQuestions.length === 0) {
-          // Retry sans le bloc code — parfois le modèle n'enveloppe pas dans ```json
           const jsonOnly = aiText.replace(/```json|```/g, '').trim()
           try {
             const parsed = JSON.parse(jsonOnly)
@@ -260,14 +319,13 @@ Règles IMPORTANTES :
           } catch {}
         }
       } else {
-        await new Promise(r => setTimeout(r, 2000))
-        rawQuestions = generateDemoQuestions(file.name, numQ)
+        await new Promise(r => setTimeout(r, 1500))
+        rawQuestions = generateContentQuestions(text, numQ)
       }
 
       if (rawQuestions.length === 0) {
-        throw new Error(
-          'L\'IA n\'a pas pu générer les questions. Vérifie que le document contient du texte lisible et réessaie.'
-        )
+        // En cas d'échec du parsing IA, utiliser l'analyseur de contenu local
+        rawQuestions = generateContentQuestions(text, numQ)
       }
 
       setQuestions(rawQuestions.slice(0, numQ))
@@ -277,8 +335,20 @@ Règles IMPORTANTES :
       setShowExplain(false)
       setStep('quiz')
     } catch (err) {
-      setError(err.message || 'Erreur lors de l\'analyse. Réessaie.')
-      setStep('upload')
+      console.warn('DocQuiz AI generation fallback:', err)
+      // Si une erreur survient avec l'API, basculer sur l'analyseur de contenu local
+      try {
+        const fallbackQ = generateContentQuestions(extractedText || (await extractTextFromFile(file)), numQ)
+        setQuestions(fallbackQ.slice(0, numQ))
+        setCurrent(0)
+        setSelected(null)
+        setAnswers([])
+        setShowExplain(false)
+        setStep('quiz')
+      } catch (fallbackErr) {
+        setError(err.message || 'Erreur lors de l\'analyse. Réessaie.')
+        setStep('upload')
+      }
     }
   }
 
@@ -290,7 +360,12 @@ Règles IMPORTANTES :
   }
 
   const handleNext = () => {
-    if (current + 1 >= questions.length) { setStep('results'); return }
+    if (current + 1 >= questions.length) {
+      const correctCount = answers.filter(a => a.correct).length
+      saveDocQuizResult(correctCount, questions.length)
+      setStep('results')
+      return
+    }
     setCurrent(c => c + 1)
     setSelected(null)
     setShowExplain(false)
@@ -314,17 +389,70 @@ Règles IMPORTANTES :
   if (step === 'upload') return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 pb-24 lg:pb-8">
       <BackButton to="/dashboard" label="Tableau de bord" />
-      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-violet-500 to-pink-600 flex items-center justify-center shadow-lg shadow-violet-500/20">
-            <Brain size={20} className="text-white" />
+      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="mb-8 flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <div className="flex items-center gap-3 mb-2">
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-violet-500 to-pink-600 flex items-center justify-center shadow-lg shadow-violet-500/20">
+              <Brain size={20} className="text-white" />
+            </div>
+            <h1 className="text-2xl font-black text-gray-900 dark:text-white">Document → QCM</h1>
           </div>
-          <h1 className="text-2xl font-black text-gray-900 dark:text-white">Document → QCM</h1>
+          <p className="text-gray-500 dark:text-gray-400">
+            Importe un cours, l'IA Groq ({GROQ_MODEL}) analyse son contenu conceptuel et génère des QCM.
+          </p>
         </div>
-        <p className="text-gray-500 dark:text-gray-400 ml-13">
-          Importe un document, l'IA l'analyse et génère automatiquement des QCM.
-        </p>
+        <button
+          onClick={() => { setApiKeyInput(activeKey); setShowKeyModal(true) }}
+          className={`flex items-center gap-1.5 text-xs px-3 py-2 rounded-xl border font-semibold transition-all ${
+            activeKey
+              ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300'
+              : 'bg-amber-50 dark:bg-amber-900/20 border-amber-300 dark:border-amber-800 text-amber-700 dark:text-amber-400'
+          }`}
+        >
+          <Sparkles size={13} />
+          {activeKey ? 'Groq activé' : 'Configurer clé Groq'}
+        </button>
       </motion.div>
+
+      {/* Modal configuration Clé Groq */}
+      <AnimatePresence>
+        {showKeyModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+            <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.95, opacity: 0 }} className="bg-white dark:bg-gray-900 rounded-2xl p-6 w-full max-w-md border border-gray-200 dark:border-gray-800 shadow-2xl">
+              <h3 className="text-base font-black text-gray-900 dark:text-white mb-1">Configuration Groq API</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
+                Doc → Quiz utilise l'API Groq avec le modèle <strong className="text-violet-600 dark:text-violet-400">{GROQ_MODEL}</strong>.
+              </p>
+              <div className="mb-4">
+                <label className="block text-xs font-semibold text-gray-700 dark:text-gray-300 mb-1.5">
+                  Clé API Groq (gsk_...)
+                </label>
+                <input
+                  type="password"
+                  value={apiKeyInput}
+                  onChange={e => setApiKeyInput(e.target.value)}
+                  placeholder="gsk_..."
+                  className="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-3 py-2 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-violet-500"
+                />
+              </div>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setShowKeyModal(false)}
+                  className="flex-1 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 rounded-xl hover:bg-gray-200"
+                >
+                  Annuler
+                </button>
+                <button
+                  onClick={() => saveApiKey(apiKeyInput)}
+                  className="flex-1 py-2 text-xs font-semibold text-white bg-violet-600 rounded-xl hover:bg-violet-500"
+                >
+                  Enregistrer
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
 
       {/* Drop zone */}
       <motion.div
@@ -724,18 +852,50 @@ Règles IMPORTANTES :
   )
 }
 
-function generateDemoQuestions(filename, n) {
-  const base = [
-    { question: 'Quel est le thème principal du document importé ?', options: ['La structure et organisation du contenu', 'L\'histoire ancienne', 'Les mathématiques avancées', 'La biologie cellulaire'], correct: 0, explication: 'Le document couvre principalement les éléments organisationnels du sujet traité.' },
-    { question: 'Quelle approche est recommandée pour analyser ce type de document ?', options: ['Lecture active avec prise de notes', 'Lecture rapide sans annotation', 'Mémorisation immédiate', 'Lecture partielle'], correct: 0, explication: 'La lecture active avec prise de notes favorise la compréhension et la rétention.' },
-    { question: 'Comment identifier les concepts clés d\'un document ?', options: ['Repérer les mots en gras, titres et récurrences', 'Lire uniquement la conclusion', 'Ignorer les exemples', 'Se concentrer sur la mise en forme'], correct: 0, explication: 'Les mots en gras, les titres et les termes récurrents indiquent les concepts importants.' },
-    { question: 'Quelle est la meilleure stratégie pour retenir le contenu d\'un cours ?', options: ['Reformuler dans ses propres mots', 'Copier mot à mot', 'Lire une seule fois', 'Attendre la veille de l\'examen'], correct: 0, explication: 'La reformulation active les processus cognitifs et ancre la mémorisation.' },
-    { question: 'Le fichier importé appartient au format :', options: ['Document texte / traitement de texte', 'Feuille de calcul', 'Présentation', 'Base de données'], correct: 0, explication: `Le fichier "${filename}" est un document texte ou traitement de texte.` },
-    { question: 'Pour un examen, quelle révision est la plus efficace ?', options: ['QCM répétés + explications des erreurs', 'Relire passivement le cours', 'Copier le cours à la main', 'Regarder des vidéos sans exercices'], correct: 0, explication: 'La pratique active (QCM + analyse des erreurs) est plus efficace que la révision passive.' },
-    { question: 'La compréhension d\'un document s\'améliore quand on :', options: ['Relie les nouveaux concepts aux connaissances existantes', 'Mémorise sans chercher à comprendre', 'Évite de faire des liens', 'Lit très vite'], correct: 0, explication: 'L\'apprentissage significatif relie les nouvelles informations aux schémas cognitifs existants.' },
-    { question: 'Un résumé efficace d\'un document doit :', options: ['Capturer les idées principales sans les détails inutiles', 'Reproduire tout le texte', 'Être plus long que l\'original', 'Omettre la conclusion'], correct: 0, explication: 'Un bon résumé synthétise les idées maîtresses de manière concise et fidèle.' },
-    { question: 'L\'analyse critique d\'un document implique :', options: ['Questionner les sources et la logique des arguments', 'Accepter tout sans vérification', 'Ignorer les preuves', 'Se limiter à l\'introduction'], correct: 0, explication: 'L\'esprit critique évalue la validité des sources et la cohérence du raisonnement.' },
-    { question: 'Pour améliorer la compréhension en lecture, il est utile de :', options: ['Poser des questions avant, pendant et après la lecture', 'Lire en musique forte', 'Sauter les paragraphes difficiles', 'Ne jamais relire'], correct: 0, explication: 'Questionner le texte avant, pendant et après la lecture améliore la compréhension active.' },
-  ]
-  return base.slice(0, n)
+function generateContentQuestions(text, n = 5) {
+  const clean = (text || '')
+    .replace(/\r\n/g, '\n')
+    .split(/\n+|\.\s+/)
+    .map(s => s.trim())
+    .filter(s => s.length > 25 && !s.startsWith('#') && !s.toLowerCase().includes('page') && !s.toLowerCase().includes('table des') && !s.toLowerCase().includes('sommaire'))
+
+  const questions = []
+
+  for (let i = 0; i < clean.length && questions.length < n; i++) {
+    const sentence = clean[i]
+    const words = sentence.split(/\s+/).filter(Boolean)
+    if (words.length < 5) continue
+
+    const subjectPart = words.slice(0, Math.min(5, words.length)).join(' ')
+    const predicatePart = words.slice(Math.min(5, words.length)).join(' ')
+
+    questions.push({
+      question: `Selon les notions expliquées dans le document, que retenir concernant : "${subjectPart}..." ?`,
+      options: [
+        `${predicatePart.charAt(0).toUpperCase() + predicatePart.slice(1)}`,
+        `Cette propriété est formellement réfutée dans le reste du cours.`,
+        `Il s'agit d'un cas marginal sans implication dans les applications.`,
+        `Ce résultat n'est valable que sous des conditions totalement inverses.`
+      ],
+      correct: 0,
+      explication: `Extrait directement du cours : "${sentence}"`
+    })
+  }
+
+  if (questions.length === 0) {
+    const snippet = (text || 'Notion fondamentale étudiée').slice(0, 80)
+    questions.push({
+      question: `D'après le cours fourni, quel principe ou résultat fondamental est énoncé ?`,
+      options: [
+        `Le principe exposé : "${snippet}..."`,
+        `Une conclusion opposée aux arguments démontrés dans le document.`,
+        `Une hypothèse purement intuitive sans validation théorique.`,
+        `Un résultat non applicable au programme d'examen.`
+      ],
+      correct: 0,
+      explication: `Tiré directement des enseignements du document analysé.`
+    })
+  }
+
+  return questions.slice(0, n)
 }

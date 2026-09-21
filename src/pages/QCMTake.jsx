@@ -64,19 +64,46 @@ export default function QCMTake() {
   }
 
   const saveResult = async (finalAnswers) => {
-    if (!user) return
+    const total = quiz.questions?.length || 1
     const correct = finalAnswers.filter(a => a.correct).length
-    const pct = Math.round((correct / quiz.questions.length) * 100)
+    const pct = Math.min(100, Math.max(0, Math.round((correct / total) * 100)))
     const taken = startTime ? Math.floor((Date.now() - startTime) / 1000) : 0
-    await supabase.from('quiz_results').insert({
-      user_id:      user.id,
-      quiz_id:      quiz.id,
-      subject_id:   quiz.subjectId,
-      score:        pct,
-      total_q:      quiz.questions.length,
-      correct_q:    correct,
-      time_taken:   taken,
-    })
+    const nowIso = new Date().toISOString()
+
+    const record = {
+      id: 'local_' + Date.now(),
+      quiz_id: quiz.id,
+      subject_id: quiz.subjectId,
+      score: pct,
+      total_q: total,
+      correct_q: correct,
+      time_taken: taken,
+      completed_at: nowIso,
+    }
+
+    try {
+      const existing = JSON.parse(localStorage.getItem('tuteuria_quiz_results') || '[]')
+      existing.unshift(record)
+      localStorage.setItem('tuteuria_quiz_results', JSON.stringify(existing.slice(0, 100)))
+    } catch (e) {
+      console.warn('LocalStorage save error:', e)
+    }
+
+    if (user && user.id !== 'demo-user-id') {
+      try {
+        await supabase.from('quiz_results').insert({
+          user_id:      user.id,
+          quiz_id:      quiz.id,
+          subject_id:   quiz.subjectId,
+          score:        pct,
+          total_q:      total,
+          correct_q:    correct,
+          time_taken:   taken,
+        })
+      } catch (e) {
+        console.warn('Supabase save error:', e)
+      }
+    }
   }
 
   const handleNext = () => {

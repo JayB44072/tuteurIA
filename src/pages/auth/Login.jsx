@@ -11,7 +11,7 @@ export default function Login() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  const { login, user, loading: authLoading } = useAuth()
+  const { login, loginDemo, user, loading: authLoading } = useAuth()
   const navigate = useNavigate()
 
   if (!authLoading && user) return <Navigate to="/dashboard" replace />
@@ -64,16 +64,9 @@ export default function Login() {
     }
   }
 
-  const handleDemo = async () => {
-    setLoading(true)
-    try {
-      await login('demo@tuteuia.com', 'demo123456')
-      navigate('/dashboard')
-    } catch {
-      navigate('/dashboard')
-    } finally {
-      setLoading(false)
-    }
+  const handleDemo = () => {
+    loginDemo()
+    navigate('/dashboard')
   }
 
   return (

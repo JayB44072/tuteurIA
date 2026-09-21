@@ -36,9 +36,15 @@ export default function Navbar() {
   }, [])
 
   const handleLogout = async () => {
-    setProfileOpen(false); setMobileOpen(false)
-    await logout()
-    navigate('/')
+    setProfileOpen(false)
+    setMobileOpen(false)
+    try {
+      await logout()
+    } catch (e) {
+      console.warn('Logout error:', e)
+    } finally {
+      navigate('/', { replace: true })
+    }
   }
 
   return (

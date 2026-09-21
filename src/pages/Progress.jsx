@@ -28,25 +28,56 @@ export default function Progress() {
 
   async function fetchResults() {
     setLoading(true)
-    const { data, error } = await supabase
-      .from('quiz_results')
-      .select('quiz_id, subject_id, score, correct_q, total_q, completed_at')
-      .eq('user_id', user.id)
-      .order('completed_at', { ascending: false })
+    let combined = []
 
-    if (error || !data) { setLoading(false); return }
+    // 1. Lire les résultats locaux en cache
+    try {
+      const local = JSON.parse(localStorage.getItem('tuteuria_quiz_results') || '[]')
+      if (Array.isArray(local)) combined = [...local]
+    } catch {}
 
-    setResults(data)
-    computeStats(data)
+    // 2. Lire depuis Supabase si connecté
+    try {
+      const { data, error } = await supabase
+        .from('quiz_results')
+        .select('quiz_id, subject_id, score, correct_q, total_q, completed_at')
+        .eq('user_id', user.id)
+        .order('completed_at', { ascending: false })
+
+      if (!error && data && data.length) {
+        // Fusionner sans doublon (sur base de completed_at + quiz_id)
+        const keys = new Set(data.map(d => `${d.quiz_id}_${d.completed_at}`))
+        const uniqueLocal = combined.filter(l => !keys.has(`${l.quiz_id}_${l.completed_at}`))
+        combined = [...data, ...uniqueLocal]
+      }
+    } catch (e) {
+      console.warn('Supabase fetchResults fallback to local:', e)
+    }
+
+    // Normaliser strictement chaque résultat : score borné entre 0 et 100
+    const cleanResults = combined.map(r => {
+      const totalQ = Number(r.total_q) || 0
+      const correctQ = Number(r.correct_q) || 0
+      const calcPct = totalQ > 0 ? Math.round((correctQ / totalQ) * 100) : Number(r.score) || 0
+      return {
+        ...r,
+        total_q: totalQ,
+        correct_q: correctQ,
+        score: Math.min(100, Math.max(0, calcPct)),
+      }
+    }).sort((a, b) => new Date(b.completed_at || 0) - new Date(a.completed_at || 0))
+
+    setResults(cleanResults)
+    computeStats(cleanResults)
     setLoading(false)
   }
 
   function computeStats(data) {
     if (!data.length) return
 
-    // Stats globales
-    const avgScore    = Math.round(data.reduce((a, r) => a + r.score, 0) / data.length)
-    const successRate = Math.round(data.filter(r => r.score >= 60).length / data.length * 100)
+    // Stats globales bornées à 100%
+    const avgScore    = Math.min(100, Math.max(0, Math.round(data.reduce((a, r) => a + r.score, 0) / data.length)))
+    const successRate = Math.min(100, Math.max(0, Math.round(data.filter(r => r.score >= 50).length / data.length * 100)))
     const subjectSet  = new Set(data.map(r => r.subject_id).filter(Boolean))
     setStats({ total: data.length, avgScore, subjects: subjectSet.size, successRate })
 
@@ -61,7 +92,7 @@ export default function Progress() {
       })
       return {
         semaine: `S${i + 1}`,
-        score: week.length ? Math.round(week.reduce((a, r) => a + r.score, 0) / week.length) : null,
+        score: week.length ? Math.min(100, Math.max(0, Math.round(week.reduce((a, r) => a + r.score, 0) / week.length))) : null,
       }
     }).filter(w => w.score !== null)
     setWeeklyData(weeks.length ? weeks : [])
@@ -80,7 +111,7 @@ export default function Progress() {
         fullName: subject?.nom ?? sid,
         icon: subject?.icon ?? '📖',
         couleur: subject?.couleur ?? 'from-sky-500 to-sky-600',
-        score: Math.round(scores.reduce((a, s) => a + s, 0) / scores.length),
+        score: Math.min(100, Math.max(0, Math.round(scores.reduce((a, s) => a + s, 0) / scores.length))),
         count: scores.length,
       }
     }).sort((a, b) => b.score - a.score)
@@ -288,8 +319,8 @@ export default function Progress() {
                           {r.correct_q}/{r.total_q} bonnes réponses · {fmtDate(r.completed_at)}
                         </p>
                       </div>
-                      <div className={`text-sm font-bold ${r.score >= 70 ? 'text-green-500' : r.score >= 50 ? 'text-amber-500' : 'text-red-500'}`}>
-                        {r.score}%
+                      <div className={`text-sm font-bold ${Math.min(100, Math.max(0, r.score)) >= 70 ? 'text-green-500' : Math.min(100, Math.max(0, r.score)) >= 50 ? 'text-amber-500' : 'text-red-500'}`}>
+                        {Math.min(100, Math.max(0, r.score))}%
                       </div>
                     </motion.div>
                   )

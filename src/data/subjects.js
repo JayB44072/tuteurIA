@@ -1,1686 +1,451 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+// TUTEURIA — CATALOGUE COMPLET DES MATIÈRES ET COURS PÉDAGOGIQUES
+// BACCALAURÉAT (SOUS-SYSTÈME FRANCOPHONE) & GCE A-LEVEL (ANGLOPHONE SUBSYSTEM)
+// ═══════════════════════════════════════════════════════════════════════════════
+
 export const SUBJECTS = [
   {
-    id: 'mathematiques',
-    nom: 'Mathématiques',
-    icon: '📐',
-    couleur: 'from-blue-500 to-blue-700',
-    couleurLight: 'bg-blue-50 text-blue-700 border-blue-200',
-    couleurDark: 'dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Algèbre, géométrie, analyse et probabilités pour maîtriser les mathématiques du secondaire.',
-    chapitres: [
+    "id": "mathematiques",
+    "nom": "Mathématiques",
+    "icon": "📐",
+    "couleur": "from-blue-600 to-indigo-700",
+    "couleurLight": "bg-blue-50 text-blue-700 border-blue-200",
+    "couleurDark": "dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Algèbre, analyse réelle, géométrie vectorielle et probabilités pour le Baccalauréat scientifique et technique (Séries C, D, TI).",
+    "chapitres": [
       {
-        id: 'algebre',
-        titre: 'Algèbre',
-        icon: '∑',
-        lecons: [
+        "id": "algebre-polynomes",
+        "titre": "Algèbre & Équations du Second Degré",
+        "icon": "∑",
+        "lecons": [
           {
-            id: 'equations',
-            titre: 'Équations et inéquations',
-            duree: '45 min',
-            contenu: `# Équations et Inéquations
-
-## I. Équations du premier degré
-
-> Une équation du premier degré à une inconnue est une égalité de la forme **ax + b = 0**, où *a* et *b* sont des réels et *a ≠ 0*.
-
-### Méthode de résolution
-
-Pour résoudre ax + b = 0 :
-1. Transposer le terme constant : ax = −b
-2. Diviser les deux membres par a : x = −b/a
-
-**Exemple résolu :**
-\`\`\`
-  3x + 6 = 0
-  3x = −6
-  x = −6/3 = −2
-\`\`\`
-
-!! Vérification : substituer x = −2 dans l'équation : 3(−2) + 6 = −6 + 6 = 0 ✓
-
----
-
-## II. Inéquations du premier degré
-
-### Règles fondamentales
-
-- Ajouter ou soustraire un même nombre des deux membres **conserve** l'inégalité.
-- Multiplier ou diviser par un nombre **positif** conserve l'inégalité.
-- Multiplier ou diviser par un nombre **négatif** **inverse** le sens de l'inégalité.
-
-!! La règle d'inversion du signe est la source d'erreur la plus fréquente. Ne jamais l'oublier !
-
-**Exemple :** Résoudre −2x + 4 > 0
-\`\`\`
-  −2x + 4 > 0
-  −2x > −4
-  x < 2   ← signe inversé car on divise par −2
-\`\`\`
-
----
-
-## III. Équations du second degré
-
-> L'équation du second degré **ax² + bx + c = 0** (a ≠ 0) se résout grâce au **discriminant** Δ = b² − 4ac.
-
-### Tableau de résolution
-
-- **Δ > 0** → Deux solutions distinctes : x₁ = (−b − √Δ)/2a  et  x₂ = (−b + √Δ)/2a
-- **Δ = 0** → Une solution double : x = −b/2a
-- **Δ < 0** → Aucune solution réelle
-
-### Exemple complet
-\`\`\`
-  x² − 5x + 6 = 0
-  a = 1,  b = −5,  c = 6
-  Δ = (−5)² − 4×1×6 = 25 − 24 = 1
-  x₁ = (5 − 1)/2 = 2
-  x₂ = (5 + 1)/2 = 3
-\`\`\`
-
-**Vérification par factorisation :** x² − 5x + 6 = (x − 2)(x − 3) ✓`
+            "id": "second-degre",
+            "titre": "Résolution, Discriminant et Relations de Viète",
+            "duree": "50 min",
+            "contenu": "# Équations et Inéquations du Second Degré\n\n## I. Définition et Forme Canonique\n\n> Soit le trinôme du second degré P(x) = ax² + bx + c, où a, b, c sont des réels et a ≠ 0.\n\nPour tout réel x, la forme canonique s'écrit :\nP(x) = a [ (x + b / (2a))² - (b² - 4ac) / (4a²) ]\nLe discriminant est Δ = b² - 4ac.\n\n---\n\n## II. Discussion selon le signe du Discriminant\n\n- **Si Δ > 0** : Deux racines réelles distinctes :\n  x₁ = (-b - √Δ) / (2a)   et   x₂ = (-b + √Δ) / (2a)\n  Forme factorisée : P(x) = a(x - x₁)(x - x₂)\n\n- **Si Δ = 0** : Une racine réelle double :\n  x₀ = -b / (2a)\n  Forme factorisée : P(x) = a(x - x₀)²\n\n- **Si Δ < 0** : Aucune racine dans ℝ. Le trinôme garde le signe constant de a pour tout x réel.\n\n---\n\n## III. Relations de Viète (Somme et Produit)\n\nSi le trinôme admet deux racines x₁ et x₂, alors :\n- S = x₁ + x₂ = -b/a\n- P = x₁ · x₂ = c/a\n\n!! Deux nombres dont la somme vaut S et le produit vaut P sont les solutions de l'équation :\nX² - S·X + P = 0\n\n---\n\n## IV. Exemple Résolu Type Bac\n\n**Énoncé :** Résoudre dans ℝ l'équation 2x² - 7x + 3 = 0.\n1. Calcul du discriminant : Δ = (-7)² - 4(2)(3) = 49 - 24 = 25 = 5².\n2. Comme Δ > 0, deux solutions distinctes :\n   - x₁ = (7 - 5) / 4 = 2/4 = 1/2\n   - x₂ = (7 + 5) / 4 = 12/4 = 3\n3. Ensemble solution : S = {1/2 ; 3}. Forme factorisée : (2x - 1)(x - 3)."
           },
           {
-            id: 'polynomes',
-            titre: 'Polynômes et factorisation',
-            duree: '50 min',
-            contenu: `# Polynômes et Factorisation
-
-## I. Définition
-
-> Un **polynôme** de degré n en x est une expression de la forme :
-> P(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + ··· + a₁x + a₀,  avec aₙ ≠ 0.
-
-Le **degré** d'un polynôme est le plus grand exposant de x ayant un coefficient non nul.
-
----
-
-## II. Identités remarquables
-
-Ces formules doivent être **mémorisées absolument** car elles sont omniprésentes :
-
-> **(a + b)² = a² + 2ab + b²** — Carré d'une somme
-> **(a − b)² = a² − 2ab + b²** — Carré d'une différence
-> **(a + b)(a − b) = a² − b²** — Produit de la somme par la différence
-
-### Démonstration de (a + b)²
-\`\`\`
-  (a + b)² = (a + b)(a + b)
-           = a² + ab + ba + b²
-           = a² + 2ab + b²  ✓
-\`\`\`
-
----
-
-## III. Techniques de factorisation
-
-### 1. Mise en facteur commun
-
-Repérer un facteur commun à tous les termes :
-\`\`\`
-  6x³ − 4x² + 2x = 2x(3x² − 2x + 1)
-\`\`\`
-
-### 2. Utiliser les identités remarquables
-
-\`\`\`
-  x² − 9 = x² − 3² = (x − 3)(x + 3)
-  4x² + 12x + 9 = (2x + 3)²
-\`\`\`
-
-### 3. Factorisation par le discriminant
-
-\`\`\`
-  x² − 5x + 6  →  Δ = 25 − 24 = 1
-  x₁ = 2,  x₂ = 3
-  x² − 5x + 6 = (x − 2)(x − 3)
-\`\`\`
-
-!! Pour factoriser un trinôme ax² + bx + c, calculer toujours le discriminant en premier.`
-          }
-        ]
-      },
-      {
-        id: 'geometrie',
-        titre: 'Géométrie',
-        icon: '△',
-        lecons: [
-          {
-            id: 'vecteurs',
-            titre: 'Vecteurs dans le plan',
-            duree: '40 min',
-            contenu: `## Vecteurs dans le plan
-
-Un vecteur est défini par sa **direction**, son **sens** et sa **norme**.
-
-### Coordonnées d'un vecteur
-Si A(x₁, y₁) et B(x₂, y₂), alors :
-**AB⃗** = (x₂ - x₁ ; y₂ - y₁)
-
-### Norme d'un vecteur
-||AB⃗|| = √((x₂-x₁)² + (y₂-y₁)²)
-
-### Opérations
-**Addition :** u⃗(a,b) + v⃗(c,d) = (a+c ; b+d)
-**Produit scalaire :** u⃗·v⃗ = ac + bd
-
-### Colinéarité
-u⃗(a,b) et v⃗(c,d) sont colinéaires si et seulement si : ad - bc = 0`
-          },
-          {
-            id: 'trigonometrie',
-            titre: 'Trigonométrie',
-            duree: '55 min',
-            contenu: `## Trigonométrie
-
-### Cercle trigonométrique
-Le cercle trigonométrique est un cercle de rayon 1 centré à l'origine.
-
-Pour un angle θ : cos(θ) est l'abscisse, sin(θ) est l'ordonnée.
-
-### Valeurs remarquables
-| θ | 0° | 30° | 45° | 60° | 90° |
-|---|-----|-----|-----|-----|-----|
-| cos | 1 | √3/2 | √2/2 | 1/2 | 0 |
-| sin | 0 | 1/2 | √2/2 | √3/2 | 1 |
-| tan | 0 | 1/√3 | 1 | √3 | - |
-
-### Formules fondamentales
-- sin²(θ) + cos²(θ) = 1
-- tan(θ) = sin(θ)/cos(θ)
-
-### Formules d'addition
-- cos(a+b) = cos(a)cos(b) - sin(a)sin(b)
-- sin(a+b) = sin(a)cos(b) + cos(a)sin(b)`
-          }
-        ]
-      },
-      {
-        id: 'analyse',
-        titre: 'Analyse et Fonctions',
-        icon: '∫',
-        lecons: [
-          {
-            id: 'limites',
-            titre: 'Limites et continuité',
-            duree: '60 min',
-            contenu: `## Limites
-
-### Définition intuitive
-La limite de f(x) quand x tend vers a est le nombre L vers lequel f(x) se rapproche lorsque x se rapproche de a.
-
-### Limites usuelles
-- lim(x→+∞) xⁿ = +∞ (n > 0)
-- lim(x→0) sin(x)/x = 1
-- lim(x→+∞) (1 + 1/x)ˣ = e
-
-### Opérations sur les limites
-Si lim f = L et lim g = M :
-- lim(f + g) = L + M
-- lim(f × g) = L × M
-- lim(f/g) = L/M si M ≠ 0
-
-### Formes indéterminées
-- ∞ - ∞
-- 0 × ∞
-- 0/0
-- ∞/∞
-
-Ces formes nécessitent un traitement particulier (factorisation, règle de L'Hôpital...)`
-          },
-          {
-            id: 'derivees',
-            titre: 'Dérivées et applications',
-            duree: '70 min',
-            contenu: `## Dérivées
-
-### Définition
-f'(x) = lim(h→0) [f(x+h) - f(x)] / h
-
-### Dérivées usuelles
-| f(x) | f'(x) |
-|------|-------|
-| xⁿ | n·xⁿ⁻¹ |
-| √x | 1/(2√x) |
-| eˣ | eˣ |
-| ln(x) | 1/x |
-| sin(x) | cos(x) |
-| cos(x) | -sin(x) |
-
-### Règles de dérivation
-- (u + v)' = u' + v'
-- (ku)' = ku' (k constante)
-- (uv)' = u'v + uv'
-- (u/v)' = (u'v - uv') / v²
-- (g∘f)'(x) = g'(f(x)) × f'(x)
-
-### Applications
-**Étude de variations :** f'(x) > 0 → f croissante ; f'(x) < 0 → f décroissante
-**Extrema locaux :** f'(a) = 0 et changement de signe`
-          }
-        ]
-      },
-      {
-        id: 'probabilites',
-        titre: 'Probabilités et Statistiques',
-        icon: '🎲',
-        lecons: [
-          {
-            id: 'probabilites-base',
-            titre: 'Probabilités de base',
-            duree: '45 min',
-            contenu: `## Probabilités
-
-### Vocabulaire
-- **Expérience aléatoire :** expérience dont le résultat est imprévisible
-- **Espace fondamental Ω :** ensemble de tous les résultats possibles
-- **Événement :** sous-ensemble de Ω
-- **Probabilité P(A) :** nombre entre 0 et 1
-
-### Propriétés
-- 0 ≤ P(A) ≤ 1
-- P(Ω) = 1
-- P(Ā) = 1 - P(A)
-- P(A ∪ B) = P(A) + P(B) - P(A ∩ B)
-
-### Équiprobabilité
-Si Ω a n issues équiprobables :
-P(A) = (nombre d'issues favorables à A) / n
-
-### Probabilités conditionnelles
-P(A|B) = P(A ∩ B) / P(B)
-
-### Indépendance
-A et B sont indépendants si P(A ∩ B) = P(A) × P(B)`
-          }
-        ]
-      },
-      {
-        id: 'suites',
-        titre: 'Suites numériques',
-        icon: '∞',
-        lecons: [
-          {
-            id: 'suites-arithmetiques',
-            titre: 'Suites arithmétiques et géométriques',
-            duree: '50 min',
-            contenu: `## Suites numériques
-
-### Suites arithmétiques
-Une suite est **arithmétique** si chaque terme s'obtient en ajoutant une constante r (raison) au terme précédent.
-- uₙ = u₀ + n·r
-- Somme : S = n × (u₁ + uₙ) / 2
-
-### Suites géométriques
-Une suite est **géométrique** si chaque terme s'obtient en multipliant le terme précédent par une constante q (raison).
-- uₙ = u₀ × qⁿ
-- Somme (q ≠ 1) : S = u₀ × (qⁿ - 1) / (q - 1)
-
-### Raisonnement par récurrence
-1. **Initialisation :** vérifier la propriété pour n = 0 (ou 1)
-2. **Hérédité :** supposer la propriété vraie au rang n, et montrer qu'elle est vraie au rang n+1
-3. **Conclusion**`
+            "id": "nombres-complexes",
+            "titre": "Nombres Complexes et Géométrie du Plan",
+            "duree": "60 min",
+            "contenu": "# Nombres Complexes et Applications Géométriques\n\n## I. Forme Algébrique et Conjugué\n\n> L'ensemble ℂ des nombres complexes prolonge ℝ avec le nombre imaginaire i vérifiant i² = -1.\nTout nombre complexe s'écrit z = a + ib, avec a, b ∈ ℝ.\n- a = Re(z) est la partie réelle.\n- b = Im(z) est la partie imaginaire.\n- Le conjugué de z est z̄ = a - ib.\n\n---\n\n## II. Module et Argument\n\nPour z = a + ib ≠ 0 :\n- **Module :** |z| = √(a² + b²) = √(z · z̄)\n- **Argument :** θ = arg(z) [2π] tel que cos(θ) = a/|z| et sin(θ) = b/|z|\n\nForme trigonométrique et exponentielle :\nz = |z|(cos θ + i sin θ) = |z| e^(iθ)\n\n---\n\n## III. Interprétation Géométrique\n\nSoient les points A(zA), B(zB) et C(zC) dans le plan muni d'un repère orthonormé direct :\n- Affixe du vecteur AB : z_AB = zB - zA\n- Distance AB = |zB - zA|\n- Angle de vecteurs : (u, AB) = arg(zB - zA) [2π]\n\n!! **Propriétés géométriques fondamentales :**\n- Les points A, B, C sont alignés ssi (zC - zA) / (zB - zA) ∈ ℝ.\n- Le triangle ABC est rectangle en A ssi (zC - zA) / (zB - zA) est un imaginaire pur (partie réelle nulle)."
           }
         ]
       }
     ]
   },
   {
-    id: 'physique',
-    nom: 'Physique',
-    icon: '⚛️',
-    couleur: 'from-emerald-500 to-emerald-700',
-    couleurLight: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-    couleurDark: 'dark:bg-emerald-900/20 dark:text-emerald-300 dark:border-emerald-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Mécanique, électricité, optique et thermodynamique pour comprendre les lois de l\'univers.',
-    chapitres: [
+    "id": "physique",
+    "nom": "Physique",
+    "icon": "⚡",
+    "couleur": "from-amber-500 to-orange-600",
+    "couleurLight": "bg-amber-50 text-amber-700 border-amber-200",
+    "couleurDark": "dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Mécanique du point, oscillateurs, électrostatique, circuits électriques RLC et transferts d'énergie pour le Baccalauréat.",
+    "chapitres": [
       {
-        id: 'mecanique',
-        titre: 'Mécanique',
-        icon: '🔧',
-        lecons: [
+        "id": "mecanique-point",
+        "titre": "Cinématique et Dynamique Newtonienne",
+        "icon": "⚙️",
+        "lecons": [
           {
-            id: 'cinematique',
-            titre: 'Cinématique du point matériel',
-            duree: '60 min',
-            contenu: `## Cinématique
-
-### Mouvement rectiligne uniforme (MRU)
-- Vitesse constante : v = constante
-- Position : x(t) = x₀ + v·t
-- Accélération : a = 0
-
-### Mouvement rectiligne uniformément accéléré (MRUA)
-- Accélération constante : a = constante
-- Vitesse : v(t) = v₀ + a·t
-- Position : x(t) = x₀ + v₀·t + ½a·t²
-
-### Chute libre
-Objet en chute libre (sans frottement) :
-- a = g = 9,8 m/s² (vers le bas)
-- v(t) = gt (en partant du repos)
-- h(t) = ½gt²
-
-### Vecteurs cinématiques
-- **Position :** OM⃗(x,y,z)
-- **Vitesse :** v⃗ = dOM⃗/dt
-- **Accélération :** a⃗ = dv⃗/dt`
-          },
-          {
-            id: 'dynamique',
-            titre: 'Dynamique - Lois de Newton',
-            duree: '55 min',
-            contenu: `## Lois de Newton
-
-### 1ère loi (Inertie)
-Un corps au repos reste au repos, et un corps en mouvement rectiligne uniforme reste en MRU, tant qu'aucune force extérieure ne s'exerce sur lui.
-
-### 2ème loi (Fondamentale)
-**ΣF⃗ = m·a⃗**
-
-La somme des forces est égale à la masse multipliée par l'accélération.
-
-### 3ème loi (Interaction)
-Si A exerce une force F⃗ sur B, alors B exerce sur A une force -F⃗ (opposée, même norme, même droite d'action).
-
-### Forces usuelles
-- **Poids :** P⃗ = m·g⃗ (vers le bas, g = 9,8 N/kg)
-- **Réaction normale :** N⃗ (perpendiculaire au support)
-- **Frottement :** f⃗ = μ·N (opposé au mouvement)
-- **Tension :** T⃗ (dans le fil, vers le haut)`
-          }
-        ]
-      },
-      {
-        id: 'electricite',
-        titre: 'Électricité',
-        icon: '⚡',
-        lecons: [
-          {
-            id: 'circuits',
-            titre: 'Circuits électriques',
-            duree: '65 min',
-            contenu: `## Circuits électriques
-
-### Grandeurs électriques
-- **Intensité I :** débit de charges (Ampère, A)
-- **Tension U :** différence de potentiel (Volt, V)
-- **Résistance R :** opposition au courant (Ohm, Ω)
-
-### Loi d'Ohm
-**U = R·I**
-
-### Association de résistances
-**En série :** R_eq = R₁ + R₂ + R₃ + ...
-**En parallèle :** 1/R_eq = 1/R₁ + 1/R₂ + ...
-
-### Lois de Kirchhoff
-**Loi des nœuds :** La somme des courants entrant = somme des courants sortant
-**Loi des mailles :** La somme algébrique des tensions dans une maille est nulle
-
-### Puissance électrique
-P = U·I = R·I² = U²/R (en Watts)
-Énergie : E = P·t (en Joules)`
-          }
-        ]
-      },
-      {
-        id: 'optique',
-        titre: 'Optique',
-        icon: '🔭',
-        lecons: [
-          {
-            id: 'reflection',
-            titre: 'Réflexion et réfraction',
-            duree: '50 min',
-            contenu: `## Optique géométrique
-
-### Lois de Snell-Descartes
-
-**Réflexion :**
-L'angle d'incidence = l'angle de réflexion (par rapport à la normale)
-
-**Réfraction :**
-n₁·sin(θ₁) = n₂·sin(θ₂)
-
-Où n est l'indice de réfraction du milieu.
-
-### Indices de réfraction courants
-- Air : n ≈ 1
-- Eau : n ≈ 1,33
-- Verre : n ≈ 1,5
-
-### Réflexion totale
-Se produit quand θ₁ > θ_c (angle critique)
-sin(θ_c) = n₂/n₁ (avec n₁ > n₂)
-
-### Lentilles convergentes
-**Relation de conjugaison :**
-1/v - 1/u = 1/f'
-
-Où : f' = focale, u = distance objet, v = distance image`
-          }
-        ]
-      },
-      {
-        id: 'thermodynamique',
-        titre: 'Thermodynamique',
-        icon: '🌡️',
-        lecons: [
-          {
-            id: 'chaleur',
-            titre: 'Chaleur et température',
-            duree: '45 min',
-            contenu: `## Thermodynamique
-
-### Température et chaleur
-- **Température :** mesure de l'agitation thermique (Kelvin K, ou Celsius °C)
-- T(K) = T(°C) + 273,15
-
-### Capacité calorifique
-Q = m·c·ΔT
-- Q : quantité de chaleur (J)
-- m : masse (kg)
-- c : capacité thermique massique (J/kg·K)
-- ΔT : variation de température
-
-### Changements d'état
-Pendant un changement d'état, la **température reste constante**.
-L = m·L_f (chaleur latente)
-
-### Premier principe de la thermodynamique
-ΔU = Q + W
-- ΔU : variation d'énergie interne
-- Q : chaleur reçue
-- W : travail reçu`
+            "id": "lois-newton",
+            "titre": "Les 3 Lois de Newton et Mouvement dans un Champ de Pesanteur",
+            "duree": "55 min",
+            "contenu": "# Lois de Newton et Balistique\n\n## I. Les Lois Fondamentales de la Dynamique\n\n### 1ère Loi : Principe d'Inertie\n> Dans un référentiel galiléen, si la somme vectorielle des forces extérieures appliquées à un solide est nulle, le solide est immobile ou en mouvement rectiligne uniforme : Σ F_ext = 0 ⇔ v_G = cste.\n\n### 2ème Loi : Principe Fondamental de la Dynamique (PFD)\nDans un référentiel galiléen, la résultante des forces extérieures est égale à la dérivée temporelle de la quantité de mouvement :\nΣ F_ext = m · a_G\n\n### 3ème Loi : Principe des Actions Réciproques\nLorsque deux corps A et B interagissent :\nF_(A/B) = - F_(B/A)\n\n---\n\n## II. Mouvement d'un Projectile dans le Champ de Pesanteur\n\nSoit un solide lancé avec une vitesse v₀ sous un angle α avec l'horizontale. En négligeant les frottements de l'air :\n- Accélération : ax = 0, ay = -g\n- Vitesse : vx(t) = v₀ cos(α), vy(t) = -gt + v₀ sin(α)\n- Équations horaires : x(t) = (v₀ cos α) t, y(t) = -1/2 g t² + (v₀ sin α) t\n\nÉquation de la trajectoire :\ny(x) = - [g / (2 v₀² cos² α)] x² + x tan(α)\nLa trajectoire est un arc de parabole situé dans le plan vertical."
           }
         ]
       }
     ]
   },
   {
-    id: 'chimie',
-    nom: 'Chimie',
-    icon: '🧪',
-    couleur: 'from-amber-500 to-amber-700',
-    couleurLight: 'bg-amber-50 text-amber-700 border-amber-200',
-    couleurDark: 'dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Chimie générale, organique et minérale. Maîtrise les transformations de la matière.',
-    chapitres: [
+    "id": "chimie",
+    "nom": "Chimie",
+    "icon": "🧪",
+    "couleur": "from-emerald-500 to-teal-700",
+    "couleurLight": "bg-emerald-50 text-emerald-700 border-emerald-200",
+    "couleurDark": "dark:bg-emerald-900/20 dark:text-emerald-300 dark:border-emerald-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Cinétique chimique, équilibres acido-basiques, pH et synthèse organique pour les épreuves du Baccalauréat.",
+    "chapitres": [
       {
-        id: 'atome',
-        titre: 'Structure de l\'atome',
-        icon: '⚛',
-        lecons: [
+        "id": "solutions-acide-base",
+        "titre": "Solutions Aqueuses & Équilibres Acido-Basiques",
+        "icon": "💧",
+        "lecons": [
           {
-            id: 'modele-atomique',
-            titre: 'Modèle atomique et tableau périodique',
-            duree: '55 min',
-            contenu: `## Structure de l'atome
-
-### Composition de l'atome
-- **Noyau :** protons (charge +) et neutrons (neutres)
-- **Cortège électronique :** électrons (charge -)
-
-**Numéro atomique Z :** nombre de protons
-**Masse atomique A :** Z + N (neutrons)
-**Notation :** ᴬ_Z X
-
-### Configuration électronique
-Les électrons se répartissent sur des couches K, L, M, N...
-- K : 2 électrons max
-- L : 8 électrons max
-- M : 18 électrons max
-
-### Tableau périodique
-**Périodes :** lignes horizontales (même nombre de couches)
-**Groupes :** colonnes verticales (même configuration externe → propriétés similaires)
-
-### Ions
-- **Cation :** perte d'électrons → charge positive (Na⁺, Ca²⁺)
-- **Anion :** gain d'électrons → charge négative (Cl⁻, O²⁻)`
-          }
-        ]
-      },
-      {
-        id: 'liaisons',
-        titre: 'Liaisons chimiques',
-        icon: '🔗',
-        lecons: [
-          {
-            id: 'liaison-covalente',
-            titre: 'Liaisons covalentes et ioniques',
-            duree: '50 min',
-            contenu: `## Liaisons chimiques
-
-### Liaison covalente
-Partage d'une ou plusieurs paires d'électrons entre deux atomes.
-- **Simple :** 1 paire partagée (C-H)
-- **Double :** 2 paires partagées (C=O)
-- **Triple :** 3 paires partagées (N≡N)
-
-### Règle de l'octet
-Les atomes tendent à avoir 8 électrons dans leur couche externe (2 pour H).
-
-### Liaison ionique
-Transfert d'électrons entre un métal et un non-métal.
-Ex : Na + Cl → Na⁺Cl⁻
-
-### Électronégativité
-Capacité d'un atome à attirer les électrons d'une liaison.
-Plus l'électronégativité est élevée, plus l'atome attire les électrons.
-
-### Molécules polaires
-Si Δχ > 0,4 : liaison polaire → molécule polaire (si asymétrique)`
-          }
-        ]
-      },
-      {
-        id: 'reactions',
-        titre: 'Réactions chimiques',
-        icon: '⚗️',
-        lecons: [
-          {
-            id: 'equilibre',
-            titre: 'Équilibre et cinétique chimique',
-            duree: '60 min',
-            contenu: `## Réactions chimiques
-
-### Équation chimique
-**Réactifs → Produits**
-L'équation doit être équilibrée (conservation des atomes et charges).
-
-### Stœchiométrie
-Les coefficients stœchiométriques donnent les proportions molaires.
-n = m/M (moles = masse / masse molaire)
-
-### Constante d'équilibre K
-Pour aA + bB ⇌ cC + dD :
-K = [C]ᶜ[D]ᵈ / [A]ᵃ[B]ᵇ
-
-### Facteurs influençant l'équilibre (Le Chatelier)
-- **Concentration :** ajout d'un réactif → déplace vers les produits
-- **Température :** augmentation → favorise la réaction endothermique
-- **Pression :** augmentation → favorise le côté avec moins de moles gazeuses
-
-### Cinétique chimique
-**Vitesse de réaction** : dépend de la température, concentration et catalyseur.
-**Loi d'Arrhenius :** k = A·e^(-Ea/RT)`
-          }
-        ]
-      },
-      {
-        id: 'chimie-organique',
-        titre: 'Chimie organique',
-        icon: '🌿',
-        lecons: [
-          {
-            id: 'hydrocarbures',
-            titre: 'Hydrocarbures et groupes fonctionnels',
-            duree: '65 min',
-            contenu: `## Chimie organique
-
-### Hydrocarbures
-Composés contenant uniquement C et H.
-
-**Alcanes :** CₙH₂ₙ₊₂ (liaisons simples)
-- Méthane CH₄, Éthane C₂H₆, Propane C₃H₈
-
-**Alcènes :** CₙH₂ₙ (une double liaison)
-- Éthylène CH₂=CH₂
-
-**Alcynes :** CₙH₂ₙ₋₂ (une triple liaison)
-- Acétylène CH≡CH
-
-### Groupes fonctionnels
-| Groupe | Famille | Exemple |
-|--------|---------|---------|
-| -OH | Alcool | Éthanol C₂H₅OH |
-| -COOH | Acide carboxylique | Acide acétique |
-| -NH₂ | Amine | Aniline |
-| -CHO | Aldéhyde | Formaldéhyde |
-| C=O | Cétone | Acétone |
-
-### Isomérie
-Molécules de même formule brute mais de structure différente.
-- Isomérie de chaîne
-- Isomérie de position
-- Isomérie de fonction`
+            "id": "ph-titrages",
+            "titre": "Constante d'acidité Ka, pH et Titrages Acido-Basiques",
+            "duree": "50 min",
+            "contenu": "# Acides, Bases et Mesure du pH\n\n## I. Définition de Brönsted et Couples Acide/Base\n\n- Un **acide** est une espèce chimique capable de céder un ou plusieurs protons H⁺.\n- Une **base** est une espèce chimique capable de capter un ou plusieurs protons H⁺.\nCouple HA / A⁻ : HA ⇌ A⁻ + H⁺\n\n---\n\n## II. Échelle de pH et Produit Ionique de l'Eau\n\nÀ 25°C, l'autoprotolyse de l'eau est caractérisée par :\nKe = [H₃O⁺][HO⁻] = 10⁻¹⁴  ⇒  pKe = 14\n\nPar définition :\npH = -log[H₃O⁺]  ⇔  [H₃O⁺] = 10^(-pH)\n\n---\n\n## III. Constante d'Acidité Ka et Henderson-Hasselbalch\n\nPour un acide faible en solution :\nKa = ([A⁻][H₃O⁺]) / [HA],   pKa = -log(Ka)\npH = pKa + log([A⁻] / [HA])\n\n- Si pH < pKa : L'acide HA prédomine.\n- Si pH = pKa : [HA] = [A⁻] (demi-équivalence).\n- Si pH > pKa : La base A⁻ prédomine."
           }
         ]
       }
     ]
   },
   {
-    id: 'svt',
-    nom: 'SVT',
-    icon: '🌱',
-    couleur: 'from-green-500 to-green-700',
-    couleurLight: 'bg-green-50 text-green-700 border-green-200',
-    couleurDark: 'dark:bg-green-900/20 dark:text-green-300 dark:border-green-800',
-    niveaux: ['Bac'],
-    description: 'Sciences de la Vie et de la Terre : biologie cellulaire, génétique, écologie et géologie.',
-    chapitres: [
+    "id": "svt",
+    "nom": "SVT",
+    "icon": "🌱",
+    "couleur": "from-green-600 to-emerald-800",
+    "couleurLight": "bg-green-50 text-green-700 border-green-200",
+    "couleurDark": "dark:bg-green-900/20 dark:text-green-300 dark:border-green-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Génétique mendélienne, système immunitaire, géologie et écosystèmes forestiers du bassin du Congo.",
+    "chapitres": [
       {
-        id: 'cellule',
-        titre: 'La cellule',
-        icon: '🔬',
-        lecons: [
+        "id": "genetique-humaine",
+        "titre": "Génétique Mendélienne & Santé",
+        "icon": "🧬",
+        "lecons": [
           {
-            id: 'structure-cellulaire',
-            titre: 'Structure et organisation cellulaire',
-            duree: '50 min',
-            contenu: `## La cellule
-
-### Définition
-La cellule est l'unité structurale et fonctionnelle de tout être vivant.
-
-### Cellule procaryote vs eucaryote
-**Procaryote :** sans noyau délimité (bactéries)
-**Eucaryote :** avec noyau délimité par une enveloppe nucléaire
-
-### Organites cellulaires
-- **Noyau :** contient l'ADN, centre de contrôle
-- **Mitochondrie :** production d'énergie (ATP) par respiration
-- **Chloroplaste :** photosynthèse (dans les cellules végétales)
-- **Réticulum endoplasmique :** synthèse de protéines et lipides
-- **Appareil de Golgi :** tri et emballage des protéines
-- **Lysosomes :** digestion intracellulaire
-- **Vacuole :** stockage (très développée dans les végétaux)
-- **Ribosomes :** synthèse des protéines
-
-### Membrane plasmique
-Double couche de phospholipides + protéines.
-**Propriétés :** semi-perméable, fluidité`
-          }
-        ]
-      },
-      {
-        id: 'genetique',
-        titre: 'Génétique',
-        icon: '🧬',
-        lecons: [
-          {
-            id: 'adn',
-            titre: 'ADN et expression génétique',
-            duree: '70 min',
-            contenu: `## Génétique moléculaire
-
-### Structure de l'ADN
-Double hélice de nucléotides composés de :
-- Sucre (désoxyribose)
-- Phosphate
-- Base azotée : Adénine (A), Thymine (T), Guanine (G), Cytosine (C)
-
-**Appariement des bases :** A-T et G-C (liens hydrogène)
-
-### Réplication de l'ADN
-Semi-conservative : chaque brin sert de matrice.
-Enzyme principale : ADN polymérase
-
-### Transcription (ADN → ARN)
-Dans le noyau : un brin d'ADN → ARN messager (ARNm)
-Enzyme : ARN polymérase
-
-### Traduction (ARNm → Protéine)
-Dans le cytoplasme (ribosomes) :
-- Codons (triplets de bases) codent des acides aminés
-- ARN de transfert (ARNt) amène les acides aminés
-
-### Mutations
-**Substitution :** remplacement d'une base
-**Délétion :** perte d'une base
-**Insertion :** ajout d'une base
-
-Les mutations peuvent être silencieuses, faux-sens ou non-sens.`
-          },
-          {
-            id: 'lois-mendel',
-            titre: 'Lois de Mendel et hérédité',
-            duree: '65 min',
-            contenu: `## Génétique mendélienne
-
-### Vocabulaire
-- **Gène :** séquence d'ADN codant un caractère
-- **Allèle :** forme alternative d'un gène
-- **Locus :** emplacement du gène sur le chromosome
-- **Homozygote :** 2 allèles identiques (AA ou aa)
-- **Hétérozygote :** 2 allèles différents (Aa)
-- **Phénotype :** caractère observable
-- **Génotype :** composition allélique
-
-### 1ère loi de Mendel (Uniformité)
-En croisant deux lignées pures, tous les hybrides F1 ont le même phénotype.
-
-### 2ème loi de Mendel (Ségrégation)
-Les allèles se séparent lors de la formation des gamètes.
-Croisement F1 × F1 : 3 dominants : 1 récessif
-
-### Tableau de Punnett
-Permet de visualiser les combinaisons alléliques possibles.
-
-| | A | a |
-|---|---|---|
-| **A** | AA | Aa |
-| **a** | Aa | aa |`
-          }
-        ]
-      },
-      {
-        id: 'ecologie',
-        titre: 'Écologie',
-        icon: '🌍',
-        lecons: [
-          {
-            id: 'ecosystemes',
-            titre: 'Écosystèmes et biodiversité',
-            duree: '45 min',
-            contenu: `## Écologie
-
-### L'écosystème
-Ensemble formé par une biocénose (êtres vivants) et son biotope (milieu physique).
-
-### Niveaux trophiques
-1. **Producteurs :** végétaux (photosynthèse)
-2. **Consommateurs primaires :** herbivores
-3. **Consommateurs secondaires :** carnivores
-4. **Décomposeurs :** bactéries, champignons
-
-### Flux d'énergie
-L'énergie se perd à chaque niveau (10% transmise en moyenne).
-
-### Cycles biogéochimiques
-- **Cycle du carbone :** photosynthèse ↔ respiration ↔ combustion
-- **Cycle de l'azote :** fixation → nitrification → dénitrification
-- **Cycle de l'eau**
-
-### Biodiversité
-3 niveaux : génétique, spécifique, écosystémique.
-**Menaces :** déforestation, pollution, espèces invasives, changement climatique`
+            "id": "drepanocytose-etude",
+            "titre": "Transmission des Caractères Héréditaires : Cas de la Drépanocytose",
+            "duree": "50 min",
+            "contenu": "# Génétique et Hérédité Humaine\n\n## I. Les Lois de Mendel en Monohybridisme\n\n1. **Loi d'uniformité des hybrides de F1 :** Le croisement de deux lignées pures donne une génération F1 100% homogène.\n2. **Loi de ségrégation des allèles :** Lors de la formation des gamètes, les allèles se séparent équitablement. En F2, on observe le ratio phénotypique 3/4 dominant et 1/4 récessif.\n\n---\n\n## II. Étude Contextuelle : La Drépanocytose en Afrique\n\n!! La drépanocytose (anémie falciforme) est une maladie autosomique récessive très répandue en Afrique subsaharienne.\n- Allèle A : normal (hémoglobine HbA)\n- Allèle S : muté (hémoglobine HbS, hématies déformées en faucille)\n\n### Analyse des Descendants de Parents Porteurs Sains (AS × AS)\n- 25% de probabilité d'avoir un enfant sain homozygote (AA)\n- 50% de probabilité d'avoir un enfant porteur sain résistant au paludisme (AS)\n- 25% de probabilité d'avoir un enfant drépanocytaire atteint de la forme grave (SS)"
           }
         ]
       }
     ]
   },
   {
-    id: 'histoire',
-    nom: 'Histoire',
-    icon: '📜',
-    couleur: 'from-orange-500 to-orange-700',
-    couleurLight: 'bg-orange-50 text-orange-700 border-orange-200',
-    couleurDark: 'dark:bg-orange-900/20 dark:text-orange-300 dark:border-orange-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Histoire mondiale, africaine et locale. De l\'Antiquité à nos jours.',
-    chapitres: [
+    "id": "histoire",
+    "nom": "Histoire",
+    "icon": "📜",
+    "couleur": "from-rose-600 to-red-800",
+    "couleurLight": "bg-rose-50 text-rose-700 border-rose-200",
+    "couleurDark": "dark:bg-rose-900/20 dark:text-rose-300 dark:border-rose-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Histoire contemporaine du Cameroun (de 1884 à la réunification de 1961), décolonisation et relations internationales.",
+    "chapitres": [
       {
-        id: 'afrique-precoloniale',
-        titre: 'Afrique précoloniale',
-        icon: '🏛️',
-        lecons: [
+        "id": "cameroun-contemporain",
+        "titre": "De la Colonisation à la Réunification",
+        "icon": "🇨🇲",
+        "lecons": [
           {
-            id: 'grands-empires',
-            titre: 'Les grands empires africains',
-            duree: '55 min',
-            contenu: `## Les grands empires africains
-
-### Empire du Ghana (Ve - XIe siècle)
-Premier grand empire d'Afrique de l'Ouest, situé au Sahel.
-- Commerce de l'or et du sel
-- Capital : Koumbi Saleh
-- Déclin : invasion des Almoravides (1076)
-
-### Empire du Mali (XIIIe - XVe siècle)
-- Fondateur : Soundiata Keita (1235, bataille de Kirina)
-- Apogée sous Mansa Moussa (1312-1337)
-- Célèbre pèlerinage à La Mecque (1324) avec 60 000 hommes et 80 chameaux chargés d'or
-- Université de Tombouctou (Sankoré)
-
-### Empire Songhaï (XVe - XVIe siècle)
-- Fondateur : Sonni Ali Ber
-- Apogée sous Askia Mohammed (1493-1528)
-- Commerce transsaharien et Islam
-
-### Royaume du Bénin (XIIe - XIXe siècle)
-- Situé au Nigeria actuel
-- Renommé pour ses bronzes et ivoires
-- Organisation administrative avancée
-
-### Royaume du Kongo (XIVe - XIXe siècle)
-- Afrique centrale
-- Contact avec les Portugais (1483)
-- Christianisation et traite des esclaves`
-          }
-        ]
-      },
-      {
-        id: 'colonisation',
-        titre: 'Colonisation et décolonisation',
-        icon: '🗺️',
-        lecons: [
-          {
-            id: 'colonisation-afrique',
-            titre: 'La colonisation de l\'Afrique',
-            duree: '65 min',
-            contenu: `## La colonisation de l'Afrique
-
-### Conférence de Berlin (1884-1885)
-Partage de l'Afrique entre puissances européennes.
-**Participants :** France, Angleterre, Allemagne, Portugal, Belgique, Italie, Espagne...
-
-**Principes :**
-- Liberté de commerce dans le bassin du Congo
-- Liberté de navigation sur le Congo et le Niger
-- Règle de l'effectivité : occupation réelle
-
-### Formes de colonisation
-- **Colonisation de peuplement :** Algérie, Kenya, Afrique du Sud
-- **Colonisation d'exploitation :** extraction de ressources
-- **Administration directe (France) :** assimilation
-- **Administration indirecte (Angleterre) :** conservation des structures locales
-
-### Résistances africaines
-- Résistance de Samori Touré contre la France (1882-1898)
-- Résistance de Béhanzin au Dahomey
-- Guerres Zoulou en Afrique du Sud
-- Révolte des Maji-Maji en Tanzanie (1905-1907)
-
-### Décolonisation (1945-1975)
-**Conférence de Bandung (1955) :** solidarité afro-asiatique
-**Ghana :** 1er pays d'Afrique subsaharienne indépendant (6 mars 1957)
-**Année africaine (1960) :** 17 pays accèdent à l'indépendance`
-          }
-        ]
-      },
-      {
-        id: 'guerres-mondiales',
-        titre: 'Guerres mondiales',
-        icon: '⚔️',
-        lecons: [
-          {
-            id: 'premiere-guerre',
-            titre: 'Première Guerre mondiale (1914-1918)',
-            duree: '60 min',
-            contenu: `## Première Guerre mondiale
-
-### Causes
-**MAIN :** Militarisme, Alliances, Impérialisme, Nationalisme
-
-**Étincelle :** Assassinat de l'archiduc François-Ferdinand à Sarajevo (28 juin 1914)
-
-### Camps en présence
-**Triple Alliance :** Allemagne, Autriche-Hongrie, Italie
-**Triple Entente :** France, Russie, Royaume-Uni
-
-### Déroulement
-1914 : Guerre de mouvement → guerre de position (tranchées)
-1916 : Batailles de Verdun et de la Somme (boucheries)
-1917 : Entrée en guerre des États-Unis ; révolution russe
-1918 : Armistice le 11 novembre
-
-### Bilan
-- ~18 millions de morts
-- Effondrement de 4 empires : ottoman, austro-hongrois, russe, allemand
-- Traité de Versailles (1919) : "diktat" pour l'Allemagne
-
-### Participation africaine
-- Tirailleurs sénégalais (600 000 soldats africains)
-- Porteurs et travailleurs forcés`
+            "id": "upc-reunification",
+            "titre": "Le Nationalisme Camerounais, l'UPC et la Réunification de 1961",
+            "duree": "60 min",
+            "contenu": "# Le Mouvement Nationaliste et la Réunification du Cameroun\n\n## I. La Tutelle Internationale et la Naissance de l'UPC\n\nPartagé en 1916 entre la France et la Grande-Bretagne, le Cameroun devient un territoire sous tutelle de l'ONU en 1946.\nLe **10 avril 1948**, l'Union des Populations du Cameroun (UPC) est fondée à Douala sous la direction de :\n- **Ruben Um Nyobè** (Secrétaire Général, le 'Mpodol')\n- **Félix Moumié**\n- **Ernest Ouandié**\n\nRevendications majeures : la réunification des deux Cameroun et l'indépendance nationale immédiate.\n\n---\n\n## II. La Proclamation de l'Indépendance et le Plébiscite\n\n- Le **1er janvier 1960**, le Cameroun sous tutelle française devient indépendant avec Ahmadou Ahidjo comme chef de l'État.\n- Le **11 février 1961**, le plébiscite de l'ONU permet au Southern Cameroons britannique de choisir à une écrasante majorité l'union avec la République du Cameroun.\n- La **Conférence de Foumban** (juillet 1961) fixe les bases de l'État fédéral.\n- Le **1er octobre 1961**, la République Fédérale du Cameroun voit officiellement le jour."
           }
         ]
       }
     ]
   },
   {
-    id: 'geographie',
-    nom: 'Géographie',
-    icon: '🌍',
-    couleur: 'from-teal-500 to-teal-700',
-    couleurLight: 'bg-teal-50 text-teal-700 border-teal-200',
-    couleurDark: 'dark:bg-teal-900/20 dark:text-teal-300 dark:border-teal-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Géographie physique, humaine et économique. Cartographie et enjeux du monde contemporain.',
-    chapitres: [
+    "id": "geographie",
+    "nom": "Géographie",
+    "icon": "🌍",
+    "couleur": "from-cyan-600 to-blue-800",
+    "couleurLight": "bg-cyan-50 text-cyan-700 border-cyan-200",
+    "couleurDark": "dark:bg-cyan-900/20 dark:text-cyan-300 dark:border-cyan-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Géographie physique et économique du Cameroun, bassins fluviaux, ressources agro-industrielles et intégration CEMAC.",
+    "chapitres": [
       {
-        id: 'geographie-physique',
-        titre: 'Géographie physique',
-        icon: '🏔️',
-        lecons: [
+        "id": "espace-camerounais",
+        "titre": "Espaces et Économie du Cameroun",
+        "icon": "🗺️",
+        "lecons": [
           {
-            id: 'relief',
-            titre: 'Reliefs et formation de la Terre',
-            duree: '50 min',
-            contenu: `## Géographie physique
-
-### Structure interne de la Terre
-- **Croûte terrestre :** 0-70 km (continental) ou 0-10 km (océanique)
-- **Manteau :** 70-2900 km (silicates)
-- **Noyau externe :** 2900-5100 km (fer liquide)
-- **Noyau interne :** 5100-6371 km (fer solide)
-
-### Tectonique des plaques
-La lithosphère est divisée en plaques qui se déplacent (~2-10 cm/an).
-
-**Types de frontières :**
-- **Divergentes :** les plaques s'écartent (dorsales océaniques)
-- **Convergentes :** les plaques se rapprochent (subduction → montagnes)
-- **Transformantes :** les plaques glissent l'une contre l'autre
-
-### Séismes et volcans
-- **Séismes :** rupture et libération d'énergie le long d'une faille
-- **Volcans :** émission de magma (shield, stratovolcan, caldeira)
-
-### Grands ensembles du relief africain
-- Bouclier africain (plateau stable)
-- Rift africain (fractures de l'est)
-- Atlas (nord), Drakensberg (sud)
-- Kilimandjaro (5 895 m), plus haut sommet d'Afrique`
-          }
-        ]
-      },
-      {
-        id: 'geographie-humaine',
-        titre: 'Géographie humaine',
-        icon: '👥',
-        lecons: [
-          {
-            id: 'population',
-            titre: 'Population mondiale et migrations',
-            duree: '55 min',
-            contenu: `## Population mondiale
-
-### Évolution de la population
-- 1 milliard en 1804
-- 2 milliards en 1927
-- 8 milliards en 2022
-- Projection : ~10 milliards en 2050
-
-### Indicateurs démographiques
-- **Taux de natalité :** naissances pour 1000 hab/an
-- **Taux de mortalité :** décès pour 1000 hab/an
-- **Accroissement naturel :** natalité - mortalité
-- **Espérance de vie**
-- **Taux de fécondité :** enfants par femme
-
-### Transition démographique
-1. Natalité élevée, mortalité élevée → stable
-2. Mortalité chute (médecine), natalité reste haute → explosion
-3. Natalité chute → stabilisation
-4. Natalité ≈ mortalité (basse) → vieillissement
-
-### Migrations
-**Causes :** économiques, politiques (réfugiés), climatiques, familiales
-
-**Grandes routes migratoires :**
-- Afrique → Europe (Méditerranée)
-- Amérique centrale → USA
-- Asie du Sud-Est → Golfe Persique`
+            "id": "reliefs-climats-cameroun",
+            "titre": "Reliefs, Domaines Climatiques et Bassin de la Sanaga",
+            "duree": "50 min",
+            "contenu": "# Le Milieu Physique du Cameroun\n\n## I. Les Grands Ensembles de Relief\n\nLe Cameroun est qualifié d'Afrique en miniature en raison de ses contrastes :\n1. **Les Basses Terres Côtières :** Littoral sédimentaire bordant l'Océan Atlantique.\n2. **Le Plateau Sud-Camerounais et l'Adamaoua :** Régions de hauts plateaux de 600 à 1 100 m d'altitude.\n3. **La Ligne Volcanique du Cameroun :** Chaîne de massifs volcaniques culminant au **Mont Cameroun (4 095 m)**, plus haut sommet d'Afrique centrale.\n\n---\n\n## II. Hydrographie et Énergie\n\nLe fleuve **Sanaga** (918 km) est l'artère maîtresse du pays. Il alimente les grands barrages hydroélectriques nationaux (Édéa, Song Loulou, Nachtigal), moteurs du développement industriel."
           }
         ]
       }
     ]
   },
   {
-    id: 'francais',
-    nom: 'Français',
-    icon: '✍️',
-    couleur: 'from-indigo-500 to-indigo-700',
-    couleurLight: 'bg-indigo-50 text-indigo-700 border-indigo-200',
-    couleurDark: 'dark:bg-indigo-900/20 dark:text-indigo-300 dark:border-indigo-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Littérature, grammaire, expression écrite et orale. Maîtrise de la langue française.',
-    chapitres: [
+    "id": "francais",
+    "nom": "Français & Littérature",
+    "icon": "📚",
+    "couleur": "from-purple-600 to-indigo-800",
+    "couleurLight": "bg-purple-50 text-purple-700 border-purple-200",
+    "couleurDark": "dark:bg-purple-900/20 dark:text-purple-300 dark:border-purple-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Méthodologie de la dissertation, commentaire de texte et chefs-d'œuvre de la littérature négro-africaine.",
+    "chapitres": [
       {
-        id: 'grammaire',
-        titre: 'Grammaire et syntaxe',
-        icon: '📝',
-        lecons: [
+        "id": "roman-africain",
+        "titre": "Le Roman Africain d'Engagement",
+        "icon": "✍️",
+        "lecons": [
           {
-            id: 'propositions',
-            titre: 'Propositions et analyse syntaxique',
-            duree: '50 min',
-            contenu: `## Grammaire française
-
-### Types de propositions
-**Proposition principale :** peut exister seule
-**Proposition subordonnée :** dépend d'une principale
-
-### Propositions subordonnées relatives
-Introduites par un pronom relatif (qui, que, dont, où...)
-**Exemple :** "L'élève **qui travaille** réussit."
-
-### Propositions subordonnées conjonctives
-Introduites par une conjonction (que, si, quand, parce que...)
-- **Complétive :** "Je pense **que tu as raison**."
-- **Circonstancielle de temps :** "**Quand il arrive**, nous partons."
-- **Circonstancielle de cause :** "Je reste **parce qu'il pleut**."
-- **Circonstancielle de but :** "Il travaille **pour réussir**."
-
-### Concordance des temps
-- Présent → subordonnée au présent ou passé
-- Passé → subordonnée à l'imparfait ou au plus-que-parfait
-- Conditionnel présent → imparfait dans la subordonnée`
-          }
-        ]
-      },
-      {
-        id: 'litterature',
-        titre: 'Littérature française et africaine',
-        icon: '📚',
-        lecons: [
-          {
-            id: 'mouvements-litteraires',
-            titre: 'Grands mouvements littéraires',
-            duree: '60 min',
-            contenu: `## Mouvements littéraires
-
-### La Négritude (XXe siècle)
-Mouvement littéraire et politique célébrant les valeurs de la culture africaine.
-**Fondateurs :** Aimé Césaire (Martinique), Léopold Sédar Senghor (Sénégal), Léon-Gontran Damas (Guyane)
-**Œuvres clés :**
-- "Cahier d'un retour au pays natal" - Césaire
-- "Chants d'ombre" - Senghor
-
-### Le Réalisme (XIXe siècle)
-Représentation fidèle de la réalité sociale.
-**Auteurs :** Balzac (La Comédie humaine), Flaubert (Madame Bovary), Zola (Germinal)
-
-### Le Romantisme (XIXe siècle)
-Exaltation des sentiments, de la nature, du moi.
-**Auteurs :** Victor Hugo (Les Misérables), Lamartine, Musset
-
-### Le Surréalisme (XXe siècle)
-Exploration de l'inconscient, automatisme psychique.
-**Auteurs :** André Breton, Aragon, Éluard
-
-### Littérature africaine francophone
-- Mongo Beti (Cameroun) : "Mission terminée"
-- Ahmadou Kourouma (Côte d'Ivoire) : "Les soleils des indépendances"
-- Mariama Bâ (Sénégal) : "Une si longue lettre"`
-          }
-        ]
-      },
-      {
-        id: 'expression-ecrite',
-        titre: 'Expression écrite',
-        icon: '🖊️',
-        lecons: [
-          {
-            id: 'dissertation',
-            titre: 'La dissertation littéraire',
-            duree: '55 min',
-            contenu: `## La dissertation littéraire
-
-### Structure
-**Introduction :**
-1. Accroche (citation, fait, question rhétorique)
-2. Présentation du sujet
-3. Problématique
-4. Annonce du plan
-
-**Développement :**
-- 2 ou 3 parties équilibrées
-- Chaque partie : idée principale + arguments + exemples
-- Transitions entre parties
-
-**Conclusion :**
-1. Synthèse des idées
-2. Réponse à la problématique
-3. Ouverture (élargissement)
-
-### Les connecteurs logiques
-- **Addition :** de plus, en outre, par ailleurs
-- **Opposition :** cependant, néanmoins, toutefois
-- **Cause :** car, parce que, puisque
-- **Conséquence :** donc, ainsi, c'est pourquoi
-- **Illustration :** par exemple, c'est le cas de
-
-### Conseils
-- Éviter le "je"
-- Varier le vocabulaire
-- Citer les œuvres entre guillemets
-- Analyser, ne pas raconter`
+            "id": "beti-oyono",
+            "titre": "La Satire Anticoloniale : Ferdinand Oyono et Mongo Beti",
+            "duree": "55 min",
+            "contenu": "# Le Roman Africain de Protestation\n\n## I. L'Ironie Tragique de Ferdinand Oyono\n\nDans *Une vie de boy* (1956), à travers le journal intime de Toundi Joseph, Ferdinand Oyono démonte les faux-semblants de l'ordre colonial. Le boy observe les faiblesses morales des maîtres blancs, brisant le mythe de la supériorité coloniale.\n\n---\n\n## II. Mongo Beti et la Dénonciation de l'Alliance Colon-Église\n\nDans *Le pauvre Christ de Bomba* (1956), Mongo Beti dépeint l'échec cuisant de l'évangélisation missionnaire en pays Tala et démontre la complicité institutionnelle entre l'administration coloniale et les institutions ecclésiales."
           }
         ]
       }
     ]
   },
   {
-    id: 'anglais',
-    nom: 'Anglais',
-    icon: '🇬🇧',
-    couleur: 'from-cyan-500 to-cyan-700',
-    couleurLight: 'bg-cyan-50 text-cyan-700 border-cyan-200',
-    couleurDark: 'dark:bg-cyan-900/20 dark:text-cyan-300 dark:border-cyan-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Grammar, vocabulary, comprehension and expression. Master English for exams.',
-    chapitres: [
+    "id": "philosophie",
+    "nom": "Philosophie",
+    "icon": "🧠",
+    "couleur": "from-violet-700 to-purple-900",
+    "couleurLight": "bg-violet-50 text-violet-700 border-violet-200",
+    "couleurDark": "dark:bg-violet-900/20 dark:text-violet-300 dark:border-violet-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "La conscience, la liberté, la politique, et les débats fondamentaux sur la philosophie africaine critique.",
+    "chapitres": [
       {
-        id: 'grammar',
-        titre: 'Grammar',
-        icon: '📖',
-        lecons: [
+        "id": "philo-africaine",
+        "titre": "La Philosophie Africaine et le Développement",
+        "icon": "💡",
+        "lecons": [
           {
-            id: 'tenses',
-            titre: 'English Tenses',
-            duree: '60 min',
-            contenu: `## English Tenses
-
-### Present Tenses
-**Simple Present:** habitual actions, facts
-- I work / She works
-- Used with: always, usually, often, sometimes
-
-**Present Continuous:** actions happening now
-- I am working / She is working
-- Used with: now, at the moment, currently
-
-**Present Perfect:** past actions with present relevance
-- I have worked / She has worked
-- Used with: just, already, yet, ever, since, for
-
-### Past Tenses
-**Simple Past:** completed actions at specific time
-- I worked / She worked
-- Used with: yesterday, last week, in 2020
-
-**Past Continuous:** ongoing action interrupted in the past
-- I was working when he called.
-
-**Past Perfect:** action before another past action
-- I had worked before she arrived.
-
-### Future Tenses
-**Will:** predictions, promises, offers
-- It will rain tomorrow.
-
-**Going to:** plans, intentions, evidence
-- I am going to study medicine.
-
-**Present Continuous for future:** fixed arrangements
-- I am meeting him tomorrow.`
-          }
-        ]
-      },
-      {
-        id: 'comprehension',
-        titre: 'Reading Comprehension',
-        icon: '📑',
-        lecons: [
-          {
-            id: 'reading-skills',
-            titre: 'Reading Skills and Strategies',
-            duree: '45 min',
-            contenu: `## Reading Comprehension
-
-### Reading Strategies
-**Skimming:** reading quickly to get the main idea
-**Scanning:** looking for specific information
-**Intensive reading:** reading carefully for detailed understanding
-
-### Identifying Main Ideas
-- Look at the title and headings
-- Read the first and last sentence of each paragraph
-- Identify topic sentences
-
-### Understanding Vocabulary in Context
-When you don't know a word:
-1. Look at surrounding words (context clues)
-2. Identify the word type (noun, verb, adjective)
-3. Look for synonyms or antonyms nearby
-4. Use word parts (prefix, root, suffix)
-
-### Question Types
-- **Literal:** answer directly in the text
-- **Inferential:** reading between the lines
-- **Evaluative:** your opinion based on the text
-- **Vocabulary:** meaning of words in context
-
-### Essay Structure
-**Introduction → Body paragraphs → Conclusion**
-- Use connectives: However, Furthermore, In addition, Therefore`
+            "id": "critique-ethnophilo",
+            "titre": "Marcien Towa et la Critique de l'Ethnophilosophie",
+            "duree": "55 min",
+            "contenu": "# La Pensée Philosophique Africaine\n\n## I. La Querelle de l'Ethnophilosophie\n\nÀ la suite de *La Philosophie bantoue* de Placide Tempels, des auteurs ont cherché la pensée africaine dans les proverbes et contes traditionnels.\n\n---\n\n## II. L'Exigence Critique selon Marcien Towa\n\nDans son *Essai sur la problématique philosophique dans l'Afrique actuelle* (1971), le philosophe camerounais **Marcien Towa** réfute vigoureusement cette approche :\n- La philosophie n'est pas un consensus culturel inconscient.\n- Elle est une démarche personnelle, rigoureuse et critique.\n- L'Afrique doit soumettre sa tradition à une critique constructive pour s'approprier les sciences et technologies nécessaires à son réel affranchissement."
           }
         ]
       }
     ]
   },
   {
-    id: 'philosophie',
-    nom: 'Philosophie',
-    icon: '🧠',
-    couleur: 'from-violet-500 to-violet-700',
-    couleurLight: 'bg-violet-50 text-violet-700 border-violet-200',
-    couleurDark: 'dark:bg-violet-900/20 dark:text-violet-300 dark:border-violet-800',
-    niveaux: ['Bac'],
-    description: 'Logique, éthique, métaphysique et philosophie politique. Penser par soi-même.',
-    chapitres: [
+    "id": "informatique",
+    "nom": "Informatique",
+    "icon": "💻",
+    "couleur": "from-slate-700 to-cyan-900",
+    "couleurLight": "bg-slate-50 text-slate-700 border-slate-200",
+    "couleurDark": "dark:bg-slate-900/20 dark:text-slate-300 dark:border-slate-800",
+    "niveaux": [
+      "Bac"
+    ],
+    "description": "Algorithmique fondamentale, structures conditionnelles et itératives, bases de données et réseaux.",
+    "chapitres": [
       {
-        id: 'logique',
-        titre: 'Logique et argumentation',
-        icon: '💭',
-        lecons: [
+        "id": "algo-prog",
+        "titre": "Algorithmique & Structures de Données",
+        "icon": "⚙️",
+        "lecons": [
           {
-            id: 'raisonnement',
-            titre: 'Le raisonnement logique',
-            duree: '50 min',
-            contenu: `## Logique et raisonnement
-
-### Le raisonnement déductif
-Du général au particulier.
-**Syllogisme :**
-- Prémisse majeure : Tous les hommes sont mortels
-- Prémisse mineure : Socrate est un homme
-- Conclusion : Donc Socrate est mortel
-
-### Le raisonnement inductif
-Du particulier au général.
-- Observation de cas particuliers → règle générale
-- **Limite :** ne garantit pas la vérité de la conclusion
-
-### Le raisonnement par analogie
-Raisonner sur la ressemblance entre deux situations.
-**Exemple :** "L'État est comme un corps humain..."
-
-### Les sophismes (raisonnements fallacieux)
-- **Ad hominem :** attaquer la personne, pas l'argument
-- **Homme de paille :** déformer l'argument adverse
-- **Appel à la majorité :** "tout le monde le fait"
-- **Fausse cause :** confondre corrélation et causalité
-- **Pente glissante :** "si A alors forcément Z"
-
-### La dissertation philosophique
-1. Analyser le sujet (définir les concepts)
-2. Problématiser (trouver la tension)
-3. Construire un plan dialectique (thèse/antithèse/synthèse)
-4. Argumenter avec des exemples`
-          }
-        ]
-      },
-      {
-        id: 'ethique',
-        titre: 'Éthique et morale',
-        icon: '⚖️',
-        lecons: [
-          {
-            id: 'courants-ethiques',
-            titre: 'Les grands courants éthiques',
-            duree: '60 min',
-            contenu: `## Éthique et philosophie morale
-
-### L'éthique utilitariste (Bentham, Mill)
-**Principe :** maximiser le bonheur du plus grand nombre.
-La valeur morale d'un acte dépend de ses conséquences.
-**Critique :** peut justifier des injustices envers une minorité.
-
-### L'éthique déontologique (Kant)
-**Impératif catégorique :** "Agis seulement selon la maxime qui fait que tu peux vouloir en même temps qu'elle devienne une loi universelle."
-Le devoir prime sur les conséquences.
-
-### L'éthique des vertus (Aristote)
-Le bonheur (eudémonie) s'atteint par la pratique des vertus :
-courage, justice, tempérance, prudence...
-
-### L'existentialisme (Sartre)
-"L'existence précède l'essence."
-L'homme est radicalement libre et responsable.
-"Nous sommes condamnés à être libres."
-
-### Éthique africaine : Ubuntu
-"Je suis parce que nous sommes" (Desmond Tutu)
-Philosophie de l'interdépendance et de la communauté.
-
-### Questions éthiques contemporaines
-- Bioéthique (euthanasie, clonage)
-- Éthique environnementale
-- Éthique numérique
-- Justice sociale et inégalités`
+            "id": "boucles-tableaux",
+            "titre": "Structures Conditionnelles, Boucles et Tableaux",
+            "duree": "50 min",
+            "contenu": "# Algorithmique et Logique de Programmation\n\n## I. Les Structures de Contrôle\n\nUn algorithme s'articule autour de trois structures majeures :\n1. **La séquence :** Exécution séquentielle des instructions.\n2. **L'alternative (Si ... Alors ... Sinon) :** Branchement conditionnel basé sur une expression booléenne.\n3. **La répétition :**\n   - Boucle *Pour* : lorsque le nombre d'itérations est déterminé à l'avance.\n   - Boucle *Tant Que* : itération soumise à une condition préalable."
           }
         ]
       }
     ]
   },
   {
-    id: 'economie',
-    nom: 'Économie',
-    icon: '📊',
-    couleur: 'from-rose-500 to-rose-700',
-    couleurLight: 'bg-rose-50 text-rose-700 border-rose-200',
-    couleurDark: 'dark:bg-rose-900/20 dark:text-rose-300 dark:border-rose-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Microéconomie, macroéconomie et économie africaine. Comprendre les mécanismes économiques.',
-    chapitres: [
+    "id": "gce-maths",
+    "nom": "Pure Mathematics with Mechanics",
+    "icon": "📐",
+    "couleur": "from-blue-700 to-indigo-950",
+    "couleurLight": "bg-blue-50 text-blue-800 border-blue-200",
+    "couleurDark": "dark:bg-blue-900/30 dark:text-blue-200 dark:border-blue-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Calculus, differential equations, vectors, coordinate geometry, statics and dynamics for Cameroon GCE A-Level.",
+    "chapitres": [
       {
-        id: 'microeconomie',
-        titre: 'Microéconomie',
-        icon: '🏪',
-        lecons: [
+        "id": "gce-diff-calc",
+        "titre": "Differentiation & Integration Techniques",
+        "icon": "∫",
+        "lecons": [
           {
-            id: 'offre-demande',
-            titre: 'Offre, demande et prix d\'équilibre',
-            duree: '55 min',
-            contenu: `## Microéconomie
-
-### La demande
-La demande représente la quantité d'un bien qu'un acheteur souhaite acquérir à un prix donné.
-
-**Loi de la demande :** quand le prix augmente, la quantité demandée diminue (relation inverse).
-
-**Déterminants de la demande :**
-- Revenu des ménages
-- Prix des biens substituts et complémentaires
-- Goûts et préférences
-- Anticipations
-
-### L'offre
-L'offre représente la quantité qu'un producteur est prêt à vendre à un prix donné.
-
-**Loi de l'offre :** quand le prix augmente, la quantité offerte augmente (relation directe).
-
-**Déterminants de l'offre :**
-- Coûts de production
-- Technologie disponible
-- Prix des intrants
-- Nombre de producteurs
-
-### L'équilibre de marché
-Le prix d'équilibre est celui qui égalise l'offre et la demande.
-- Prix > équilibre → surplus → baisse des prix
-- Prix < équilibre → pénurie → hausse des prix
-
-### Élasticité
-**Élasticité-prix de la demande :** e = (ΔQ/Q) / (ΔP/P)
-- e > 1 : demande élastique (sensible aux prix)
-- e < 1 : demande inélastique (peu sensible aux prix)`
-          }
-        ]
-      },
-      {
-        id: 'macroeconomie',
-        titre: 'Macroéconomie',
-        icon: '🏛️',
-        lecons: [
-          {
-            id: 'pib',
-            titre: 'PIB, croissance et inflation',
-            duree: '60 min',
-            contenu: `## Macroéconomie
-
-### Le PIB (Produit Intérieur Brut)
-Valeur totale des biens et services produits dans un pays en une année.
-
-**Méthodes de calcul :**
-- **Par la production :** somme des valeurs ajoutées
-- **Par les dépenses :** C + I + G + (X - M)
-  - C : consommation des ménages
-  - I : investissement
-  - G : dépenses publiques
-  - X : exportations, M : importations
-
-### La croissance économique
-Augmentation durable du PIB réel.
-**Taux de croissance :** [(PIB₂ - PIB₁) / PIB₁] × 100
-
-**Sources de croissance :**
-- Facteur travail (quantité et qualité)
-- Facteur capital (machines, équipements)
-- Progrès technique (facteur résiduel de Solow)
-
-### L'inflation
-Augmentation générale et durable du niveau des prix.
-**Mesure :** Indice des Prix à la Consommation (IPC)
-
-**Causes :**
-- Inflation par la demande (trop de monnaie)
-- Inflation par les coûts (matières premières)
-- Inflation importée
-
-**Effets :** perte de pouvoir d'achat, déséquilibres économiques
-
-### Économie africaine
-**Défis :** dépendance aux matières premières, dette extérieure, chômage des jeunes
-**Opportunités :** dividende démographique, ressources naturelles, marché africain (ZLECAF)`
+            "id": "gce-differentiation-rules",
+            "titre": "Product Rule, Quotient Rule and Implicit Differentiation",
+            "duree": "60 min",
+            "contenu": "# Advanced Differentiation for GCE A-Level\n\n## I. Product and Quotient Rules\n\nLet u and v be differentiable functions of x:\n- **Product Rule:** d/dx[u · v] = u (dv/dx) + v (du/dx)\n- **Quotient Rule:** d/dx[u / v] = [v (du/dx) - u (dv/dx)] / v²\n- **Chain Rule:** dy/dx = (dy/du) · (du/dx)\n\n---\n\n## II. Implicit Differentiation\n\nWhen given an equation relating x and y implicitly such as x³ + 2xy + y² = 9 :\n1. Differentiate each term with respect to x applying the product and chain rules.\n2. Collect all dy/dx terms on one side.\n3. Solve for dy/dx:\n   3x² + 2(y + x dy/dx) + 2y dy/dx = 0\n   dy/dx (2x + 2y) = -(3x² + 2y)\n   dy/dx = - (3x² + 2y) / (2x + 2y)\n\n---\n\n## III. Stationary Points\n\n- Stationary points occur where dy/dx = 0.\n- If d²y/dx² < 0, the stationary point is a local maximum.\n- If d²y/dx² > 0, the stationary point is a local minimum."
           }
         ]
       }
     ]
   },
   {
-    id: 'informatique',
-    nom: 'Informatique',
-    icon: '💻',
-    couleur: 'from-slate-500 to-slate-700',
-    couleurLight: 'bg-slate-50 text-slate-700 border-slate-200',
-    couleurDark: 'dark:bg-slate-900/20 dark:text-slate-300 dark:border-slate-800',
-    niveaux: ['Bac', 'GCE'],
-    description: 'Algorithmique, programmation, réseaux et systèmes. Les bases de l\'informatique.',
-    chapitres: [
+    "id": "gce-physics",
+    "nom": "Physics (A-Level)",
+    "icon": "⚡",
+    "couleur": "from-amber-600 to-red-700",
+    "couleurLight": "bg-amber-50 text-amber-800 border-amber-200",
+    "couleurDark": "dark:bg-amber-900/30 dark:text-amber-200 dark:border-amber-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Newtonian mechanics, wave superposition, electricity, magnetism, fields, and quantum physics for the Cameroon GCE Board.",
+    "chapitres": [
       {
-        id: 'algorithmique',
-        titre: 'Algorithmique',
-        icon: '🔄',
-        lecons: [
+        "id": "gce-superposition-waves",
+        "titre": "Wave Phenomena & Superposition",
+        "icon": "〰️",
+        "lecons": [
           {
-            id: 'algorithmes-base',
-            titre: 'Algorithmes et structures de base',
-            duree: '60 min',
-            contenu: `## Algorithmique
-
-### Qu'est-ce qu'un algorithme ?
-Suite finie et ordonnée d'instructions permettant de résoudre un problème.
-
-**Propriétés :** Finitude, Déterminisme, Entrées/Sorties, Efficacité
-
-### Structures de contrôle
-
-**Séquence :**
-\`\`\`
-Instruction 1
-Instruction 2
-Instruction 3
-\`\`\`
-
-**Condition (Si...Sinon) :**
-\`\`\`
-Si condition Alors
-  bloc si vrai
-Sinon
-  bloc si faux
-Fin Si
-\`\`\`
-
-**Boucle Pour :**
-\`\`\`
-Pour i de 1 à 10 Faire
-  instruction
-Fin Pour
-\`\`\`
-
-**Boucle Tant Que :**
-\`\`\`
-Tant Que condition Faire
-  instruction
-Fin Tant Que
-\`\`\`
-
-### Complexité
-**O(1) :** constante | **O(n) :** linéaire | **O(n²) :** quadratique | **O(log n) :** logarithmique
-
-### Exemple : Tri à bulles
-\`\`\`
-Pour i de 1 à n-1 Faire
-  Pour j de 1 à n-i Faire
-    Si tableau[j] > tableau[j+1] Alors
-      echanger tableau[j] et tableau[j+1]
-    Fin Si
-  Fin Pour
-Fin Pour
-\`\`\``
-          }
-        ]
-      },
-      {
-        id: 'reseaux',
-        titre: 'Réseaux informatiques',
-        icon: '🌐',
-        lecons: [
-          {
-            id: 'internet',
-            titre: 'Internet et protocoles',
-            duree: '45 min',
-            contenu: `## Réseaux informatiques
-
-### Types de réseaux
-- **LAN :** réseau local (maison, école)
-- **MAN :** réseau métropolitain (ville)
-- **WAN :** réseau étendu (Internet)
-
-### Modèle OSI (7 couches)
-1. Physique
-2. Liaison de données
-3. Réseau (IP)
-4. Transport (TCP, UDP)
-5. Session
-6. Présentation
-7. Application (HTTP, FTP, SMTP)
-
-### Adressage IP
-**IPv4 :** 32 bits, notation décimale (192.168.1.1)
-**IPv6 :** 128 bits, notation hexadécimale
-
-**Classes d'adresses IPv4 :**
-- Classe A : 0.0.0.0 - 127.255.255.255
-- Classe B : 128.0.0.0 - 191.255.255.255
-- Classe C : 192.0.0.0 - 223.255.255.255
-
-### Protocoles essentiels
-- **HTTP/HTTPS :** transfert de pages web (port 80/443)
-- **FTP :** transfert de fichiers (port 21)
-- **SMTP :** envoi d'emails (port 25)
-- **DNS :** résolution de noms de domaine
-- **DHCP :** attribution automatique d'adresses IP
-
-### Sécurité réseau
-- Pare-feu (firewall)
-- Chiffrement (SSL/TLS)
-- VPN (réseau privé virtuel)`
+            "id": "gce-youngs-experiment",
+            "titre": "Interference, Coherence and Young's Double Slit",
+            "duree": "55 min",
+            "contenu": "# Wave Motion and Optical Interference\n\n## I. The Principle of Superposition\n\n> When two or more waves meet at a point in space, the resultant displacement is the vector sum of the displacements of the individual waves.\n\n### Conditions for Observable Interference Fringes\n1. **Coherence:** Constant phase difference and equal frequencies.\n2. Similar amplitudes for high contrast between bright and dark fringes.\n\n---\n\n## II. Young's Double-Slit Experiment\n\nThe fringe separation y between adjacent bright or dark fringes on a distant screen is:\ny = (λ · D) / d\n\nWhere:\n- λ is the wavelength of monochromatic light\n- D is the slit-to-screen distance\n- d is the separation between the two coherent slits"
           }
         ]
       }
     ]
   },
   {
-    id: 'biologie',
-    nom: 'Biologie',
-    icon: '🔬',
-    couleur: 'from-pink-500 to-pink-700',
-    couleurLight: 'bg-pink-50 text-pink-700 border-pink-200',
-    couleurDark: 'dark:bg-pink-900/20 dark:text-pink-300 dark:border-pink-800',
-    niveaux: ['GCE'],
-    description: 'Cell biology, physiology, ecology and evolution. For GCE A-Level Biology.',
-    chapitres: [
+    "id": "gce-chemistry",
+    "nom": "Chemistry (A-Level)",
+    "icon": "🧪",
+    "couleur": "from-teal-600 to-cyan-800",
+    "couleurLight": "bg-teal-50 text-teal-800 border-teal-200",
+    "couleurDark": "dark:bg-teal-900/30 dark:text-teal-200 dark:border-teal-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Chemical energetics, reaction kinetics, chemical equilibria, and organic reaction mechanisms for GCE A-Level.",
+    "chapitres": [
       {
-        id: 'cell-biology',
-        titre: 'Cell Biology',
-        icon: '🦠',
-        lecons: [
+        "id": "gce-org-mechanisms",
+        "titre": "Organic Reaction Mechanisms",
+        "icon": "⚗️",
+        "lecons": [
           {
-            id: 'cell-structure',
-            titre: 'Cell Structure and Function',
-            duree: '55 min',
-            contenu: `## Cell Biology
-
-### Cell Theory
-1. All living things are made of cells
-2. The cell is the basic unit of life
-3. All cells come from pre-existing cells
-
-### Prokaryotic vs Eukaryotic Cells
-
-| Feature | Prokaryotic | Eukaryotic |
-|---------|-------------|------------|
-| Nucleus | No | Yes |
-| Size | 1-10 μm | 10-100 μm |
-| Organelles | Few, no membrane | Many, membrane-bound |
-| DNA | Circular | Linear (chromosomes) |
-| Examples | Bacteria | Plants, Animals, Fungi |
-
-### Cell Organelles and Functions
-- **Nucleus:** contains DNA, controls cell activities
-- **Mitochondria:** ATP production (cellular respiration)
-- **Ribosomes:** protein synthesis
-- **Endoplasmic Reticulum:** protein/lipid synthesis
-- **Golgi apparatus:** sorting and packaging proteins
-- **Lysosomes:** intracellular digestion
-- **Chloroplasts:** photosynthesis (plant cells only)
-- **Vacuole:** storage, turgor pressure in plants
-
-### Cell Membrane
-Fluid mosaic model: phospholipid bilayer with embedded proteins.
-**Functions:** selective permeability, cell recognition, communication`
+            "id": "gce-sn1-sn2",
+            "titre": "Nucleophilic Substitution: SN1 vs SN2 in Halogenoalkanes",
+            "duree": "60 min",
+            "contenu": "# Nucleophilic Substitution in Halogenoalkanes\n\n## I. The SN2 Mechanism (Bimolecular)\n\n- Rate = k [R-X] [Nu⁻]\n- Single concerted step with simultaneous backside attack by nucleophile and departure of the leaving group.\n- Results in inversion of configuration (Walden inversion).\n- Predominantly favoured by primary (1°) halogenoalkanes due to minimal steric hindrance.\n\n---\n\n## II. The SN1 Mechanism (Unimolecular)\n\n- Rate = k [R-X] (first order kinetics).\n- Two-step process involving a planar carbocation intermediate.\n- Produces a racemic mixture when attacking a chiral center.\n- Predominantly favoured by tertiary (3°) halogenoalkanes due to stability of the tertiary carbocation."
           }
         ]
       }
     ]
   },
   {
-    id: 'espagnol',
-    nom: 'Espagnol',
-    icon: '🇪🇸',
-    couleur: 'from-yellow-500 to-yellow-700',
-    couleurLight: 'bg-yellow-50 text-yellow-700 border-yellow-200',
-    couleurDark: 'dark:bg-yellow-900/20 dark:text-yellow-300 dark:border-yellow-800',
-    niveaux: ['Bac'],
-    description: 'Gramática, vocabulario, comprensión y expresión. Aprende el español para los exámenes.',
-    chapitres: [
+    "id": "gce-biology",
+    "nom": "Biology (A-Level)",
+    "icon": "🔬",
+    "couleur": "from-emerald-600 to-green-800",
+    "couleurLight": "bg-emerald-50 text-emerald-800 border-emerald-200",
+    "couleurDark": "dark:bg-emerald-900/30 dark:text-emerald-200 dark:border-emerald-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Cell biology, molecular genetics, protein synthesis, transport systems, and tropical ecology for Cameroon GCE A-Level.",
+    "chapitres": [
       {
-        id: 'gramatica',
-        titre: 'Gramática española',
-        icon: '📗',
-        lecons: [
+        "id": "gce-mol-genetics",
+        "titre": "Molecular Genetics & DNA Replication",
+        "icon": "🧬",
+        "lecons": [
           {
-            id: 'verbos',
-            titre: 'Los tiempos verbales',
-            duree: '55 min',
-            contenu: `## Los tiempos verbales en español
-
-### El Presente de Indicativo
-Acciones habituales o que ocurren ahora.
-**Irregulares comunes :**
-- Ser : soy, eres, es, somos, sois, son
-- Estar : estoy, estás, está, estamos, estáis, están
-- Ir : voy, vas, va, vamos, vais, van
-- Tener : tengo, tienes, tiene...
-
-### El Pretérito Indefinido
-Acciones completadas en el pasado.
-- hablar → hablé, hablaste, habló, hablamos, hablasteis, hablaron
-- Irregulares : ser/ir → fui, fuiste, fue, fuimos, fuisteis, fueron
-
-### El Pretérito Imperfecto
-Acciones habituales en el pasado o descripciones.
-- hablar → hablaba, hablabas, hablaba...
-- ser → era, eras, era...
-
-### El Futuro Simple
-Acciones futuras o suposiciones.
-- hablar → hablaré, hablarás, hablará...
-- Irregulares : tener → tendré, hacer → haré, poder → podré
-
-### El Subjuntivo
-Deseos, dudas, emociones.
-- "Quiero que **vengas**."
-- "Espero que **tenga** éxito."`
+            "id": "gce-dna-synthesis",
+            "titre": "DNA Structure and Semi-Conservative Replication",
+            "duree": "60 min",
+            "contenu": "# Molecular Genetics: DNA Replication and Protein Synthesis\n\n## I. DNA Double Helix Structure\n\n- Antiparallel double-stranded polynucleotide.\n- Complementary base pairing: Adenine with Thymine (2 hydrogen bonds), Guanine with Cytosine (3 hydrogen bonds).\n\n---\n\n## II. Semi-Conservative Replication\n\n1. **DNA Helicase:** Unwinds and breaks hydrogen bonds between bases.\n2. **DNA Polymerase:** Catalyses the addition of nucleotides in the 5' to 3' direction.\n3. The leading strand is synthesized continuously; the lagging strand is synthesized discontinuously as Okazaki fragments, joined by DNA Ligase."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gce-history",
+    "nom": "Cameroon & World History",
+    "icon": "📜",
+    "couleur": "from-rose-700 to-amber-900",
+    "couleurLight": "bg-rose-50 text-rose-800 border-rose-200",
+    "couleurDark": "dark:bg-rose-900/30 dark:text-rose-200 dark:border-rose-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Cameroon History from the 1884 German annexation to post-independence, and 20th century World Affairs for GCE A-Level.",
+    "chapitres": [
+      {
+        "id": "gce-cameroon-1884-1961",
+        "titre": "Cameroon History 1884–1961",
+        "icon": "🏛️",
+        "lecons": [
+          {
+            "id": "gce-treaty-plebiscite",
+            "titre": "The Germano-Duala Treaty (1884) and the 1961 Plebiscite",
+            "duree": "60 min",
+            "contenu": "# Modern History of Cameroon\n\n## I. The Germano-Duala Treaty of July 1884\n\nOn July 12, 1884, Dr. Gustav Nachtigal on behalf of the German Empire signed the historic treaty with King Bell and King Akwa, establishing the German Protectorate of Kamerun and outmanoeuvring British Consul Edward Hewett.\n\n---\n\n## II. The UN Plebiscite of February 11, 1961\n\nFollowing the League of Nations and UN Trusteeship division after WWI:\n- Southern Cameroons voted by an overwhelming majority (233,571 to 97,741) to achieve independence by joining the independent Republic of Cameroun.\n- The Foumban Constitutional Conference in July 1961 established the Federal Republic of Cameroon on October 1, 1961."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gce-economics",
+    "nom": "Economics (A-Level)",
+    "icon": "📈",
+    "couleur": "from-amber-600 to-yellow-800",
+    "couleurLight": "bg-amber-50 text-amber-800 border-amber-200",
+    "couleurDark": "dark:bg-amber-900/30 dark:text-amber-200 dark:border-amber-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Price theory, market structures, inflation, balance of payments, and development policies for African economies.",
+    "chapitres": [
+      {
+        "id": "gce-macro-policy",
+        "titre": "Macroeconomic Indicators & Policies",
+        "icon": "📊",
+        "lecons": [
+          {
+            "id": "gce-inflation-bop",
+            "titre": "Inflation and Balance of Payments Adjustment",
+            "duree": "55 min",
+            "contenu": "# Macroeconomic Principles: Inflation and External Balance\n\n## I. Demand-Pull vs Cost-Push Inflation\n\n- **Demand-Pull Inflation:** Caused by aggregate demand exceeding full employment output capacity (AD > AS).\n- **Cost-Push Inflation:** Triggered by rising costs of factors of production (wages, raw materials, imported energy).\n\n---\n\n## II. The Balance of Payments (BOP)\n\nRecords economic transactions between residents of a country and the rest of the world.\n- Current Account: Trade balance in goods and services, primary and secondary income.\n- Corrective policies for developing countries: Currency devaluation, expenditure-switching policies and export diversification."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gce-computer-science",
+    "nom": "Computer Science (A-Level)",
+    "icon": "💻",
+    "couleur": "from-indigo-600 to-blue-900",
+    "couleurLight": "bg-indigo-50 text-indigo-800 border-indigo-200",
+    "couleurDark": "dark:bg-indigo-900/30 dark:text-indigo-200 dark:border-indigo-700",
+    "niveaux": [
+      "GCE"
+    ],
+    "description": "Data representation, algorithms, complexity, relational databases, and computer networking for GCE A-Level.",
+    "chapitres": [
+      {
+        "id": "gce-algo-complexity",
+        "titre": "Algorithms & Database Systems",
+        "icon": "🔀",
+        "lecons": [
+          {
+            "id": "gce-sorting-bigo",
+            "titre": "Searching, Sorting Algorithms and Big-O Complexity",
+            "duree": "55 min",
+            "contenu": "# Algorithms and Complexity\n\n## I. Searching Algorithms\n\n- **Linear Search:** Checks items sequentially. Complexity: O(n).\n- **Binary Search:** Requires a sorted dataset. Repeatedly halves the search space. Complexity: O(log n).\n\n---\n\n## II. Sorting Algorithms\n\n- **Bubble Sort:** O(n²) average and worst-case time complexity.\n- **Merge Sort:** Divide-and-conquer algorithm with guaranteed O(n log n) time complexity in all cases.\n\n---\n\n## III. Relational Database Normalization\n\n- 1NF: Atomic values, no repeating groups.\n- 2NF: In 1NF and no partial dependencies on composite keys.\n- 3NF: In 2NF and no transitive dependencies."
           }
         ]
       }
     ]
   }
-]
+];
 
-export const getSubject = (id) => SUBJECTS.find(s => s.id === id)
+export const getSubject = (id) => SUBJECTS.find(s => s.id === id);
 export const getChapter = (subjectId, chapterId) => {
-  const subject = getSubject(subjectId)
-  return subject?.chapitres.find(c => c.id === chapterId)
-}
+  const subject = getSubject(subjectId);
+  return subject?.chapitres.find(c => c.id === chapterId);
+};

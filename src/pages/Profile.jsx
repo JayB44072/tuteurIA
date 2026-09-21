@@ -60,8 +60,13 @@ export default function Profile() {
   }
 
   const handleLogout = async () => {
-    await logout()
-    navigate('/')
+    try {
+      await logout()
+    } catch (e) {
+      console.warn('Logout error:', e)
+    } finally {
+      navigate('/', { replace: true })
+    }
   }
 
   return (

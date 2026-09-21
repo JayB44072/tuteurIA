@@ -159,6 +159,48 @@ export default function CourseReader({ content, title }) {
     else if (/^\d+\.\s/.test(trimmed)) {
       olBuf.push(trimmed.replace(/^\d+\.\s/, ''))
     }
+    // Table block (| Header 1 | Header 2 |)
+    else if (trimmed.startsWith('|') && trimmed.endsWith('|')) {
+      flushLists()
+      const tableLines = []
+      while (i < lines.length && lines[i].trim().startsWith('|') && lines[i].trim().endsWith('|')) {
+        tableLines.push(lines[i].trim())
+        i++
+      }
+      i--
+
+      if (tableLines.length >= 2) {
+        const headerRow = tableLines[0].slice(1, -1).split('|').map(c => c.trim())
+        const dataRows = tableLines.slice(2).map(r => r.slice(1, -1).split('|').map(c => c.trim()))
+
+        elements.push(
+          <div key={`table-${i}`} className="my-5 overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+            <table className="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr className="bg-sky-50 dark:bg-sky-950/40 border-b border-gray-200 dark:border-gray-800">
+                  {headerRow.map((h, hIdx) => (
+                    <th key={hIdx} className="px-4 py-3 font-bold text-gray-900 dark:text-white">
+                      {parseInline(h)}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                {dataRows.map((row, rIdx) => (
+                  <tr key={rIdx} className="hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors">
+                    {row.map((cell, cIdx) => (
+                      <td key={cIdx} className="px-4 py-2.5 text-gray-700 dark:text-gray-300">
+                        {parseInline(cell)}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )
+      }
+    }
     // Horizontal rule
     else if (trimmed === '---') {
       flushLists()
