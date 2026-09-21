@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useAuth } from '../context/AuthContext'
 import { useTheme } from '../context/ThemeContext'
-import { supabase, isSupabaseConfigured, getSupabaseConfig, saveSupabaseConfig } from '../lib/supabase'
+import { useNavigate } from 'react-router-dom'
+import { supabase } from '../lib/supabase'
 import BackButton from '../components/BackButton'
 
 const DEFAULT_PREFS = { reminders: true, newQuizzes: false }
@@ -16,12 +17,6 @@ export default function Profile() {
   const [prefs, setPrefs] = useState(DEFAULT_PREFS)
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState(false)
-  
-  const [showConfigModal, setShowConfigModal] = useState(false)
-  const currentConfig = getSupabaseConfig()
-  const isConfigured = isSupabaseConfigured()
-  const [customUrl, setCustomUrl] = useState(currentConfig.url && !currentConfig.url.includes('placeholder.supabase.co') ? currentConfig.url : '')
-  const [customKey, setCustomKey] = useState(currentConfig.key && currentConfig.key !== 'placeholder-key' ? currentConfig.key : '')
 
   const name    = profile?.full_name || user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Élève'
   const email   = user?.email || '—'
@@ -184,25 +179,6 @@ export default function Profile() {
               <div className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow-sm transition-transform ${prefs.newQuizzes ? 'translate-x-7' : 'translate-x-1'}`} />
             </button>
           </div>
-
-          {/* Configuration Supabase */}
-          <div className="flex items-center justify-between px-5 py-4">
-            <div className="flex items-center gap-3">
-              <span className="text-xl">⚡</span>
-              <div>
-                <p className="text-sm font-medium text-gray-900 dark:text-white">Base Supabase</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {isConfigured ? 'Connecté à votre projet' : 'Non configuré (placeholder)'}
-                </p>
-              </div>
-            </div>
-            <button
-              onClick={() => setShowConfigModal(true)}
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition-colors"
-            >
-              {isConfigured ? 'Gérer' : 'Configurer'}
-            </button>
-          </div>
         </div>
       </motion.div>
 
@@ -228,79 +204,6 @@ export default function Profile() {
           🚪 Se déconnecter
         </button>
       </motion.div>
-
-      {/* Modal Supabase */}
-      {showConfigModal && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
-            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-3xl p-6 w-full max-w-lg shadow-2xl">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <span className="text-sky-500 text-xl">⚡</span> Projet Supabase
-              </h3>
-              <button onClick={() => setShowConfigModal(false)} className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-lg">✕</button>
-            </div>
-            <p className="text-gray-600 dark:text-gray-300 text-xs mb-5 leading-relaxed">
-              Vos identifiants Supabase (<strong>Project Settings → API</strong>) :
-            </p>
-
-            <div className="space-y-4">
-              <div>
-                <label className="block text-gray-700 dark:text-gray-300 text-xs font-semibold mb-1">
-                  Project URL
-                </label>
-                <input
-                  type="text"
-                  placeholder="https://votre-projet.supabase.co"
-                  value={customUrl}
-                  onChange={(e) => setCustomUrl(e.target.value)}
-                  className="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 dark:text-white focus:outline-none focus:border-sky-500 font-mono"
-                />
-              </div>
-
-              <div>
-                <label className="block text-gray-700 dark:text-gray-300 text-xs font-semibold mb-1">
-                  Project API Key (clé anon / public)
-                </label>
-                <input
-                  type="text"
-                  placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
-                  value={customKey}
-                  onChange={(e) => setCustomKey(e.target.value)}
-                  className="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl px-3.5 py-2.5 text-xs text-gray-900 dark:text-white focus:outline-none focus:border-sky-500 font-mono break-all"
-                />
-              </div>
-            </div>
-
-            <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <button
-                type="button"
-                onClick={() => {
-                  if (!customUrl.trim() || !customKey.trim()) {
-                    alert('Veuillez renseigner à la fois l\'URL du projet et la clé Anon publique.')
-                    return
-                  }
-                  if (customUrl.includes('placeholder.supabase.co')) {
-                    alert('L\'URL ne peut pas être l\'URL placeholder.')
-                    return
-                  }
-                  saveSupabaseConfig(customUrl, customKey)
-                }}
-                className="flex-1 bg-gradient-to-r from-sky-500 to-violet-600 text-white font-bold py-3 rounded-xl hover:opacity-90 transition-opacity text-sm shadow-lg shadow-sky-500/20"
-              >
-                Enregistrer & Reconnecter
-              </button>
-              <button
-                type="button"
-                onClick={() => setShowConfigModal(false)}
-                className="px-5 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm"
-              >
-                Fermer
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      )}
     </div>
   )
 }
