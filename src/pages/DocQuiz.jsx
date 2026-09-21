@@ -144,8 +144,10 @@ export default function DocQuiz() {
   const [apiKeyInput, setApiKeyInput] = useState('')
   const fileRef = useRef()
 
+  const DEFAULT_GROQ_KEY = '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'
+
   const [activeKey, setActiveKey] = useState(() => {
-    return import.meta.env.VITE_GROQ_API_KEY || localStorage.getItem('tuteuria_groq_api_key') || ''
+    return import.meta.env.VITE_GROQ_API_KEY || localStorage.getItem('tuteuria_groq_api_key') || DEFAULT_GROQ_KEY
   })
 
   const GROQ_MODEL = import.meta.env.VITE_GROQ_MODEL || 'openai/gpt-oss-20b'
@@ -157,7 +159,7 @@ export default function DocQuiz() {
       setActiveKey(trimmed)
     } else {
       localStorage.removeItem('tuteuria_groq_api_key')
-      setActiveKey(import.meta.env.VITE_GROQ_API_KEY || '')
+      setActiveKey(import.meta.env.VITE_GROQ_API_KEY || DEFAULT_GROQ_KEY)
     }
     setShowKeyModal(false)
   }
