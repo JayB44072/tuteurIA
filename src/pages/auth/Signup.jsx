@@ -6,10 +6,19 @@ import { useAuth } from '../../context/AuthContext'
 import { useTheme } from '../../context/ThemeContext'
 import { useLang } from '../../context/LangContext'
 
+import { isSupabaseConfigured, saveSupabaseConfig, getSupabaseConfig } from '../../lib/supabase'
+
 export default function Signup() {
   const [form, setForm] = useState({ name: '', email: '', password: '', confirm: '' })
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
+  const [showConfigModal, setShowConfigModal] = useState(false)
+
+  const currentConfig = getSupabaseConfig()
+  const isConfigured = isSupabaseConfigured()
+  const [customUrl, setCustomUrl] = useState(currentConfig.url && !currentConfig.url.includes('placeholder.supabase.co') ? currentConfig.url : '')
+  const [customKey, setCustomKey] = useState(currentConfig.key && currentConfig.key !== 'placeholder-key' ? currentConfig.key : '')
+
   const { signup, user, loading: authLoading } = useAuth()
   const navigate = useNavigate()
 
@@ -56,6 +65,13 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
+
+    if (!isConfigured) {
+      setError("Supabase n'est pas encore configuré. Renseignez l'URL et la clé de votre projet pour créer un compte.")
+      setShowConfigModal(true)
+      return
+    }
+
     if (form.password !== form.confirm) { setError(t.errPass); return }
     if (form.password.length < 6) { setError(t.errLen); return }
     setLoading(true)
@@ -63,7 +79,13 @@ export default function Signup() {
       await signup(form.email, form.password, { full_name: form.name })
       navigate('/dashboard')
     } catch (err) {
-      setError(err.message || 'Erreur lors de l\'inscription.')
+      console.error('Signup error detail:', err)
+      const msg = err?.message || ''
+      if (msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('ERR_NAME_NOT_RESOLVED')) {
+        setError("Erreur réseau : Impossible de joindre votre serveur Supabase. Vérifiez l'URL de votre projet Supabase.")
+      } else {
+        setError(msg || 'Erreur lors de l\'inscription.')
+      }
     } finally {
       setLoading(false)
     }
@@ -102,6 +124,35 @@ export default function Signup() {
         </div>
 
         <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8">
+          {!isConfigured && (
+            <div className="bg-amber-500/15 border border-amber-500/30 rounded-2xl p-4 mb-5 text-left">
+              <div className="flex items-start gap-3">
+                <span className="text-xl">⚠️</span>
+                <div>
+                  <h4 className="text-amber-300 font-bold text-xs uppercase tracking-wider">Connexion Supabase Requise</h4>
+                  <p className="text-amber-100/80 text-xs mt-1 leading-relaxed">
+                    L'application pointe sur <code className="bg-black/40 px-1 py-0.5 rounded text-amber-300">placeholder.supabase.co</code>. Renseignez votre URL Supabase pour pouvoir créer un compte.
+                  </p>
+                  <div className="flex gap-2 mt-3">
+                    <button
+                      type="button"
+                      onClick={() => setShowConfigModal(true)}
+                      className="text-xs font-bold px-3 py-1.5 rounded-lg bg-amber-500 text-gray-950 hover:bg-amber-400 transition-colors"
+                    >
+                      ⚙️ Configurer Supabase
+                    </button>
+                    <Link
+                      to="/auth/login"
+                      className="text-xs font-medium px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors flex items-center"
+                    >
+                      Mode démo (sur Login)
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {error && (
             <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
               className="bg-red-500/20 border border-red-500/30 text-red-300 text-sm px-4 py-3 rounded-xl mb-5">
@@ -137,6 +188,86 @@ export default function Signup() {
           </p>
         </div>
       </motion.div>
+
+      {/* Modal de configuration Supabase */}
+      {showConfigModal && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
+            className="bg-gray-900 border border-white/20 rounded-3xl p-6 w-full max-w-lg shadow-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                <span className="text-sky-400 text-xl">⚡</span> Configuration de votre projet Supabase
+              </h3>
+              <button onClick={() => setShowConfigModal(false)} className="text-white/40 hover:text-white text-lg">✕</button>
+            </div>
+            <p className="text-white/70 text-xs mb-5 leading-relaxed">
+              Pour connecter votre application à votre base de données Supabase, rendez-vous sur{' '}
+              <a href="https://supabase.com/dashboard" target="_blank" rel="noreferrer" className="text-sky-400 underline">
+                Supabase Dashboard
+              </a>{' '}
+              → votre projet → <strong>Project Settings</strong> → <strong>API</strong> :
+            </p>
+
+            <div className="space-y-4">
+              <div>
+                <label className="block text-white/80 text-xs font-semibold mb-1">
+                  1. Project URL <span className="text-sky-400 font-normal">(ex: https://xyzcompany.supabase.co)</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="https://votre-projet.supabase.co"
+                  value={customUrl}
+                  onChange={(e) => setCustomUrl(e.target.value)}
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-sky-400 font-mono"
+                />
+              </div>
+
+              <div>
+                <label className="block text-white/80 text-xs font-semibold mb-1">
+                  2. Project API Key <span className="text-sky-400 font-normal">(clé anon / public)</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                  value={customKey}
+                  onChange={(e) => setCustomKey(e.target.value)}
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-white/30 focus:outline-none focus:border-sky-400 font-mono break-all"
+                />
+              </div>
+            </div>
+
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <button
+                type="button"
+                onClick={() => {
+                  if (!customUrl.trim() || !customKey.trim()) {
+                    alert('Veuillez renseigner à la fois l\'URL du projet et la clé Anon publique.')
+                    return
+                  }
+                  if (customUrl.includes('placeholder.supabase.co')) {
+                    alert('L\'URL ne peut pas être l\'URL placeholder.')
+                    return
+                  }
+                  saveSupabaseConfig(customUrl, customKey)
+                }}
+                className="flex-1 bg-gradient-to-r from-sky-500 to-violet-600 text-white font-bold py-3 rounded-xl hover:opacity-90 transition-opacity text-sm shadow-lg shadow-sky-500/20"
+              >
+                Enregistrer & Reconnecter
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowConfigModal(false)}
+                className="px-5 py-3 rounded-xl bg-white/10 text-white/70 hover:bg-white/20 transition-colors text-sm"
+              >
+                Fermer
+              </button>
+            </div>
+            <p className="text-white/40 text-[11px] mt-3 text-center">
+              💡 Vous pouvez aussi modifier directement les variables <code className="text-sky-300">VITE_SUPABASE_URL</code> et <code className="text-sky-300">VITE_SUPABASE_ANON_KEY</code> dans le fichier <code className="text-sky-300">.env</code>.
+            </p>
+          </motion.div>
+        </div>
+      )}
     </div>
   )
 }
