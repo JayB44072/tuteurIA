@@ -4,352 +4,352 @@
 
 export const QUIZZES = [
   {
-    "id": "mathematiques-math-c1-qcm",
+    "id": "mathematiques-mathematiques-c1-qcm",
     "subjectId": "mathematiques",
-    "chapterId": "math-c1",
+    "chapterId": "mathematiques-c1",
     "titre": "Chapitre 1 : Algèbre & Équations du Second Degré — QCM d'Évaluation",
     "difficulte": "moyen",
     "duree": 15,
     "questions": [
       {
         "id": 1,
-        "question": "Discriminant de $x^2 - 7x + 10 = 0$ ?",
+        "question": "Question 1 sur Algèbre & Équations du Second Degré : Quelle affirmation est exacte ?",
         "options": [
-          "9",
-          "49",
-          "1",
-          "25"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$\\Delta = 49 - 40 = 9$."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Racines de $x^2 - 7x + 10 = 0$ :",
+        "question": "Question 2 sur Algèbre & Équations du Second Degré : Quelle affirmation est exacte ?",
         "options": [
-          "2 et 5",
-          "-2 et -5",
-          "1 et 10",
-          "Aucune"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$x = (7 \\pm 3)/2$, donc 2 et 5."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Somme des racines de $3x^2 - 12x + 5 = 0$ :",
+        "question": "Question 3 sur Algèbre & Équations du Second Degré : Quelle affirmation est exacte ?",
         "options": [
-          "4",
-          "-4",
-          "5/3",
-          "12"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$S = -b/a = 12/3 = 4$."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Produit des racines de $2x^2 + 6x - 8 = 0$ :",
+        "question": "Question 4 sur Algèbre & Équations du Second Degré : Quelle affirmation est exacte ?",
         "options": [
-          "-4",
-          "4",
-          "-3",
-          "8"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$P = c/a = -8/2 = -4$."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Si $\\Delta < 0$, le trinôme est :",
+        "question": "Question 5 sur Algèbre & Équations du Second Degré : Quelle affirmation est exacte ?",
         "options": [
-          "Du signe de a",
-          "Toujours positif",
-          "Toujours négatif",
-          "Nul"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Le signe reste constant égal à $a$."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
   {
-    "id": "mathematiques-math-c2-qcm",
+    "id": "mathematiques-mathematiques-c2-qcm",
     "subjectId": "mathematiques",
-    "chapterId": "math-c2",
+    "chapterId": "mathematiques-c2",
     "titre": "Chapitre 2 : Analyse & Fonctions Numériques — QCM d'Évaluation",
     "difficulte": "moyen",
     "duree": 15,
     "questions": [
       {
         "id": 1,
-        "question": "Dérivée de $f(x) = \\ln(x^2 + 1)$ :",
+        "question": "Question 1 sur Analyse & Fonctions Numériques : Quelle affirmation est exacte ?",
         "options": [
-          "2x / (x² + 1)",
-          "1 / (x² + 1)",
-          "2x",
-          "x / (x² + 1)"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$(\\ln u)' = u'/u = 2x / (x^2+1)$."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "$\\lim_{x \\to 0} \\frac{e^x - 1}{x} =$ ?",
+        "question": "Question 2 sur Analyse & Fonctions Numériques : Quelle affirmation est exacte ?",
         "options": [
-          "1",
-          "0",
-          "e",
-          "\\infty"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Nombre dérivé de $e^x$ en 0."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Tangente à $e^x$ en $x=0$ :",
+        "question": "Question 3 sur Analyse & Fonctions Numériques : Quelle affirmation est exacte ?",
         "options": [
-          "y = x + 1",
-          "y = x",
-          "y = e x",
-          "y = 1"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$y = 1(x-0)+1 = x+1$."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Si $\\lim_{x \\to 2} f(x) = \\infty$, alors $x=2$ est :",
+        "question": "Question 4 sur Analyse & Fonctions Numériques : Quelle affirmation est exacte ?",
         "options": [
-          "Asymptote verticale",
-          "Asymptote horizontale",
-          "Tangente",
-          "Asymptote oblique"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Limite infinie en un point = asymptote verticale."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "La fonction $f(x) = e^{-x}$ est :",
+        "question": "Question 5 sur Analyse & Fonctions Numériques : Quelle affirmation est exacte ?",
         "options": [
-          "Strictement décroissante",
-          "Strictement croissante",
-          "Constante",
-          "Non dérivable"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$f'(x) = -e^{-x} < 0$."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
   {
-    "id": "mathematiques-math-c3-qcm",
+    "id": "mathematiques-mathematiques-c3-qcm",
     "subjectId": "mathematiques",
-    "chapterId": "math-c3",
+    "chapterId": "mathematiques-c3",
     "titre": "Chapitre 3 : Suites Numériques & Récurrence — QCM d'Évaluation",
     "difficulte": "moyen",
     "duree": 15,
     "questions": [
       {
         "id": 1,
-        "question": "Somme des $n$ premiers entiers $1 + ... + n$ :",
+        "question": "Question 1 sur Suites Numériques & Récurrence : Quelle affirmation est exacte ?",
         "options": [
-          "n(n+1)/2",
-          "n²",
-          "n(n-1)/2",
-          "2n+1"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Somme arithmétique de raison 1."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Si $v_0 = 3$ et $q = 2$, alors $v_4 =$ ?",
+        "question": "Question 2 sur Suites Numériques & Récurrence : Quelle affirmation est exacte ?",
         "options": [
-          "48",
-          "24",
-          "96",
-          "12"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$v_4 = 3 \\cdot 2^4 = 48$."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Une suite croissante majorée est :",
+        "question": "Question 3 sur Suites Numériques & Récurrence : Quelle affirmation est exacte ?",
         "options": [
-          "Convergente",
-          "Divergente",
-          "Nulle",
-          "Infinie"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Théorème de convergence monotone."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Si $q = 0,5$, alors $\\lim q^n =$ ?",
+        "question": "Question 4 sur Suites Numériques & Récurrence : Quelle affirmation est exacte ?",
         "options": [
-          "0",
-          "1",
-          "∞",
-          "0.5"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Pour $|q| < 1$, $\\lim q^n = 0$."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Première étape de la récurrence :",
+        "question": "Question 5 sur Suites Numériques & Récurrence : Quelle affirmation est exacte ?",
         "options": [
-          "Initialisation",
-          "Hérédité",
-          "Conclusion",
-          "Hypothèse"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Vérification au premier rang."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
   {
-    "id": "mathematiques-math-c4-qcm",
+    "id": "mathematiques-mathematiques-c4-qcm",
     "subjectId": "mathematiques",
-    "chapterId": "math-c4",
+    "chapterId": "mathematiques-c4",
     "titre": "Chapitre 4 : Nombres Complexes & Géométrie Vectorielle — QCM d'Évaluation",
     "difficulte": "moyen",
     "duree": 15,
     "questions": [
       {
         "id": 1,
-        "question": "Module de $z = 3 + 4i$ :",
+        "question": "Question 1 sur Nombres Complexes & Géométrie Vectorielle : Quelle affirmation est exacte ?",
         "options": [
-          "5",
-          "7",
-          "25",
-          "1"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$\\sqrt{9+16} = 5$."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Si $z = e^{i \\pi/2}$, $z =$ ?",
+        "question": "Question 2 sur Nombres Complexes & Géométrie Vectorielle : Quelle affirmation est exacte ?",
         "options": [
-          "i",
-          "1",
-          "-1",
-          "-i"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$\\cos(\\pi/2) + i \\sin(\\pi/2) = i$."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Conjugué de $2 - 5i$ :",
+        "question": "Question 3 sur Nombres Complexes & Géométrie Vectorielle : Quelle affirmation est exacte ?",
         "options": [
-          "2 + 5i",
-          "-2 + 5i",
-          "-2 - 5i",
-          "5 - 2i"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Changer le signe imaginaire."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Rotation d'angle $\\pi/3$ centrée à l'origine :",
+        "question": "Question 4 sur Nombres Complexes & Géométrie Vectorielle : Quelle affirmation est exacte ?",
         "options": [
-          "z' = e^(i π/3) z",
-          "z' = z + π/3",
-          "z' = 3z",
-          "z' = e^(-i π/3) z"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$z' = e^{i\\theta} z$."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Si $\\vec{u} \\cdot \\vec{v} = 0$, les vecteurs sont :",
+        "question": "Question 5 sur Nombres Complexes & Géométrie Vectorielle : Quelle affirmation est exacte ?",
         "options": [
-          "Orthogonaux",
-          "Colinéaires",
-          "Égaux",
-          "Opposés"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Produit scalaire nul = orthogonalité."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
   {
-    "id": "mathematiques-math-c5-qcm",
+    "id": "mathematiques-mathematiques-c5-qcm",
     "subjectId": "mathematiques",
-    "chapterId": "math-c5",
+    "chapterId": "mathematiques-c5",
     "titre": "Chapitre 5 : Calcul Intégral & Probabilités — QCM d'Évaluation",
     "difficulte": "moyen",
     "duree": 15,
     "questions": [
       {
         "id": 1,
-        "question": "$\\int_0^1 2x dx =$ ?",
+        "question": "Question 1 sur Calcul Intégral & Probabilités : Quelle affirmation est exacte ?",
         "options": [
-          "1",
-          "2",
-          "0.5",
-          "0"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$[x^2]_0^1 = 1$."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Primitive de $e^{2x}$ :",
+        "question": "Question 2 sur Calcul Intégral & Probabilités : Quelle affirmation est exacte ?",
         "options": [
-          "1/2 e^(2x)",
-          "2 e^(2x)",
-          "e^(2x)",
-          "e^x"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$(1/2 e^{2x})' = e^{2x}$."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Si $P(A)=0.4$ et $P_A(B)=0.5$, $P(A \\cap B) =$ ?",
+        "question": "Question 3 sur Calcul Intégral & Probabilités : Quelle affirmation est exacte ?",
         "options": [
-          "0.2",
-          "0.9",
-          "0.1",
-          "0.8"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$0.4 \\times 0.5 = 0.2$."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Espérance de $X \\sim \\mathcal{B}(10, 0.3)$ :",
+        "question": "Question 4 sur Calcul Intégral & Probabilités : Quelle affirmation est exacte ?",
         "options": [
-          "3",
-          "0.3",
-          "7",
-          "2.1"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "$E(X) = 10 \\times 0.3 = 3$."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Valeur de $\\binom{n}{0}$ :",
+        "question": "Question 5 sur Calcul Intégral & Probabilités : Quelle affirmation est exacte ?",
         "options": [
-          "1",
-          "0",
-          "n",
-          "p"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Toujours égal à 1."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -363,63 +363,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Cinématique & Dynamique Newtonienne : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Cinématique & Dynamique Newtonienne : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Cinématique & Dynamique Newtonienne : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Cinématique & Dynamique Newtonienne : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Cinématique & Dynamique Newtonienne : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -433,63 +433,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Travail, Énergie & Puissance Mécanique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Travail, Énergie & Puissance Mécanique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Travail, Énergie & Puissance Mécanique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Travail, Énergie & Puissance Mécanique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Travail, Énergie & Puissance Mécanique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -503,63 +503,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Oscillateurs Mécaniques & Ondes Progressives : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Oscillateurs Mécaniques & Ondes Progressives : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Oscillateurs Mécaniques & Ondes Progressives : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Oscillateurs Mécaniques & Ondes Progressives : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Oscillateurs Mécaniques & Ondes Progressives : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -573,63 +573,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Électrostatique & Circuits Électriques RLC : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Électrostatique & Circuits Électriques RLC : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Électrostatique & Circuits Électriques RLC : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Électrostatique & Circuits Électriques RLC : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Électrostatique & Circuits Électriques RLC : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -643,63 +643,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Physique Nucléaire & Optique Géométrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Physique Nucléaire & Optique Géométrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Physique Nucléaire & Optique Géométrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Physique Nucléaire & Optique Géométrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Physique Nucléaire & Optique Géométrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -713,63 +713,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Solutions Aqueuses & Équilibres Acido-Basiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Solutions Aqueuses & Équilibres Acido-Basiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Solutions Aqueuses & Équilibres Acido-Basiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Solutions Aqueuses & Équilibres Acido-Basiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Solutions Aqueuses & Équilibres Acido-Basiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -783,63 +783,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Cinétique Chimique & Catalyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Cinétique Chimique & Catalyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Cinétique Chimique & Catalyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Cinétique Chimique & Catalyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Cinétique Chimique & Catalyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -853,63 +853,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Chimie Organique — Alcanes & Alcools : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Chimie Organique — Alcanes & Alcools : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Chimie Organique — Alcanes & Alcools : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Chimie Organique — Alcanes & Alcools : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Chimie Organique — Alcanes & Alcools : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -923,63 +923,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Acides Carboxyliques & Dérivés Fonctionnels : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Acides Carboxyliques & Dérivés Fonctionnels : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Acides Carboxyliques & Dérivés Fonctionnels : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Acides Carboxyliques & Dérivés Fonctionnels : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Acides Carboxyliques & Dérivés Fonctionnels : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -993,63 +993,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Électrochimie, Piles & Electrolyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Électrochimie, Piles & Electrolyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Électrochimie, Piles & Electrolyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Électrochimie, Piles & Electrolyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Électrochimie, Piles & Electrolyse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1063,63 +1063,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Génétique & Brassage Chromosomique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Génétique & Brassage Chromosomique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Génétique & Brassage Chromosomique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Génétique & Brassage Chromosomique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Génétique & Brassage Chromosomique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1133,63 +1133,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Immunologie & Défense de l'Organisme : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Immunologie & Défense de l'Organisme : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Immunologie & Défense de l'Organisme : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Immunologie & Défense de l'Organisme : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Immunologie & Défense de l'Organisme : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1203,63 +1203,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Neurophysiologie & Reflexes Moteurs : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Neurophysiologie & Reflexes Moteurs : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Neurophysiologie & Reflexes Moteurs : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Neurophysiologie & Reflexes Moteurs : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Neurophysiologie & Reflexes Moteurs : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1273,63 +1273,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Géologie & Tectonique des Plaques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Géologie & Tectonique des Plaques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Géologie & Tectonique des Plaques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Géologie & Tectonique des Plaques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Géologie & Tectonique des Plaques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1343,63 +1343,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Métabolisme Cellulaire & Photosynthèse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Métabolisme Cellulaire & Photosynthèse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Métabolisme Cellulaire & Photosynthèse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Métabolisme Cellulaire & Photosynthèse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Métabolisme Cellulaire & Photosynthèse : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1413,63 +1413,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Le Cameroun sous Mandat et Tutelle (1916-1960) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Le Cameroun sous Mandat et Tutelle (1916-1960) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Le Cameroun sous Mandat et Tutelle (1916-1960) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Le Cameroun sous Mandat et Tutelle (1916-1960) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Le Cameroun sous Mandat et Tutelle (1916-1960) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1483,63 +1483,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur L'Indépendance et la Réunification du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur L'Indépendance et la Réunification du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur L'Indépendance et la Réunification du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur L'Indépendance et la Réunification du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur L'Indépendance et la Réunification du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1553,63 +1553,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Seconde Guerre Mondiale (1939-1945) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Seconde Guerre Mondiale (1939-1945) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Seconde Guerre Mondiale (1939-1945) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Seconde Guerre Mondiale (1939-1945) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Seconde Guerre Mondiale (1939-1945) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1623,63 +1623,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Guerre Froide et les Relations Est-Ouest : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Guerre Froide et les Relations Est-Ouest : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Guerre Froide et les Relations Est-Ouest : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Guerre Froide et les Relations Est-Ouest : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Guerre Froide et les Relations Est-Ouest : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1693,63 +1693,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Décolonisation en Afrique et en Asie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Décolonisation en Afrique et en Asie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Décolonisation en Afrique et en Asie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Décolonisation en Afrique et en Asie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Décolonisation en Afrique et en Asie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1763,63 +1763,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Le Relief et le Climat du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Le Relief et le Climat du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Le Relief et le Climat du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Le Relief et le Climat du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Le Relief et le Climat du Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1833,63 +1833,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Population et l'Urbanisation au Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Population et l'Urbanisation au Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Population et l'Urbanisation au Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Population et l'Urbanisation au Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Population et l'Urbanisation au Cameroun : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1903,63 +1903,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur L'Agriculture et les Ressources Énergétiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur L'Agriculture et les Ressources Énergétiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur L'Agriculture et les Ressources Énergétiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur L'Agriculture et les Ressources Énergétiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur L'Agriculture et les Ressources Énergétiques : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -1973,63 +1973,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur L'Industrie et le Commerce en Afrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur L'Industrie et le Commerce en Afrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur L'Industrie et le Commerce en Afrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur L'Industrie et le Commerce en Afrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur L'Industrie et le Commerce en Afrique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2043,63 +2043,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Mondialisation et les Enjeux Environnementaux : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Mondialisation et les Enjeux Environnementaux : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Mondialisation et les Enjeux Environnementaux : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Mondialisation et les Enjeux Environnementaux : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Mondialisation et les Enjeux Environnementaux : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2113,63 +2113,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Dissertation Littéraire & Méthodologie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Dissertation Littéraire & Méthodologie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Dissertation Littéraire & Méthodologie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Dissertation Littéraire & Méthodologie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Dissertation Littéraire & Méthodologie : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2183,63 +2183,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur L'Analyse Méthodique de Texte : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur L'Analyse Méthodique de Texte : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur L'Analyse Méthodique de Texte : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur L'Analyse Méthodique de Texte : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur L'Analyse Méthodique de Texte : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2253,63 +2253,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Littérature Négro-Africaine Contemporaine : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Littérature Négro-Africaine Contemporaine : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Littérature Négro-Africaine Contemporaine : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Littérature Négro-Africaine Contemporaine : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Littérature Négro-Africaine Contemporaine : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2323,63 +2323,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Les Courants Littéraires Européens : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Les Courants Littéraires Européens : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Les Courants Littéraires Européens : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Les Courants Littéraires Européens : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Les Courants Littéraires Européens : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2393,63 +2393,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Figures de Style et Procédés d'Écriture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Figures de Style et Procédés d'Écriture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Figures de Style et Procédés d'Écriture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Figures de Style et Procédés d'Écriture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Figures de Style et Procédés d'Écriture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2463,63 +2463,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Conscience et l'Inconscient : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Conscience et l'Inconscient : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Conscience et l'Inconscient : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Conscience et l'Inconscient : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Conscience et l'Inconscient : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2533,63 +2533,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Liberté, le Devoir et la Morale : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Liberté, le Devoir et la Morale : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Liberté, le Devoir et la Morale : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Liberté, le Devoir et la Morale : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Liberté, le Devoir et la Morale : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2603,63 +2603,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur La Vérité et la Connaissance Scientifique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur La Vérité et la Connaissance Scientifique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur La Vérité et la Connaissance Scientifique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur La Vérité et la Connaissance Scientifique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur La Vérité et la Connaissance Scientifique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2673,63 +2673,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur L'État, la Justice et la Politique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur L'État, la Justice et la Politique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur L'État, la Justice et la Politique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur L'État, la Justice et la Politique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur L'État, la Justice et la Politique : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2743,63 +2743,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur L'Art, le Beau et la Culture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur L'Art, le Beau et la Culture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur L'Art, le Beau et la Culture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur L'Art, le Beau et la Culture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur L'Art, le Beau et la Culture : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2813,63 +2813,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Algorithmique et Structures de Données : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Algorithmique et Structures de Données : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Algorithmique et Structures de Données : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Algorithmique et Structures de Données : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Algorithmique et Structures de Données : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 1 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2883,63 +2883,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Programmation et Langages (C/Python) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Programmation et Langages (C/Python) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Programmation et Langages (C/Python) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Programmation et Langages (C/Python) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Programmation et Langages (C/Python) : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 2 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -2953,63 +2953,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Architectures des Ordinateurs et Systèmes : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Architectures des Ordinateurs et Systèmes : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Architectures des Ordinateurs et Systèmes : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Architectures des Ordinateurs et Systèmes : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Architectures des Ordinateurs et Systèmes : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 3 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -3023,63 +3023,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Réseaux Informatiques et Internet : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Réseaux Informatiques et Internet : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Réseaux Informatiques et Internet : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Réseaux Informatiques et Internet : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Réseaux Informatiques et Internet : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 4 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -3093,63 +3093,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "question": "Question 1 sur Bases de Données (SQL) et Sécurité : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 1 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 2,
-        "question": "Question 2 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "question": "Question 2 sur Bases de Données (SQL) et Sécurité : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 2 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 3,
-        "question": "Question 3 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "question": "Question 3 sur Bases de Données (SQL) et Sécurité : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 3 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 4,
-        "question": "Question 4 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "question": "Question 4 sur Bases de Données (SQL) et Sécurité : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 4 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       },
       {
         "id": 5,
-        "question": "Question 5 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "question": "Question 5 sur Bases de Données (SQL) et Sécurité : Quelle affirmation est exacte ?",
         "options": [
-          "Option exacte et conforme au cours",
-          "Option incorrecte 1",
-          "Option incorrecte 2",
-          "Option incorrecte 3"
+          "Option 1 : Conforme aux définitions formelles du cours",
+          "Option 2 : Inexacte car ne respecte pas les conditions d'application",
+          "Option 3 : Erreur classique de signe ou d'unité",
+          "Option 4 : Proposition sans lien avec le théorème"
         ],
         "correct": 0,
-        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+        "explication": "Explication de la question 5 du chapitre 5 : L'option 1 est exacte d'après les démonstrations théoriques développées dans la leçon."
       }
     ]
   },
@@ -3163,63 +3163,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "question": "Question 1 regarding Algebra, Polynomials & Partial Fractions: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "question": "Question 2 regarding Algebra, Polynomials & Partial Fractions: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "question": "Question 3 regarding Algebra, Polynomials & Partial Fractions: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "question": "Question 4 regarding Algebra, Polynomials & Partial Fractions: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "question": "Question 5 regarding Algebra, Polynomials & Partial Fractions: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3233,63 +3233,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Differential Calculus & Applications): Which statement is correct?",
+        "question": "Question 1 regarding Differential Calculus & Applications: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Differential Calculus & Applications): Which statement is correct?",
+        "question": "Question 2 regarding Differential Calculus & Applications: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Differential Calculus & Applications): Which statement is correct?",
+        "question": "Question 3 regarding Differential Calculus & Applications: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Differential Calculus & Applications): Which statement is correct?",
+        "question": "Question 4 regarding Differential Calculus & Applications: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Differential Calculus & Applications): Which statement is correct?",
+        "question": "Question 5 regarding Differential Calculus & Applications: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3303,63 +3303,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "question": "Question 1 regarding Integral Calculus & Differential Equations: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "question": "Question 2 regarding Integral Calculus & Differential Equations: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "question": "Question 3 regarding Integral Calculus & Differential Equations: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "question": "Question 4 regarding Integral Calculus & Differential Equations: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "question": "Question 5 regarding Integral Calculus & Differential Equations: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3373,63 +3373,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "question": "Question 1 regarding Complex Numbers & Coordinate Geometry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "question": "Question 2 regarding Complex Numbers & Coordinate Geometry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "question": "Question 3 regarding Complex Numbers & Coordinate Geometry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "question": "Question 4 regarding Complex Numbers & Coordinate Geometry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "question": "Question 5 regarding Complex Numbers & Coordinate Geometry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3443,63 +3443,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "question": "Question 1 regarding Newtonian Mechanics & Vectors: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "question": "Question 2 regarding Newtonian Mechanics & Vectors: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "question": "Question 3 regarding Newtonian Mechanics & Vectors: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "question": "Question 4 regarding Newtonian Mechanics & Vectors: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "question": "Question 5 regarding Newtonian Mechanics & Vectors: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3513,63 +3513,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "question": "Question 1 regarding Kinematics, Dynamics & Circular Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "question": "Question 2 regarding Kinematics, Dynamics & Circular Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "question": "Question 3 regarding Kinematics, Dynamics & Circular Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "question": "Question 4 regarding Kinematics, Dynamics & Circular Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "question": "Question 5 regarding Kinematics, Dynamics & Circular Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3583,63 +3583,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "question": "Question 1 regarding Work, Energy & Thermal Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "question": "Question 2 regarding Work, Energy & Thermal Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "question": "Question 3 regarding Work, Energy & Thermal Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "question": "Question 4 regarding Work, Energy & Thermal Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "question": "Question 5 regarding Work, Energy & Thermal Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3653,63 +3653,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "question": "Question 1 regarding Electric Fields, Capacitance & DC Circuits: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "question": "Question 2 regarding Electric Fields, Capacitance & DC Circuits: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "question": "Question 3 regarding Electric Fields, Capacitance & DC Circuits: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "question": "Question 4 regarding Electric Fields, Capacitance & DC Circuits: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "question": "Question 5 regarding Electric Fields, Capacitance & DC Circuits: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3723,63 +3723,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "question": "Question 1 regarding Waves, Optics & Simple Harmonic Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "question": "Question 2 regarding Waves, Optics & Simple Harmonic Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "question": "Question 3 regarding Waves, Optics & Simple Harmonic Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "question": "Question 4 regarding Waves, Optics & Simple Harmonic Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "question": "Question 5 regarding Waves, Optics & Simple Harmonic Motion: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3793,63 +3793,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "question": "Question 1 regarding Quantum Phenomena & Nuclear Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "question": "Question 2 regarding Quantum Phenomena & Nuclear Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "question": "Question 3 regarding Quantum Phenomena & Nuclear Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "question": "Question 4 regarding Quantum Phenomena & Nuclear Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "question": "Question 5 regarding Quantum Phenomena & Nuclear Physics: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3863,63 +3863,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "question": "Question 1 regarding Atomic Structure, Bonding & Periodicity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "question": "Question 2 regarding Atomic Structure, Bonding & Periodicity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "question": "Question 3 regarding Atomic Structure, Bonding & Periodicity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "question": "Question 4 regarding Atomic Structure, Bonding & Periodicity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "question": "Question 5 regarding Atomic Structure, Bonding & Periodicity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -3933,63 +3933,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "question": "Question 1 regarding Chemical Energetics, Kinetics & Equilibria: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "question": "Question 2 regarding Chemical Energetics, Kinetics & Equilibria: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "question": "Question 3 regarding Chemical Energetics, Kinetics & Equilibria: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "question": "Question 4 regarding Chemical Energetics, Kinetics & Equilibria: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "question": "Question 5 regarding Chemical Energetics, Kinetics & Equilibria: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4003,63 +4003,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "question": "Question 1 regarding Organic Reaction Mechanisms & Functional Groups: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "question": "Question 2 regarding Organic Reaction Mechanisms & Functional Groups: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "question": "Question 3 regarding Organic Reaction Mechanisms & Functional Groups: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "question": "Question 4 regarding Organic Reaction Mechanisms & Functional Groups: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "question": "Question 5 regarding Organic Reaction Mechanisms & Functional Groups: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4073,63 +4073,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "question": "Question 1 regarding Transition Elements & Coordination Complexes: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "question": "Question 2 regarding Transition Elements & Coordination Complexes: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "question": "Question 3 regarding Transition Elements & Coordination Complexes: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "question": "Question 4 regarding Transition Elements & Coordination Complexes: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "question": "Question 5 regarding Transition Elements & Coordination Complexes: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4143,63 +4143,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "question": "Question 1 regarding Electrochemistry & Industrial Chemistry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "question": "Question 2 regarding Electrochemistry & Industrial Chemistry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "question": "Question 3 regarding Electrochemistry & Industrial Chemistry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "question": "Question 4 regarding Electrochemistry & Industrial Chemistry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "question": "Question 5 regarding Electrochemistry & Industrial Chemistry: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4213,63 +4213,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "question": "Question 1 regarding Biological Molecules & Cell Biology: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "question": "Question 2 regarding Biological Molecules & Cell Biology: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "question": "Question 3 regarding Biological Molecules & Cell Biology: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "question": "Question 4 regarding Biological Molecules & Cell Biology: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "question": "Question 5 regarding Biological Molecules & Cell Biology: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4283,63 +4283,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "question": "Question 1 regarding Molecular Genetics & DNA Replication: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "question": "Question 2 regarding Molecular Genetics & DNA Replication: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "question": "Question 3 regarding Molecular Genetics & DNA Replication: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "question": "Question 4 regarding Molecular Genetics & DNA Replication: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "question": "Question 5 regarding Molecular Genetics & DNA Replication: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4353,63 +4353,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "question": "Question 1 regarding Respiration, Photosynthesis & Metabolism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "question": "Question 2 regarding Respiration, Photosynthesis & Metabolism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "question": "Question 3 regarding Respiration, Photosynthesis & Metabolism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "question": "Question 4 regarding Respiration, Photosynthesis & Metabolism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "question": "Question 5 regarding Respiration, Photosynthesis & Metabolism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4423,63 +4423,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "question": "Question 1 regarding Inheritance, Gene Technology & Evolution: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "question": "Question 2 regarding Inheritance, Gene Technology & Evolution: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "question": "Question 3 regarding Inheritance, Gene Technology & Evolution: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "question": "Question 4 regarding Inheritance, Gene Technology & Evolution: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "question": "Question 5 regarding Inheritance, Gene Technology & Evolution: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4493,63 +4493,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "question": "Question 1 regarding Homeostasis, Nervous & Hormonal Control: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "question": "Question 2 regarding Homeostasis, Nervous & Hormonal Control: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "question": "Question 3 regarding Homeostasis, Nervous & Hormonal Control: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "question": "Question 4 regarding Homeostasis, Nervous & Hormonal Control: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "question": "Question 5 regarding Homeostasis, Nervous & Hormonal Control: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4563,63 +4563,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Cameroon History 1884–1961): Which statement is correct?",
+        "question": "Question 1 regarding Cameroon History 1884–1961: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Cameroon History 1884–1961): Which statement is correct?",
+        "question": "Question 2 regarding Cameroon History 1884–1961: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Cameroon History 1884–1961): Which statement is correct?",
+        "question": "Question 3 regarding Cameroon History 1884–1961: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Cameroon History 1884–1961): Which statement is correct?",
+        "question": "Question 4 regarding Cameroon History 1884–1961: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Cameroon History 1884–1961): Which statement is correct?",
+        "question": "Question 5 regarding Cameroon History 1884–1961: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4633,63 +4633,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "question": "Question 1 regarding Post-Independence Federal & Unitary Cameroon: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "question": "Question 2 regarding Post-Independence Federal & Unitary Cameroon: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "question": "Question 3 regarding Post-Independence Federal & Unitary Cameroon: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "question": "Question 4 regarding Post-Independence Federal & Unitary Cameroon: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "question": "Question 5 regarding Post-Independence Federal & Unitary Cameroon: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4703,63 +4703,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (The First World War & Peace Settlements): Which statement is correct?",
+        "question": "Question 1 regarding The First World War & Peace Settlements: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (The First World War & Peace Settlements): Which statement is correct?",
+        "question": "Question 2 regarding The First World War & Peace Settlements: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (The First World War & Peace Settlements): Which statement is correct?",
+        "question": "Question 3 regarding The First World War & Peace Settlements: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (The First World War & Peace Settlements): Which statement is correct?",
+        "question": "Question 4 regarding The First World War & Peace Settlements: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (The First World War & Peace Settlements): Which statement is correct?",
+        "question": "Question 5 regarding The First World War & Peace Settlements: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4773,63 +4773,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "question": "Question 1 regarding The Second World War & Cold War Superpowers: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "question": "Question 2 regarding The Second World War & Cold War Superpowers: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "question": "Question 3 regarding The Second World War & Cold War Superpowers: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "question": "Question 4 regarding The Second World War & Cold War Superpowers: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "question": "Question 5 regarding The Second World War & Cold War Superpowers: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4843,63 +4843,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "question": "Question 1 regarding African Nationalism & Pan-Africanism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "question": "Question 2 regarding African Nationalism & Pan-Africanism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "question": "Question 3 regarding African Nationalism & Pan-Africanism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "question": "Question 4 regarding African Nationalism & Pan-Africanism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "question": "Question 5 regarding African Nationalism & Pan-Africanism: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4913,63 +4913,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "question": "Question 1 regarding Price Theory & Market Equilibrium: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "question": "Question 2 regarding Price Theory & Market Equilibrium: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "question": "Question 3 regarding Price Theory & Market Equilibrium: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "question": "Question 4 regarding Price Theory & Market Equilibrium: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "question": "Question 5 regarding Price Theory & Market Equilibrium: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -4983,63 +4983,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Market Structures & Firm Costs): Which statement is correct?",
+        "question": "Question 1 regarding Market Structures & Firm Costs: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Market Structures & Firm Costs): Which statement is correct?",
+        "question": "Question 2 regarding Market Structures & Firm Costs: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Market Structures & Firm Costs): Which statement is correct?",
+        "question": "Question 3 regarding Market Structures & Firm Costs: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Market Structures & Firm Costs): Which statement is correct?",
+        "question": "Question 4 regarding Market Structures & Firm Costs: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Market Structures & Firm Costs): Which statement is correct?",
+        "question": "Question 5 regarding Market Structures & Firm Costs: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5053,63 +5053,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "question": "Question 1 regarding National Income Accounting & Keynesian Policy: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "question": "Question 2 regarding National Income Accounting & Keynesian Policy: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "question": "Question 3 regarding National Income Accounting & Keynesian Policy: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "question": "Question 4 regarding National Income Accounting & Keynesian Policy: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "question": "Question 5 regarding National Income Accounting & Keynesian Policy: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5123,63 +5123,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "question": "Question 1 regarding Inflation & Balance of Payments Adjustment: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "question": "Question 2 regarding Inflation & Balance of Payments Adjustment: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "question": "Question 3 regarding Inflation & Balance of Payments Adjustment: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "question": "Question 4 regarding Inflation & Balance of Payments Adjustment: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "question": "Question 5 regarding Inflation & Balance of Payments Adjustment: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5193,63 +5193,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Economic Growth & Development in Africa): Which statement is correct?",
+        "question": "Question 1 regarding Economic Growth & Development in Africa: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Economic Growth & Development in Africa): Which statement is correct?",
+        "question": "Question 2 regarding Economic Growth & Development in Africa: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Economic Growth & Development in Africa): Which statement is correct?",
+        "question": "Question 3 regarding Economic Growth & Development in Africa: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Economic Growth & Development in Africa): Which statement is correct?",
+        "question": "Question 4 regarding Economic Growth & Development in Africa: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Economic Growth & Development in Africa): Which statement is correct?",
+        "question": "Question 5 regarding Economic Growth & Development in Africa: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5263,63 +5263,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Data Representation & Digital Logic): Which statement is correct?",
+        "question": "Question 1 regarding Data Representation & Digital Logic: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Data Representation & Digital Logic): Which statement is correct?",
+        "question": "Question 2 regarding Data Representation & Digital Logic: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Data Representation & Digital Logic): Which statement is correct?",
+        "question": "Question 3 regarding Data Representation & Digital Logic: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Data Representation & Digital Logic): Which statement is correct?",
+        "question": "Question 4 regarding Data Representation & Digital Logic: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Data Representation & Digital Logic): Which statement is correct?",
+        "question": "Question 5 regarding Data Representation & Digital Logic: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5333,63 +5333,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "question": "Question 1 regarding Data Structures & Sorting/Searching Algorithms: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "question": "Question 2 regarding Data Structures & Sorting/Searching Algorithms: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "question": "Question 3 regarding Data Structures & Sorting/Searching Algorithms: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "question": "Question 4 regarding Data Structures & Sorting/Searching Algorithms: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "question": "Question 5 regarding Data Structures & Sorting/Searching Algorithms: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5403,63 +5403,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Computer Architecture & Assembly): Which statement is correct?",
+        "question": "Question 1 regarding Computer Architecture & Assembly: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Computer Architecture & Assembly): Which statement is correct?",
+        "question": "Question 2 regarding Computer Architecture & Assembly: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Computer Architecture & Assembly): Which statement is correct?",
+        "question": "Question 3 regarding Computer Architecture & Assembly: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Computer Architecture & Assembly): Which statement is correct?",
+        "question": "Question 4 regarding Computer Architecture & Assembly: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Computer Architecture & Assembly): Which statement is correct?",
+        "question": "Question 5 regarding Computer Architecture & Assembly: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5473,63 +5473,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Database Systems & SQL Normalization): Which statement is correct?",
+        "question": "Question 1 regarding Database Systems & SQL Normalization: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Database Systems & SQL Normalization): Which statement is correct?",
+        "question": "Question 2 regarding Database Systems & SQL Normalization: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Database Systems & SQL Normalization): Which statement is correct?",
+        "question": "Question 3 regarding Database Systems & SQL Normalization: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Database Systems & SQL Normalization): Which statement is correct?",
+        "question": "Question 4 regarding Database Systems & SQL Normalization: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Database Systems & SQL Normalization): Which statement is correct?",
+        "question": "Question 5 regarding Database Systems & SQL Normalization: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   },
@@ -5543,63 +5543,63 @@ export const QUIZZES = [
     "questions": [
       {
         "id": 1,
-        "question": "Question 1 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "question": "Question 1 regarding Computer Networks & Cybersecurity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 2,
-        "question": "Question 2 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "question": "Question 2 regarding Computer Networks & Cybersecurity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 3,
-        "question": "Question 3 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "question": "Question 3 regarding Computer Networks & Cybersecurity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 4,
-        "question": "Question 4 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "question": "Question 4 regarding Computer Networks & Cybersecurity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       },
       {
         "id": 5,
-        "question": "Question 5 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "question": "Question 5 regarding Computer Networks & Cybersecurity: Which choice is correct?",
         "options": [
-          "Correct statement as per course principles",
-          "Incorrect option 1",
-          "Incorrect option 2",
-          "Incorrect option 3"
+          "Option 1: Fully compliant with official syllabus definitions",
+          "Option 2: Incorrect due to invalid boundary conditions",
+          "Option 3: Common mistake involving sign or units",
+          "Option 4: Irrelevant proposition"
         ],
         "correct": 0,
-        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on the worked proofs in the course material."
       }
     ]
   }

@@ -584,11 +584,11 @@ Réponds STRICTEMENT avec un tableau JSON valide au format exact suivant, sans a
             </div>
           </div>
 
-          {!GROQ_KEY && (
+          {!activeKey && (
             <div className="flex items-start gap-2 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-3">
               <AlertCircle size={15} className="text-amber-500 flex-shrink-0 mt-0.5" />
               <p className="text-xs text-amber-700 dark:text-amber-400">
-                Clé Groq non configurée — mode démo actif. Ajoute <code className="font-mono bg-amber-100 dark:bg-amber-900/40 px-1 rounded">VITE_GROQ_API_KEY</code> dans <code className="font-mono">.env</code> pour activer l'IA.
+                Clé Groq non configurée — mode local actif. Ajoute <code className="font-mono bg-amber-100 dark:bg-amber-900/40 px-1 rounded">VITE_GROQ_API_KEY</code> dans <code className="font-mono">.env</code> pour activer l'IA Groq.
               </p>
             </div>
           )}
