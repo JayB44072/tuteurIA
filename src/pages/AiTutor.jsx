@@ -136,17 +136,16 @@ const DEFAULT_GROQ_KEY = 'gsk_x9ceNqCSM4yOLSjxPygPWGdyb3FYft98E3CI4X0nteqJLM3pcX
         const data = await res.json()
         aiResponse = data.choices?.[0]?.message?.content || "Désolé, aucune réponse générée par l'IA."
       } else {
-        await new Promise(r => setTimeout(r, 1000))
+        await new Promise(r => setTimeout(r, 600))
         aiResponse = generateFallbackResponse(trimmed)
       }
       setMessages(prev => [...prev, { role: 'assistant', content: aiResponse }])
     } catch (err) {
       console.error('Groq API error:', err)
-      const isKeyErr = err.message?.includes('401') || err.message?.includes('API key')
-      const isModelErr = err.message?.includes('model')
+      const fallbackAns = generateFallbackResponse(trimmed)
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: `⚠️ **Problème de communication avec Groq :**\n\n${err.message}\n\n${isKeyErr ? "👉 Ta clé API Groq semble invalide ou expirée. Clique sur 'Configurer clé Groq' ci-dessus pour la mettre à jour." : isModelErr ? `👉 Le modèle configuré (${GROQ_MODEL}) n'est pas accessible avec cette clé. Vérifie les modèles autorisés sur ton compte Groq.` : "👉 Vérifie ta connexion internet ou réessaie dans un instant."}\n\n*(Une réponse locale de secours est disponible si besoin).*`
+        content: `${fallbackAns}\n\n---\n*💡 **Note d'information :** La clé API Groq actuelle a produit une erreur (${err.message}). Une réponse du tuteur local de secours a été fournie ci-dessus. Tu peux ajouter ta propre clé Groq gratuite dans "🔑 Clé Groq" en haut à droite.*`
       }])
     } finally {
       setLoading(false)

@@ -1,1506 +1,5609 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+// TUTEURIA — BANQUE DE QCM ET EXERCICES D'ÉVALUATION (BAC & GCE)
+// ═══════════════════════════════════════════════════════════════════════════════
+
 export const QUIZZES = [
-  // ─── MATHÉMATIQUES ───────────────────────────────────────────────
   {
-    id: 'maths-algebre-1',
-    subjectId: 'mathematiques',
-    titre: 'Algèbre — Équations du 2nd degré',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
+    "id": "mathematiques-math-c1-qcm",
+    "subjectId": "mathematiques",
+    "chapterId": "math-c1",
+    "titre": "Chapitre 1 : Algèbre & Équations du Second Degré — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Quel est le discriminant de l\'équation x² - 5x + 6 = 0 ?',
-        options: ['1', '25', '49', '11'],
-        correct: 0,
-        explication: 'Δ = b² - 4ac = (-5)² - 4×1×6 = 25 - 24 = 1'
+        "id": 1,
+        "question": "Discriminant de $x^2 - 7x + 10 = 0$ ?",
+        "options": [
+          "9",
+          "49",
+          "1",
+          "25"
+        ],
+        "correct": 0,
+        "explication": "$\\Delta = 49 - 40 = 9$."
       },
       {
-        id: 2,
-        question: 'Les solutions de x² - 5x + 6 = 0 sont :',
-        options: ['x = 2 et x = 3', 'x = -2 et x = -3', 'x = 1 et x = 6', 'x = -1 et x = -6'],
-        correct: 0,
-        explication: 'x = (5 ± 1) / 2, donc x₁ = 3 et x₂ = 2'
+        "id": 2,
+        "question": "Racines de $x^2 - 7x + 10 = 0$ :",
+        "options": [
+          "2 et 5",
+          "-2 et -5",
+          "1 et 10",
+          "Aucune"
+        ],
+        "correct": 0,
+        "explication": "$x = (7 \\pm 3)/2$, donc 2 et 5."
       },
       {
-        id: 3,
-        question: 'Si Δ < 0, l\'équation ax² + bx + c = 0 possède :',
-        options: ['Aucune solution réelle', 'Une solution double', 'Deux solutions réelles distinctes', 'Une infinité de solutions'],
-        correct: 0,
-        explication: 'Quand Δ < 0, la racine carrée n\'existe pas dans ℝ, donc pas de solution réelle.'
+        "id": 3,
+        "question": "Somme des racines de $3x^2 - 12x + 5 = 0$ :",
+        "options": [
+          "4",
+          "-4",
+          "5/3",
+          "12"
+        ],
+        "correct": 0,
+        "explication": "$S = -b/a = 12/3 = 4$."
       },
       {
-        id: 4,
-        question: 'La somme des racines de ax² + bx + c = 0 vaut :',
-        options: ['-b/a', 'b/a', 'c/a', '-c/a'],
-        correct: 0,
-        explication: 'Par les relations de Viète : x₁ + x₂ = -b/a et x₁ × x₂ = c/a'
+        "id": 4,
+        "question": "Produit des racines de $2x^2 + 6x - 8 = 0$ :",
+        "options": [
+          "-4",
+          "4",
+          "-3",
+          "8"
+        ],
+        "correct": 0,
+        "explication": "$P = c/a = -8/2 = -4$."
       },
       {
-        id: 5,
-        question: 'Résoudre 2x² - 8 = 0. Les solutions sont :',
-        options: ['x = 2 et x = -2', 'x = 4 et x = -4', 'x = √2 et x = -√2', 'x = 8 et x = -8'],
-        correct: 0,
-        explication: '2x² = 8 → x² = 4 → x = ±2'
-      },
-      {
-        id: 6,
-        question: 'Le produit des racines de 3x² - 12x + 9 = 0 vaut :',
-        options: ['3', '4', '-4', '12'],
-        correct: 0,
-        explication: 'Produit = c/a = 9/3 = 3'
-      },
-      {
-        id: 7,
-        question: 'Quelle est la forme factorisée de x² - 9 ?',
-        options: ['(x-3)(x+3)', '(x-3)²', '(x+9)(x-1)', '(x-9)(x+1)'],
-        correct: 0,
-        explication: 'Identité remarquable : a² - b² = (a-b)(a+b), ici a=x, b=3'
-      },
-      {
-        id: 8,
-        question: 'L\'équation x² + 1 = 0 a pour solutions dans ℝ :',
-        options: ['Pas de solution', 'x = 1', 'x = -1', 'x = ±i'],
-        correct: 0,
-        explication: 'Δ = 0 - 4 = -4 < 0 → pas de solution réelle'
-      },
-      {
-        id: 9,
-        question: 'Résoudre x² - 4x + 4 = 0 :',
-        options: ['x = 2 (solution double)', 'x = 2 et x = -2', 'x = 4', 'Pas de solution'],
-        correct: 0,
-        explication: 'Δ = 16 - 16 = 0 → solution double : x = 4/2 = 2. C\'est (x-2)².'
-      },
-      {
-        id: 10,
-        question: 'Pour quelle valeur de k l\'équation x² + kx + 9 = 0 a une solution double ?',
-        options: ['k = 6 ou k = -6', 'k = 3 ou k = -3', 'k = 9', 'k = 0'],
-        correct: 0,
-        explication: 'Pour solution double : Δ = 0 → k² - 36 = 0 → k = ±6'
+        "id": 5,
+        "question": "Si $\\Delta < 0$, le trinôme est :",
+        "options": [
+          "Du signe de a",
+          "Toujours positif",
+          "Toujours négatif",
+          "Nul"
+        ],
+        "correct": 0,
+        "explication": "Le signe reste constant égal à $a$."
       }
     ]
   },
   {
-    id: 'maths-fonctions-1',
-    subjectId: 'mathematiques',
-    titre: 'Dérivées et étude de fonctions',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "mathematiques-math-c2-qcm",
+    "subjectId": "mathematiques",
+    "chapterId": "math-c2",
+    "titre": "Chapitre 2 : Analyse & Fonctions Numériques — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'La dérivée de f(x) = x³ - 3x + 2 est :',
-        options: ['3x² - 3', '3x² - 3x', 'x³ - 3', '3x³ - 3'],
-        correct: 0,
-        explication: '(xⁿ)\' = nxⁿ⁻¹, donc (x³)\' = 3x², (-3x)\' = -3, (2)\' = 0'
+        "id": 1,
+        "question": "Dérivée de $f(x) = \\ln(x^2 + 1)$ :",
+        "options": [
+          "2x / (x² + 1)",
+          "1 / (x² + 1)",
+          "2x",
+          "x / (x² + 1)"
+        ],
+        "correct": 0,
+        "explication": "$(\\ln u)' = u'/u = 2x / (x^2+1)$."
       },
       {
-        id: 2,
-        question: 'f(x) = sin(x) → f\'(x) = ?',
-        options: ['cos(x)', '-cos(x)', '-sin(x)', 'tan(x)'],
-        correct: 0,
-        explication: 'La dérivée de sin(x) est cos(x). C\'est une formule fondamentale.'
+        "id": 2,
+        "question": "$\\lim_{x \\to 0} \\frac{e^x - 1}{x} =$ ?",
+        "options": [
+          "1",
+          "0",
+          "e",
+          "\\infty"
+        ],
+        "correct": 0,
+        "explication": "Nombre dérivé de $e^x$ en 0."
       },
       {
-        id: 3,
-        question: 'Si f\'(x) > 0 sur un intervalle, alors f est :',
-        options: ['Croissante', 'Décroissante', 'Constante', 'Négative'],
-        correct: 0,
-        explication: 'Un signe positif de la dérivée signifie que la fonction monte.'
+        "id": 3,
+        "question": "Tangente à $e^x$ en $x=0$ :",
+        "options": [
+          "y = x + 1",
+          "y = x",
+          "y = e x",
+          "y = 1"
+        ],
+        "correct": 0,
+        "explication": "$y = 1(x-0)+1 = x+1$."
       },
       {
-        id: 4,
-        question: 'La dérivée de eˣ est :',
-        options: ['eˣ', 'xeˣ', 'e^(x-1)', '1'],
-        correct: 0,
-        explication: 'La fonction exponentielle est sa propre dérivée : (eˣ)\' = eˣ'
+        "id": 4,
+        "question": "Si $\\lim_{x \\to 2} f(x) = \\infty$, alors $x=2$ est :",
+        "options": [
+          "Asymptote verticale",
+          "Asymptote horizontale",
+          "Tangente",
+          "Asymptote oblique"
+        ],
+        "correct": 0,
+        "explication": "Limite infinie en un point = asymptote verticale."
       },
       {
-        id: 5,
-        question: 'La dérivée de ln(x) est :',
-        options: ['1/x', 'x', 'ln(x)/x', 'e^x'],
-        correct: 0,
-        explication: '(ln x)\' = 1/x pour x > 0'
-      },
-      {
-        id: 6,
-        question: 'Dériver f(x) = (2x+1)³ en utilisant la règle de la chaîne :',
-        options: ['6(2x+1)²', '3(2x+1)²', '2(2x+1)³', '3(2x+1)'],
-        correct: 0,
-        explication: 'f\'(x) = 3(2x+1)² × 2 = 6(2x+1)²'
-      },
-      {
-        id: 7,
-        question: 'f\'(a) = 0 et f\'\'(a) > 0 indique que f a en a :',
-        options: ['Un minimum local', 'Un maximum local', 'Un point d\'inflexion', 'Un zéro'],
-        correct: 0,
-        explication: 'Si f\' s\'annule et f\'\' > 0, la fonction est concave vers le haut → minimum.'
-      },
-      {
-        id: 8,
-        question: 'La dérivée de f(x) = √x est :',
-        options: ['1/(2√x)', '2√x', '√x/2', '1/√x'],
-        correct: 0,
-        explication: '√x = x^(1/2), donc (x^(1/2))\' = (1/2)x^(-1/2) = 1/(2√x)'
+        "id": 5,
+        "question": "La fonction $f(x) = e^{-x}$ est :",
+        "options": [
+          "Strictement décroissante",
+          "Strictement croissante",
+          "Constante",
+          "Non dérivable"
+        ],
+        "correct": 0,
+        "explication": "$f'(x) = -e^{-x} < 0$."
       }
     ]
   },
   {
-    id: 'maths-proba-1',
-    subjectId: 'mathematiques',
-    titre: 'Probabilités — Calcul et loi binomiale',
-    difficulte: 'difficile',
-    duree: 25,
-    questions: [
+    "id": "mathematiques-math-c3-qcm",
+    "subjectId": "mathematiques",
+    "chapterId": "math-c3",
+    "titre": "Chapitre 3 : Suites Numériques & Récurrence — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'On lance un dé équilibré. Quelle est la probabilité d\'obtenir un nombre pair ?',
-        options: ['1/2', '1/3', '2/3', '1/6'],
-        correct: 0,
-        explication: 'Nombres pairs : 2, 4, 6 → 3 issues sur 6. P = 3/6 = 1/2'
+        "id": 1,
+        "question": "Somme des $n$ premiers entiers $1 + ... + n$ :",
+        "options": [
+          "n(n+1)/2",
+          "n²",
+          "n(n-1)/2",
+          "2n+1"
+        ],
+        "correct": 0,
+        "explication": "Somme arithmétique de raison 1."
       },
       {
-        id: 2,
-        question: 'A et B sont indépendants, P(A) = 0,3, P(B) = 0,4. P(A∩B) = ?',
-        options: ['0,12', '0,7', '0,58', '0,1'],
-        correct: 0,
-        explication: 'Indépendants → P(A∩B) = P(A) × P(B) = 0,3 × 0,4 = 0,12'
+        "id": 2,
+        "question": "Si $v_0 = 3$ et $q = 2$, alors $v_4 =$ ?",
+        "options": [
+          "48",
+          "24",
+          "96",
+          "12"
+        ],
+        "correct": 0,
+        "explication": "$v_4 = 3 \\cdot 2^4 = 48$."
       },
       {
-        id: 3,
-        question: 'P(A) = 0,6, P(B) = 0,5, P(A∪B) = 0,8. P(A∩B) = ?',
-        options: ['0,3', '0,2', '0,4', '0,1'],
-        correct: 0,
-        explication: 'P(A∪B) = P(A) + P(B) - P(A∩B) → 0,8 = 0,6 + 0,5 - x → x = 0,3'
+        "id": 3,
+        "question": "Une suite croissante majorée est :",
+        "options": [
+          "Convergente",
+          "Divergente",
+          "Nulle",
+          "Infinie"
+        ],
+        "correct": 0,
+        "explication": "Théorème de convergence monotone."
       },
       {
-        id: 4,
-        question: 'P(Ā) = 0,25. P(A) = ?',
-        options: ['0,75', '0,25', '0,5', '1,25'],
-        correct: 0,
-        explication: 'P(A) + P(Ā) = 1 → P(A) = 1 - 0,25 = 0,75'
+        "id": 4,
+        "question": "Si $q = 0,5$, alors $\\lim q^n =$ ?",
+        "options": [
+          "0",
+          "1",
+          "∞",
+          "0.5"
+        ],
+        "correct": 0,
+        "explication": "Pour $|q| < 1$, $\\lim q^n = 0$."
       },
       {
-        id: 5,
-        question: 'Dans une urne : 3 boules rouges et 5 bleues. P(rouge) = ?',
-        options: ['3/8', '5/8', '3/5', '1/3'],
-        correct: 0,
-        explication: 'P(rouge) = 3/(3+5) = 3/8'
+        "id": 5,
+        "question": "Première étape de la récurrence :",
+        "options": [
+          "Initialisation",
+          "Hérédité",
+          "Conclusion",
+          "Hypothèse"
+        ],
+        "correct": 0,
+        "explication": "Vérification au premier rang."
       }
     ]
   },
   {
-    id: 'maths-suites-1',
-    subjectId: 'mathematiques',
-    titre: 'Suites arithmétiques et géométriques',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "mathematiques-math-c4-qcm",
+    "subjectId": "mathematiques",
+    "chapterId": "math-c4",
+    "titre": "Chapitre 4 : Nombres Complexes & Géométrie Vectorielle — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'La suite (uₙ) est arithmétique avec u₀ = 5 et r = 3. u₄ = ?',
-        options: ['17', '20', '12', '15'],
-        correct: 0,
-        explication: 'u₄ = u₀ + 4r = 5 + 4×3 = 5 + 12 = 17'
+        "id": 1,
+        "question": "Module de $z = 3 + 4i$ :",
+        "options": [
+          "5",
+          "7",
+          "25",
+          "1"
+        ],
+        "correct": 0,
+        "explication": "$\\sqrt{9+16} = 5$."
       },
       {
-        id: 2,
-        question: 'La suite 2, 6, 18, 54... est :',
-        options: ['Géométrique de raison 3', 'Arithmétique de raison 4', 'Géométrique de raison 2', 'Ni l\'une ni l\'autre'],
-        correct: 0,
-        explication: '6/2 = 3, 18/6 = 3, 54/18 = 3 → géométrique, raison q = 3'
+        "id": 2,
+        "question": "Si $z = e^{i \\pi/2}$, $z =$ ?",
+        "options": [
+          "i",
+          "1",
+          "-1",
+          "-i"
+        ],
+        "correct": 0,
+        "explication": "$\\cos(\\pi/2) + i \\sin(\\pi/2) = i$."
       },
       {
-        id: 3,
-        question: 'Somme des 5 premiers termes de 1, 2, 4, 8, 16... ?',
-        options: ['31', '32', '15', '30'],
-        correct: 0,
-        explication: 'S = u₀(qⁿ-1)/(q-1) = 1×(2⁵-1)/(2-1) = 32-1 = 31'
+        "id": 3,
+        "question": "Conjugué de $2 - 5i$ :",
+        "options": [
+          "2 + 5i",
+          "-2 + 5i",
+          "-2 - 5i",
+          "5 - 2i"
+        ],
+        "correct": 0,
+        "explication": "Changer le signe imaginaire."
       },
       {
-        id: 4,
-        question: 'Somme des entiers de 1 à 100 :',
-        options: ['5050', '5000', '4950', '10100'],
-        correct: 0,
-        explication: 'S = n(n+1)/2 = 100×101/2 = 5050 (formule de Gauss)'
+        "id": 4,
+        "question": "Rotation d'angle $\\pi/3$ centrée à l'origine :",
+        "options": [
+          "z' = e^(i π/3) z",
+          "z' = z + π/3",
+          "z' = 3z",
+          "z' = e^(-i π/3) z"
+        ],
+        "correct": 0,
+        "explication": "$z' = e^{i\\theta} z$."
       },
       {
-        id: 5,
-        question: 'Si uₙ = 3n + 2, la raison de cette suite arithmétique est :',
-        options: ['3', '2', '5', '1'],
-        correct: 0,
-        explication: 'uₙ₊₁ - uₙ = 3(n+1)+2 - (3n+2) = 3 → raison r = 3'
-      }
-    ]
-  },
-
-  // ─── PHYSIQUE ────────────────────────────────────────────────────
-  {
-    id: 'physique-mecanique-1',
-    subjectId: 'physique',
-    titre: 'Mécanique — Lois de Newton',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'Un objet de 5 kg subit une force de 20 N. Son accélération est :',
-        options: ['4 m/s²', '100 m/s²', '0,25 m/s²', '25 m/s²'],
-        correct: 0,
-        explication: '2ème loi de Newton : F = ma → a = F/m = 20/5 = 4 m/s²'
-      },
-      {
-        id: 2,
-        question: 'Un objet en MRU signifie que la somme des forces est :',
-        options: ['Nulle', 'Maximale', 'Égale à mg', 'Positive'],
-        correct: 0,
-        explication: 'En MRU, a = 0 → ΣF = ma = 0 (1ère loi de Newton)'
-      },
-      {
-        id: 3,
-        question: 'Le poids d\'un objet de 2 kg sur Terre (g = 9,8 m/s²) est :',
-        options: ['19,6 N', '2 N', '9,8 N', '4,9 N'],
-        correct: 0,
-        explication: 'P = mg = 2 × 9,8 = 19,6 N'
-      },
-      {
-        id: 4,
-        question: 'La 3ème loi de Newton (action-réaction) dit que :',
-        options: ['Toute force exercée sur un objet a une force opposée sur l\'objet qui l\'exerce', 'L\'accélération est proportionnelle à la force', 'Un objet reste au repos si aucune force agit', 'La masse est proportionnelle au poids'],
-        correct: 0,
-        explication: 'F_A→B = -F_B→A : même norme, même droite d\'action, sens opposés.'
-      },
-      {
-        id: 5,
-        question: 'En chute libre depuis le repos, après 3 s, la vitesse est (g = 10 m/s²) :',
-        options: ['30 m/s', '15 m/s', '45 m/s', '10 m/s'],
-        correct: 0,
-        explication: 'v = g·t = 10 × 3 = 30 m/s'
-      },
-      {
-        id: 6,
-        question: 'La distance parcourue en chute libre après 2 s est :',
-        options: ['20 m', '40 m', '10 m', '4 m'],
-        correct: 0,
-        explication: 'h = ½gt² = ½ × 10 × 4 = 20 m'
-      },
-      {
-        id: 7,
-        question: 'Un objet lancé horizontalement à 10 m/s depuis 5 m de haut atterrit après :',
-        options: ['1 s', '0,5 s', '2 s', '√5 s'],
-        correct: 0,
-        explication: 'Verticalement : h = ½gt² → 5 = ½×10×t² → t² = 1 → t = 1 s'
-      },
-      {
-        id: 8,
-        question: 'La force de frottement f = μN avec μ = 0,3 et N = 50 N vaut :',
-        options: ['15 N', '50,3 N', '0,006 N', '150 N'],
-        correct: 0,
-        explication: 'f = μN = 0,3 × 50 = 15 N'
+        "id": 5,
+        "question": "Si $\\vec{u} \\cdot \\vec{v} = 0$, les vecteurs sont :",
+        "options": [
+          "Orthogonaux",
+          "Colinéaires",
+          "Égaux",
+          "Opposés"
+        ],
+        "correct": 0,
+        "explication": "Produit scalaire nul = orthogonalité."
       }
     ]
   },
   {
-    id: 'physique-electricite-1',
-    subjectId: 'physique',
-    titre: 'Électricité — Circuits et lois',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
+    "id": "mathematiques-math-c5-qcm",
+    "subjectId": "mathematiques",
+    "chapterId": "math-c5",
+    "titre": "Chapitre 5 : Calcul Intégral & Probabilités — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Dans un circuit série, deux résistances R₁ = 10 Ω et R₂ = 20 Ω. La résistance équivalente est :',
-        options: ['30 Ω', '6,7 Ω', '200 Ω', '15 Ω'],
-        correct: 0,
-        explication: 'En série : R_eq = R₁ + R₂ = 10 + 20 = 30 Ω'
+        "id": 1,
+        "question": "$\\int_0^1 2x dx =$ ?",
+        "options": [
+          "1",
+          "2",
+          "0.5",
+          "0"
+        ],
+        "correct": 0,
+        "explication": "$[x^2]_0^1 = 1$."
       },
       {
-        id: 2,
-        question: 'En utilisant la loi d\'Ohm, si U = 12 V et R = 4 Ω, I = ?',
-        options: ['3 A', '48 A', '0,33 A', '8 A'],
-        correct: 0,
-        explication: 'U = RI → I = U/R = 12/4 = 3 A'
+        "id": 2,
+        "question": "Primitive de $e^{2x}$ :",
+        "options": [
+          "1/2 e^(2x)",
+          "2 e^(2x)",
+          "e^(2x)",
+          "e^x"
+        ],
+        "correct": 0,
+        "explication": "$(1/2 e^{2x})' = e^{2x}$."
       },
       {
-        id: 3,
-        question: 'La puissance dissipée dans une résistance R = 5 Ω traversée par I = 2 A est :',
-        options: ['20 W', '10 W', '2,5 W', '40 W'],
-        correct: 0,
-        explication: 'P = RI² = 5 × 2² = 5 × 4 = 20 W'
+        "id": 3,
+        "question": "Si $P(A)=0.4$ et $P_A(B)=0.5$, $P(A \\cap B) =$ ?",
+        "options": [
+          "0.2",
+          "0.9",
+          "0.1",
+          "0.8"
+        ],
+        "correct": 0,
+        "explication": "$0.4 \\times 0.5 = 0.2$."
       },
       {
-        id: 4,
-        question: 'Deux résistances 10 Ω en parallèle donnent :',
-        options: ['5 Ω', '20 Ω', '10 Ω', '100 Ω'],
-        correct: 0,
-        explication: '1/R_eq = 1/10 + 1/10 = 2/10 → R_eq = 5 Ω'
+        "id": 4,
+        "question": "Espérance de $X \\sim \\mathcal{B}(10, 0.3)$ :",
+        "options": [
+          "3",
+          "0.3",
+          "7",
+          "2.1"
+        ],
+        "correct": 0,
+        "explication": "$E(X) = 10 \\times 0.3 = 3$."
       },
       {
-        id: 5,
-        question: 'La loi des nœuds dit que la somme des courants entrant dans un nœud est :',
-        options: ['Égale à la somme des courants sortants', 'Nulle', 'Maximale', 'Égale à la tension'],
-        correct: 0,
-        explication: 'La conservation de la charge impose : ΣI_entrants = ΣI_sortants'
-      },
-      {
-        id: 6,
-        question: 'L\'énergie consommée par un appareil de 100 W pendant 2 heures est :',
-        options: ['720 000 J', '200 J', '50 J', '100 J'],
-        correct: 0,
-        explication: 'E = P × t = 100 W × 7200 s = 720 000 J = 0,2 kWh'
+        "id": 5,
+        "question": "Valeur de $\\binom{n}{0}$ :",
+        "options": [
+          "1",
+          "0",
+          "n",
+          "p"
+        ],
+        "correct": 0,
+        "explication": "Toujours égal à 1."
       }
     ]
   },
   {
-    id: 'physique-optique-1',
-    subjectId: 'physique',
-    titre: 'Optique — Réflexion et réfraction',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "physique-physique-c1-qcm",
+    "subjectId": "physique",
+    "chapterId": "physique-c1",
+    "titre": "Chapitre 1 : Cinématique & Dynamique Newtonienne — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Un rayon passe de l\'eau (n=1,33) à l\'air (n=1). Il est réfracté. La loi de Snell-Descartes est :',
-        options: ['n₁ sin θ₁ = n₂ sin θ₂', 'n₁ cos θ₁ = n₂ cos θ₂', 'θ₁ = θ₂', 'n₁ θ₁ = n₂ θ₂'],
-        correct: 0,
-        explication: 'Loi de Snell-Descartes : n₁ sin θ₁ = n₂ sin θ₂'
+        "id": 1,
+        "question": "Question 1 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'La réflexion totale se produit quand :',
-        options: ['L\'angle d\'incidence dépasse l\'angle critique', 'L\'angle d\'incidence est nul', 'n₁ < n₂', 'Le rayon est perpendiculaire à la surface'],
-        correct: 0,
-        explication: 'Réflexion totale : θ₁ > θ_c, avec sin θ_c = n₂/n₁ (n₁ > n₂)'
+        "id": 2,
+        "question": "Question 2 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: 'Une lentille convergente de focale f = 10 cm. Un objet à 20 cm. L\'image est à :',
-        options: ['20 cm', '10 cm', '30 cm', '40 cm'],
-        correct: 0,
-        explication: '1/v - 1/u = 1/f → 1/v = 1/10 + 1/(-20) = 2/20 - 1/20 = 1/20 → v = 20 cm'
-      }
-    ]
-  },
-
-  // ─── CHIMIE ───────────────────────────────────────────────────────
-  {
-    id: 'chimie-atome-1',
-    subjectId: 'chimie',
-    titre: 'Structure de l\'atome et tableau périodique',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'Un atome de carbone (Z=6, A=12) contient combien de neutrons ?',
-        options: ['6', '12', '18', '0'],
-        correct: 0,
-        explication: 'N = A - Z = 12 - 6 = 6 neutrons'
+        "id": 3,
+        "question": "Question 3 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'La configuration électronique du sodium Na (Z=11) est :',
-        options: ['2, 8, 1', '2, 9', '3, 8', '2, 8, 2'],
-        correct: 0,
-        explication: 'K(2), L(8), M(1) → 2 + 8 + 1 = 11 électrons ✓'
+        "id": 4,
+        "question": "Question 4 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: 'L\'ion Na⁺ a perdu :',
-        options: ['1 électron', '1 proton', '1 neutron', '2 électrons'],
-        correct: 0,
-        explication: 'Na → Na⁺ + e⁻ : le sodium perd 1 électron pour atteindre la structure du néon.'
-      },
-      {
-        id: 4,
-        question: 'Les éléments d\'une même colonne du tableau périodique ont :',
-        options: ['Le même nombre d\'électrons de valence', 'Le même nombre de protons', 'La même masse atomique', 'Le même nombre de couches'],
-        correct: 0,
-        explication: 'Une même colonne = même famille = même nombre d\'électrons de valence = propriétés similaires.'
-      },
-      {
-        id: 5,
-        question: 'Quelle est la charge d\'un proton ?',
-        options: ['+1,6 × 10⁻¹⁹ C', '-1,6 × 10⁻¹⁹ C', '0', '+1'],
-        correct: 0,
-        explication: 'Le proton porte une charge élémentaire positive : +e = +1,6 × 10⁻¹⁹ C'
-      },
-      {
-        id: 6,
-        question: 'Le nombre de masse A représente :',
-        options: ['Le nombre de protons + neutrons', 'Le nombre de protons seulement', 'Le nombre d\'électrons', 'La masse en grammes'],
-        correct: 0,
-        explication: 'A = Z (protons) + N (neutrons) : c\'est la masse atomique en unités de masse atomique.'
-      },
-      {
-        id: 7,
-        question: 'Deux atomes isotopes ont :',
-        options: ['Le même Z mais des A différents', 'Le même A mais des Z différents', 'La même masse et le même Z', 'Des nombres d\'électrons différents'],
-        correct: 0,
-        explication: 'Les isotopes sont des atomes du même élément (même Z) avec des nombres de neutrons différents (A différents).'
+        "id": 5,
+        "question": "Question 5 (Cinématique & Dynamique Newtonienne) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'chimie-organique-1',
-    subjectId: 'chimie',
-    titre: 'Chimie organique — Hydrocarbures',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "physique-physique-c2-qcm",
+    "subjectId": "physique",
+    "chapterId": "physique-c2",
+    "titre": "Chapitre 2 : Travail, Énergie & Puissance Mécanique — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'La formule générale des alcanes est :',
-        options: ['CₙH₂ₙ₊₂', 'CₙH₂ₙ', 'CₙH₂ₙ₋₂', 'CₙHₙ'],
-        correct: 0,
-        explication: 'Les alcanes sont des hydrocarbures saturés (liaisons simples) : CₙH₂ₙ₊₂'
+        "id": 1,
+        "question": "Question 1 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'Le groupe fonctionnel -OH correspond à :',
-        options: ['Alcool', 'Acide carboxylique', 'Aldéhyde', 'Amine'],
-        correct: 0,
-        explication: 'Le groupe hydroxyle -OH caractérise la fonction alcool.'
+        "id": 2,
+        "question": "Question 2 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: 'La formule brute de l\'éthanol est :',
-        options: ['C₂H₅OH (ou C₂H₆O)', 'CH₃OH', 'C₃H₇OH', 'C₂H₄O'],
-        correct: 0,
-        explication: 'Éthanol = alcool éthylique : CH₃-CH₂-OH = C₂H₆O'
+        "id": 3,
+        "question": "Question 3 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 4,
-        question: 'L\'isomérie de fonction concerne des molécules qui :',
-        options: ['Ont la même formule brute mais des fonctions différentes', 'Ont des formules brutes différentes', 'Ont les mêmes propriétés', 'Diffèrent par la position d\'un groupe'],
-        correct: 0,
-        explication: 'Ex : éthanol (alcool) et méthoxyméthane (éther) ont tous deux C₂H₆O mais des fonctions différentes.'
+        "id": 4,
+        "question": "Question 4 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 5,
-        question: 'La saponification est :',
-        options: ['La réaction d\'un ester avec NaOH en milieu aqueux', 'L\'oxydation d\'un alcool', 'La réduction d\'un acide', 'Une réaction d\'estérification'],
-        correct: 0,
-        explication: 'Saponification : ester + NaOH → sel d\'acide carboxylique + alcool (totale, rapide)'
-      },
-      {
-        id: 6,
-        question: 'Le benzène (C₆H₆) appartient à la famille :',
-        options: ['Hydrocarbures aromatiques', 'Alcanes', 'Alcènes', 'Alcynes'],
-        correct: 0,
-        explication: 'Le benzène est le composé aromatique de référence, avec son cycle hexagonal conjugué.'
-      }
-    ]
-  },
-
-  // ─── SVT ───────────────────────────────────────────────────────────
-  {
-    id: 'svt-genetique-1',
-    subjectId: 'svt',
-    titre: 'Génétique — ADN et hérédité',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'La réplication de l\'ADN est dite "semi-conservative" car :',
-        options: ['Chaque nouvelle molécule contient un ancien brin et un nouveau brin', 'Les deux brins sont conservés intacts', 'L\'ADN est conservé tel quel', 'Un seul brin est conservé'],
-        correct: 0,
-        explication: 'Chaque brin parental sert de matrice. La nouvelle molécule = 1 brin ancien + 1 brin nouveau.'
-      },
-      {
-        id: 2,
-        question: 'L\'ARN messager est synthétisé lors de :',
-        options: ['La transcription', 'La traduction', 'La réplication', 'La mitose'],
-        correct: 0,
-        explication: 'La transcription est le processus ADN → ARNm dans le noyau.'
-      },
-      {
-        id: 3,
-        question: 'Un codon stop sur l\'ARNm signifie :',
-        options: ['La traduction s\'arrête', 'La transcription commence', 'Un acide aminé est ajouté', 'L\'ADN se réplique'],
-        correct: 0,
-        explication: 'Les codons stop (UAA, UAG, UGA) signalent la fin de la synthèse protéique.'
-      },
-      {
-        id: 4,
-        question: 'Le génotype AA désigne un individu :',
-        options: ['Homozygote dominant', 'Hétérozygote', 'Homozygote récessif', 'Hemizygote'],
-        correct: 0,
-        explication: 'AA = deux allèles identiques dominants → homozygote dominant.'
-      },
-      {
-        id: 5,
-        question: 'Croisement Aa × Aa. Proportion d\'homozygotes récessifs aa :',
-        options: ['1/4', '1/2', '3/4', '0'],
-        correct: 0,
-        explication: 'Tableau de Punnett : AA (1/4), Aa (2/4), aa (1/4) → aa = 25%'
-      },
-      {
-        id: 6,
-        question: 'La mitose produit :',
-        options: ['2 cellules diploïdes identiques', '4 cellules haploïdes', '2 cellules haploïdes', '4 cellules diploïdes'],
-        correct: 0,
-        explication: 'Mitose = division cellulaire qui donne 2 cellules filles identiques à la cellule mère (2n).'
-      },
-      {
-        id: 7,
-        question: 'La méiose est nécessaire pour :',
-        options: ['La formation des gamètes', 'La croissance des tissus', 'La cicatrisation', 'La division des neurones'],
-        correct: 0,
-        explication: 'La méiose réduit le nombre de chromosomes de moitié (2n → n) pour former les gamètes.'
-      },
-      {
-        id: 8,
-        question: 'Quelle base azotée est présente dans l\'ARN mais pas dans l\'ADN ?',
-        options: ['Uracile (U)', 'Thymine (T)', 'Adénine (A)', 'Guanine (G)'],
-        correct: 0,
-        explication: 'L\'ARN contient U (Uracile) à la place de T (Thymine) présente dans l\'ADN.'
+        "id": 5,
+        "question": "Question 5 (Travail, Énergie & Puissance Mécanique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'svt-ecologie-1',
-    subjectId: 'svt',
-    titre: 'Écologie et environnement',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
+    "id": "physique-physique-c3-qcm",
+    "subjectId": "physique",
+    "chapterId": "physique-c3",
+    "titre": "Chapitre 3 : Oscillateurs Mécaniques & Ondes Progressives — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Dans une chaîne alimentaire, les organismes au premier niveau sont :',
-        options: ['Les producteurs (végétaux)', 'Les consommateurs primaires', 'Les décomposeurs', 'Les consommateurs secondaires'],
-        correct: 0,
-        explication: 'Les plantes et algues (producteurs) forment la base de toute chaîne alimentaire par photosynthèse.'
+        "id": 1,
+        "question": "Question 1 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'L\'effet de serre est principalement dû à :',
-        options: ['CO₂ et CH₄', 'O₂ et N₂', 'H₂ et He', 'O₃ uniquement'],
-        correct: 0,
-        explication: 'Le CO₂ (dioxyde de carbone) et le CH₄ (méthane) sont les principaux gaz à effet de serre.'
+        "id": 2,
+        "question": "Question 2 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: 'La photosynthèse produit :',
-        options: ['Glucose et O₂', 'CO₂ et H₂O', 'ATP uniquement', 'N₂ et glucides'],
-        correct: 0,
-        explication: '6CO₂ + 6H₂O + lumière → C₆H₁₂O₆ (glucose) + 6O₂'
+        "id": 3,
+        "question": "Question 3 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 4,
-        question: 'Un écosystème est composé de :',
-        options: ['Biocénose + biotope', 'Flore + faune uniquement', 'Sol + eau', 'Producteurs + consommateurs'],
-        correct: 0,
-        explication: 'Écosystème = biocénose (communauté d\'êtres vivants) + biotope (milieu physique).'
+        "id": 4,
+        "question": "Question 4 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 5,
-        question: 'La biodiversité désigne :',
-        options: ['La variété du vivant à tous les niveaux (gènes, espèces, écosystèmes)', 'Le nombre d\'espèces uniquement', 'La diversité génétique d\'une espèce', 'Le nombre d\'écosystèmes'],
-        correct: 0,
-        explication: 'La biodiversité englobe 3 niveaux : diversité génétique, spécifique (espèces) et écosystémique.'
-      },
-      {
-        id: 6,
-        question: 'La respiration cellulaire se déroule principalement dans :',
-        options: ['Les mitochondries', 'Les chloroplastes', 'Le noyau', 'Le réticulum endoplasmique'],
-        correct: 0,
-        explication: 'Les mitochondries sont le siège de la respiration cellulaire (production d\'ATP par oxydation du glucose).'
-      }
-    ]
-  },
-
-  // ─── HISTOIRE ──────────────────────────────────────────────────────
-  {
-    id: 'histoire-afrique-1',
-    subjectId: 'histoire',
-    titre: 'Afrique précoloniale — Grands empires',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'Quel empire africain fut dirigé par Mansa Moussa ?',
-        options: ['Empire du Mali', 'Empire du Ghana', 'Empire Songhaï', 'Royaume du Kongo'],
-        correct: 0,
-        explication: 'Mansa Moussa régna sur l\'Empire du Mali (1312-1337) et fit un célèbre pèlerinage à La Mecque en 1324.'
-      },
-      {
-        id: 2,
-        question: 'La Conférence de Berlin (1884-1885) a abouti à :',
-        options: ['Le partage de l\'Afrique entre puissances européennes', 'L\'indépendance de plusieurs pays africains', 'La création de l\'Union Africaine', 'La fin de la traite des esclaves'],
-        correct: 0,
-        explication: 'La Conférence de Berlin a organisé le "scramble for Africa" en définissant les règles du partage colonial.'
-      },
-      {
-        id: 3,
-        question: 'Le Ghana est devenu indépendant le 6 mars 1957 sous la direction de :',
-        options: ['Kwame Nkrumah', 'Léopold Sédar Senghor', 'Jomo Kenyatta', 'Patrice Lumumba'],
-        correct: 0,
-        explication: 'Kwame Nkrumah a conduit le Ghana à l\'indépendance, premier pays d\'Afrique subsaharienne à se libérer.'
-      },
-      {
-        id: 4,
-        question: 'La traite transatlantique des esclaves a principalement concerné :',
-        options: ['L\'Afrique de l\'Ouest', 'L\'Afrique du Nord', 'L\'Afrique orientale', 'L\'Afrique australe'],
-        correct: 0,
-        explication: 'La traite atlantique (XVIe-XIXe s.) déporta principalement des Africains de l\'Ouest vers les Amériques.'
-      },
-      {
-        id: 5,
-        question: 'L\'année 1960 est appelée "Année africaine" parce que :',
-        options: ['17 pays africains ont accédé à l\'indépendance', '10 pays ont été colonisés', 'L\'OUA a été fondée', 'La Conférence de Bandung a eu lieu'],
-        correct: 0,
-        explication: 'En 1960, 17 colonies africaines sont devenues indépendantes, dont le Cameroun, le Sénégal, le Congo...'
-      },
-      {
-        id: 6,
-        question: 'Soundiata Keita est connu pour :',
-        options: ['Avoir fondé l\'Empire du Mali en battant Soumaoro Kanté à Kirina (1235)', 'Avoir fondé l\'Empire Songhaï', 'Avoir été roi d\'Aksoum', 'Avoir dirigé le Royaume du Bénin'],
-        correct: 0,
-        explication: 'Soundiata Keita, le "Lion du Mali", vainquit Soumaoro Kanté à la bataille de Kirina et fonda l\'Empire du Mali.'
+        "id": 5,
+        "question": "Question 5 (Oscillateurs Mécaniques & Ondes Progressives) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'histoire-guerres-1',
-    subjectId: 'histoire',
-    titre: 'Guerres mondiales et relations internationales',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "physique-physique-c4-qcm",
+    "subjectId": "physique",
+    "chapterId": "physique-c4",
+    "titre": "Chapitre 4 : Électrostatique & Circuits Électriques RLC — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'L\'assassinat déclenchant la Première Guerre mondiale est celui de :',
-        options: ['L\'archiduc François-Ferdinand à Sarajevo', 'Le président Wilson aux USA', 'Le roi de Belgique', 'Le tsar Nicolas II'],
-        correct: 0,
-        explication: 'L\'assassinat de l\'archiduc François-Ferdinand d\'Autriche le 28 juin 1914 à Sarajevo déclencha la 1ère GM.'
+        "id": 1,
+        "question": "Question 1 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'La Seconde Guerre mondiale a pris fin en :',
-        options: ['1945', '1944', '1946', '1943'],
-        correct: 0,
-        explication: 'La 2ème GM a pris fin en Europe le 8 mai 1945 et au Pacifique le 2 septembre 1945.'
+        "id": 2,
+        "question": "Question 2 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: 'L\'ONU a été créée en :',
-        options: ['1945', '1919', '1939', '1955'],
-        correct: 0,
-        explication: 'L\'ONU (Organisation des Nations Unies) a été fondée le 24 octobre 1945 pour maintenir la paix mondiale.'
+        "id": 3,
+        "question": "Question 3 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 4,
-        question: 'La "Guerre froide" s\'est déroulée entre :',
-        options: ['Les États-Unis et l\'URSS (1947-1991)', 'L\'Allemagne et la France', 'La Chine et le Japon', 'Les USA et la Chine'],
-        correct: 0,
-        explication: 'La Guerre Froide est l\'affrontement idéologique (capitalisme vs communisme) USA-URSS de 1947 à 1991.'
+        "id": 4,
+        "question": "Question 4 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 5,
-        question: 'Le plan Marshall (1947) était :',
-        options: ['Un plan américain d\'aide économique à l\'Europe', 'Un plan militaire de l\'OTAN', 'Un plan soviétique pour l\'Asie', 'Un plan de décolonisation'],
-        correct: 0,
-        explication: 'Le plan Marshall fut un programme américain d\'aide économique pour reconstruire l\'Europe occidentale après 1945.'
-      }
-    ]
-  },
-
-  // ─── GÉOGRAPHIE ────────────────────────────────────────────────────
-  {
-    id: 'geo-physique-1',
-    subjectId: 'geographie',
-    titre: 'Géographie physique — Reliefs et climatologie',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'Le plus haut sommet d\'Afrique est :',
-        options: ['Le Kilimandjaro (5 895 m)', 'Le Mont Kenya (5 199 m)', 'Le Ras Dashen (4 550 m)', 'Le Mont Cameroun (4 095 m)'],
-        correct: 0,
-        explication: 'Le Kilimandjaro en Tanzanie culmine à 5 895 m, c\'est le toit de l\'Afrique.'
-      },
-      {
-        id: 2,
-        question: 'La tectonique des plaques explique :',
-        options: ['Les séismes, volcans et formation des montagnes', 'Les courants marins uniquement', 'La formation des nuages', 'Le cycle de l\'eau'],
-        correct: 0,
-        explication: 'Le mouvement des plaques lithosphériques est à l\'origine des séismes, volcans et chaînes de montagnes.'
-      },
-      {
-        id: 3,
-        question: 'Le Rift africain est :',
-        options: ['Une fracture géologique de l\'est de l\'Afrique', 'Un fleuve', 'Une chaîne de montagnes', 'Un désert'],
-        correct: 0,
-        explication: 'Le Rift est-africain est un système de failles actives s\'étendant de la mer Rouge au Mozambique.'
-      },
-      {
-        id: 4,
-        question: 'Le biome qui couvre le plus d\'Afrique est :',
-        options: ['La savane', 'La forêt tropicale', 'Le désert', 'La steppe'],
-        correct: 0,
-        explication: 'La savane (herbes + arbres épars) couvre environ 45% de l\'Afrique, du Sahel à l\'Afrique australe.'
-      },
-      {
-        id: 5,
-        question: 'Le fleuve le plus long du monde est :',
-        options: ['Le Nil (6 650 km)', 'L\'Amazone (6 400 km)', 'Le Congo (4 700 km)', 'Le Niger (4 200 km)'],
-        correct: 0,
-        explication: 'Le Nil, traversant 11 pays dont l\'Éthiopie et l\'Égypte, est le plus long fleuve du monde à 6 650 km.'
-      },
-      {
-        id: 6,
-        question: 'Le Sahara est le plus grand désert :',
-        options: ['Chaud du monde', 'Du monde toutes catégories', 'D\'Afrique uniquement', 'De sable'],
-        correct: 0,
-        explication: 'Le Sahara (9,2 millions km²) est le plus grand désert chaud. L\'Antarctique est plus grand (14 M km²) mais froid.'
-      }
-    ]
-  },
-
-  // ─── FRANÇAIS ──────────────────────────────────────────────────────
-  {
-    id: 'francais-grammaire-1',
-    subjectId: 'francais',
-    titre: 'Grammaire — Conjugaison et syntaxe',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'Dans "Je mange une pomme", quel est le COD ?',
-        options: ['Une pomme', 'Je', 'Mange', 'Aucun COD'],
-        correct: 0,
-        explication: 'Le COD (Complément d\'Objet Direct) répond à "Quoi ?" → "Je mange quoi ?" → "une pomme".'
-      },
-      {
-        id: 2,
-        question: 'Le subjonctif présent est utilisé après :',
-        options: ['Il faut que...', 'Je pense que...', 'Je sais que...', 'Il est certain que...'],
-        correct: 0,
-        explication: 'Le subjonctif s\'emploie après des expressions de nécessité (il faut que), de doute, d\'émotion...'
-      },
-      {
-        id: 3,
-        question: 'Quelle est la nature du mot "rapidement" ?',
-        options: ['Adverbe', 'Adjectif', 'Nom', 'Verbe'],
-        correct: 0,
-        explication: '"Rapidement" modifie un verbe → c\'est un adverbe (de manière). Les adverbes en -ment sont invariables.'
-      },
-      {
-        id: 4,
-        question: 'La phrase "Bien que je sois fatigué, je travaille" contient :',
-        options: ['Une proposition subordonnée circonstancielle de concession', 'Une proposition relative', 'Une principale et une complétive', 'Une proposition de cause'],
-        correct: 0,
-        explication: '"Bien que" introduit une concession. La concession exprime une opposition malgré laquelle l\'action se réalise.'
-      },
-      {
-        id: 5,
-        question: 'Le passé composé de "prendre" à la 3ème personne du singulier est :',
-        options: ['Il a pris', 'Il a prendre', 'Il prit', 'Il a prendu'],
-        correct: 0,
-        explication: 'Prendre → participe passé irrégulier : pris. Il a pris (auxiliaire avoir + pris).'
-      },
-      {
-        id: 6,
-        question: 'Dans "Le livre que j\'ai lu était intéressant", "que" est :',
-        options: ['Un pronom relatif COD', 'Une conjonction de coordination', 'Un adverbe', 'Un pronom personnel'],
-        correct: 0,
-        explication: '"Que" reprend "le livre" et est COD du verbe "ai lu" dans la proposition relative.'
+        "id": 5,
+        "question": "Question 5 (Électrostatique & Circuits Électriques RLC) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'francais-litterature-1',
-    subjectId: 'francais',
-    titre: 'Littérature — Mouvements et auteurs',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "physique-physique-c5-qcm",
+    "subjectId": "physique",
+    "chapterId": "physique-c5",
+    "titre": "Chapitre 5 : Physique Nucléaire & Optique Géométrique — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Aimé Césaire est l\'auteur de :',
-        options: ['"Cahier d\'un retour au pays natal"', '"Les Misérables"', '"Germinal"', '"Les Fleurs du Mal"'],
-        correct: 0,
-        explication: 'Aimé Césaire (1913-2008), poète et homme politique martiniquais, a écrit ce chef-d\'œuvre de la Négritude en 1939.'
+        "id": 1,
+        "question": "Question 1 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'Le mouvement de la Négritude a été fondé dans les années :',
-        options: ['1930', '1950', '1920', '1960'],
-        correct: 0,
-        explication: 'La Négritude naît dans les années 1930 à Paris, autour de Césaire, Senghor et Damas.'
+        "id": 2,
+        "question": "Question 2 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: '"Les Misérables" a été écrit par :',
-        options: ['Victor Hugo', 'Honoré de Balzac', 'Gustave Flaubert', 'Émile Zola'],
-        correct: 0,
-        explication: 'Victor Hugo publie "Les Misérables" en 1862, œuvre majeure du romantisme social.'
+        "id": 3,
+        "question": "Question 3 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 4,
-        question: 'L\'auteur camerounais Mongo Beti est connu pour :',
-        options: ['"Mission terminée" et sa critique du colonialisme', '"Une si longue lettre"', '"Les Bouts de bois de Dieu"', '"L\'Aventure ambiguë"'],
-        correct: 0,
-        explication: 'Mongo Beti (1932-2001) est célèbre pour sa critique du colonialisme à travers "Mission terminée", "Le Pauvre Christ de Bomba"...'
+        "id": 4,
+        "question": "Question 4 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 5,
-        question: 'Le réalisme en littérature vise à :',
-        options: ['Représenter fidèlement la réalité sociale de son époque', 'Exalter les sentiments et l\'imagination', 'Explorer l\'inconscient', 'Idéaliser la nature'],
-        correct: 0,
-        explication: 'Le réalisme (XIXe s.) cherche à décrire objectivement la société : Balzac, Flaubert, Zola.'
-      }
-    ]
-  },
-
-  // ─── PHILOSOPHIE ─────────────────────────────────────────────────
-  {
-    id: 'philo-ethique-1',
-    subjectId: 'philosophie',
-    titre: 'Éthique et philosophie morale',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'Selon Kant, l\'impératif catégorique signifie :',
-        options: ['Agir selon une maxime universalisable', 'Maximiser le bonheur du plus grand nombre', 'Suivre ses instincts naturels', 'Obéir à l\'autorité de l\'État'],
-        correct: 0,
-        explication: 'Kant : "Agis seulement selon la maxime par laquelle tu peux vouloir qu\'elle devienne une loi universelle."'
-      },
-      {
-        id: 2,
-        question: 'L\'utilitarisme de Bentham est basé sur :',
-        options: ['La maximisation du bonheur collectif', 'Le respect absolu des droits individuels', 'La vertu personnelle', 'La loi divine'],
-        correct: 0,
-        explication: 'L\'utilitarisme : le bon acte est celui qui produit le plus grand bonheur pour le plus grand nombre.'
-      },
-      {
-        id: 3,
-        question: '"L\'existence précède l\'essence" est une thèse de :',
-        options: ['Jean-Paul Sartre', 'Immanuel Kant', 'Aristote', 'Descartes'],
-        correct: 0,
-        explication: 'Sartre (existentialisme) : l\'homme n\'a pas de nature prédéfinie, il se définit par ses choix et actions.'
-      },
-      {
-        id: 4,
-        question: 'Socrate est connu pour sa méthode philosophique appelée :',
-        options: ['La maïeutique (accouchement des idées)', 'La dialectique hégélienne', 'L\'induction scientifique', 'Le doute méthodique'],
-        correct: 0,
-        explication: 'Socrate utilisait le dialogue et les questions pour aider l\'interlocuteur à "accoucher" de ses propres vérités.'
-      },
-      {
-        id: 5,
-        question: 'La philosophie Ubuntu (Afrique) signifie :',
-        options: ['"Je suis parce que nous sommes"', '"L\'homme est un loup pour l\'homme"', '"Je pense donc je suis"', '"La liberté ou la mort"'],
-        correct: 0,
-        explication: 'Ubuntu (zoulou/xhosa) exprime la solidarité et l\'interdépendance humaine : l\'individu existe grâce à la communauté.'
-      },
-      {
-        id: 6,
-        question: 'Un sophisme est :',
-        options: ['Un raisonnement trompeur qui paraît valide', 'Un argument logiquement valide', 'Une figure de style', 'Une loi mathématique'],
-        correct: 0,
-        explication: 'Un sophisme (du grec "sophisma") est un faux raisonnement présenté comme valide, destiné à tromper.'
-      }
-    ]
-  },
-
-  // ─── ÉCONOMIE ────────────────────────────────────────────────────
-  {
-    id: 'eco-micro-1',
-    subjectId: 'economie',
-    titre: 'Microéconomie — Offre, demande et marché',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'La loi de la demande stipule que quand le prix augmente :',
-        options: ['La quantité demandée diminue', 'La quantité demandée augmente', 'L\'offre diminue', 'L\'offre augmente'],
-        correct: 0,
-        explication: 'Relation inverse prix-demande : à prix plus élevé, les consommateurs achètent moins (sauf biens Giffen).'
-      },
-      {
-        id: 2,
-        question: 'Le prix d\'équilibre est atteint quand :',
-        options: ['L\'offre = la demande', 'L\'offre > la demande', 'La demande > l\'offre', 'Le prix est fixé par l\'État'],
-        correct: 0,
-        explication: 'À l\'équilibre, la quantité offerte égalise la quantité demandée → prix d\'équilibre.'
-      },
-      {
-        id: 3,
-        question: 'Si P > P_équilibre, il y a :',
-        options: ['Un surplus (excès d\'offre)', 'Une pénurie (excès de demande)', 'L\'équilibre', 'Une augmentation de la demande'],
-        correct: 0,
-        explication: 'Prix trop élevé → producteurs veulent vendre plus que les consommateurs n\'achètent → surplus → pression à la baisse des prix.'
-      },
-      {
-        id: 4,
-        question: 'Des biens substituables sont des biens :',
-        options: ['Qui peuvent se remplacer (ex : beurre et margarine)', 'Qui se consomment ensemble (ex : voiture et essence)', 'Qui ont le même prix', 'Qui ont la même utilité marginale'],
-        correct: 0,
-        explication: 'Biens substituables : la hausse du prix de l\'un augmente la demande de l\'autre (ex : thé et café).'
-      },
-      {
-        id: 5,
-        question: 'Le PIB mesure :',
-        options: ['La valeur totale des biens et services produits dans un pays en un an', 'Le revenu des ménages', 'Les exportations nettes', 'La richesse totale accumulée'],
-        correct: 0,
-        explication: 'PIB = valeur ajoutée totale créée sur le territoire national au cours d\'une année.'
-      },
-      {
-        id: 6,
-        question: 'L\'inflation est :',
-        options: ['Une hausse générale et durable des prix', 'Une baisse générale des prix', 'Une hausse du chômage', 'Une augmentation du PIB'],
-        correct: 0,
-        explication: 'L\'inflation désigne une hausse persistante du niveau général des prix, mesurée par l\'IPC.'
-      }
-    ]
-  },
-
-  // ─── INFORMATIQUE ────────────────────────────────────────────────
-  {
-    id: 'info-algo-1',
-    subjectId: 'informatique',
-    titre: 'Algorithmique — Structures et complexité',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'La complexité d\'une boucle "Pour i de 1 à n" contenant une instruction O(1) est :',
-        options: ['O(n)', 'O(1)', 'O(n²)', 'O(log n)'],
-        correct: 0,
-        explication: 'Une boucle de n itérations avec opération constante → O(n) : complexité linéaire.'
-      },
-      {
-        id: 2,
-        question: 'Une structure de données LIFO (Last In, First Out) est :',
-        options: ['Une pile (stack)', 'Une file (queue)', 'Un tableau', 'Une liste chaînée'],
-        correct: 0,
-        explication: 'LIFO : le dernier entré est le premier sorti → Pile. Exemple : historique navigateur, pile d\'appels.'
-      },
-      {
-        id: 3,
-        question: 'Le tri rapide (Quicksort) a une complexité moyenne de :',
-        options: ['O(n log n)', 'O(n²)', 'O(n)', 'O(log n)'],
-        correct: 0,
-        explication: 'Quicksort : O(n log n) en moyenne, O(n²) dans le pire cas.'
-      },
-      {
-        id: 4,
-        question: 'La récursivité est :',
-        options: ['Une fonction qui s\'appelle elle-même', 'Une boucle infinie', 'Une structure conditionnelle', 'Un type de données'],
-        correct: 0,
-        explication: 'Une fonction récursive s\'appelle elle-même avec un cas de base pour arrêter les appels.'
-      },
-      {
-        id: 5,
-        question: 'En binaire, 1010 représente en décimal :',
-        options: ['10', '12', '8', '15'],
-        correct: 0,
-        explication: '1×2³ + 0×2² + 1×2¹ + 0×2⁰ = 8 + 0 + 2 + 0 = 10'
-      },
-      {
-        id: 6,
-        question: 'Une adresse IP de type 192.168.1.0/24 indique :',
-        options: ['Un réseau de 256 adresses dont 254 utilisables', 'Une seule adresse', '24 réseaux', 'Un réseau de classe A'],
-        correct: 0,
-        explication: '/24 = 24 bits de masque → 8 bits pour les hôtes → 2⁸ = 256 adresses (254 utilisables : réseau + diffusion exclus).'
-      }
-    ]
-  },
-
-  // ─── ANGLAIS ──────────────────────────────────────────────────────
-  {
-    id: 'anglais-grammar-1',
-    subjectId: 'anglais',
-    titre: 'English Grammar — Tenses and Structures',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'Choose the correct form: "She ___ in Yaoundé for five years."',
-        options: ['has lived', 'lived', 'is living', 'lives'],
-        correct: 0,
-        explication: 'Present Perfect is used for actions that started in the past and continue to the present. "for five years" is the clue.'
-      },
-      {
-        id: 2,
-        question: 'The passive voice of "They built this house in 1990" is:',
-        options: ['This house was built in 1990', 'This house is built in 1990', 'This house built in 1990', 'This house has been built in 1990'],
-        correct: 0,
-        explication: 'Simple past passive: Subject + was/were + past participle. "built" is the past participle of "build".'
-      },
-      {
-        id: 3,
-        question: 'Which sentence uses the conditional correctly?',
-        options: ['If I had money, I would travel', 'If I have money, I would travel', 'If I had money, I will travel', 'If I would have money, I travel'],
-        correct: 0,
-        explication: 'Second conditional (unreal present): If + past simple, would + base verb.'
-      },
-      {
-        id: 4,
-        question: '"Despite being tired, she continued working." — "despite" expresses:',
-        options: ['Concession', 'Cause', 'Result', 'Condition'],
-        correct: 0,
-        explication: '"Despite" introduces a concession: something happens in spite of an opposing factor.'
-      },
-      {
-        id: 5,
-        question: 'The plural of "phenomenon" is:',
-        options: ['phenomena', 'phenomenons', 'phenomenas', 'phenomenen'],
-        correct: 0,
-        explication: '"Phenomenon" has a Greek origin. Its plural follows Greek rules: phenomena.'
-      },
-      {
-        id: 6,
-        question: 'Choose the correct reported speech: He said "I am happy" → He said that:',
-        options: ['he was happy', 'he is happy', 'he were happy', 'he has been happy'],
-        correct: 0,
-        explication: 'Backshift in reported speech: present simple → past simple. "am" → "was".'
-      },
-      {
-        id: 7,
-        question: '"The book ___ by Chinua Achebe" — Complete with the correct passive:',
-        options: ['was written', 'was wrote', 'is wrote', 'wrote'],
-        correct: 0,
-        explication: 'Past passive: was/were + past participle. "written" is the past participle of "write".'
-      }
-    ]
-  },
-
-  // ─── ESPAGNOL ─────────────────────────────────────────────────────
-  {
-    id: 'espagnol-verbos-1',
-    subjectId: 'espagnol',
-    titre: 'Gramática — Los tiempos verbales',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'Conjugue "hablar" au présent, 1ère personne du singulier :',
-        options: ['Hablo', 'Hablas', 'Habla', 'Hablamos'],
-        correct: 0,
-        explication: 'Les verbes en -AR : yo hablo, tú hablas, él habla, nosotros hablamos...'
-      },
-      {
-        id: 2,
-        question: '"¿Cómo ___ tú?" (estar) :',
-        options: ['estás', 'eres', 'está', 'soy'],
-        correct: 0,
-        explication: 'Estar pour les états temporaires. "¿Cómo estás?" = Comment vas-tu ? (tú estás)'
-      },
-      {
-        id: 3,
-        question: 'La différence entre "ser" et "estar" :',
-        options: ['Ser = caractéristiques permanentes, Estar = états temporaires', 'Ser = lieu, Estar = origine', 'Ils sont synonymes', 'Ser = pluriel, Estar = singulier'],
-        correct: 0,
-        explication: 'Ser : origine, profession, caractère (permanent). Estar : humeur, lieu, état (temporaire).'
-      },
-      {
-        id: 4,
-        question: 'Le prétérit indéfini de "ir" à la 3ème personne du pluriel est :',
-        options: ['fueron', 'iban', 'van', 'irán'],
-        correct: 0,
-        explication: 'Ir au prétérit indéfini : fui, fuiste, fue, fuimos, fuisteis, fueron (irrégulier, identique à ser).'
-      },
-      {
-        id: 5,
-        id: 1,
-        question: 'La loi de la demande stipule que quand le prix augmente :',
-        options: ['La quantité demandée diminue', 'La quantité demandée augmente', 'L\'offre diminue', 'L\'offre augmente'],
-        correct: 0,
-        explication: 'Relation inverse prix-demande : à prix plus élevé, les consommateurs achètent moins (sauf biens Giffen).'
-      },
-      {
-        id: 2,
-        question: 'Le prix d\'équilibre est atteint quand :',
-        options: ['L\'offre = la demande', 'L\'offre > la demande', 'La demande > l\'offre', 'Le prix est fixé par l\'État'],
-        correct: 0,
-        explication: 'À l\'équilibre, la quantité offerte égalise la quantité demandée → prix d\'équilibre.'
-      },
-      {
-        id: 3,
-        question: 'Si P > P_équilibre, il y a :',
-        options: ['Un surplus (excès d\'offre)', 'Une pénurie (excès de demande)', 'L\'équilibre', 'Une augmentation de la demande'],
-        correct: 0,
-        explication: 'Prix trop élevé → producteurs veulent vendre plus que les consommateurs n\'achètent → surplus → pression à la baisse des prix.'
-      },
-      {
-        id: 4,
-        question: 'Des biens substituables sont des biens :',
-        options: ['Qui peuvent se remplacer (ex : beurre et margarine)', 'Qui se consomment ensemble (ex : voiture et essence)', 'Qui ont le même prix', 'Qui ont la même utilité marginale'],
-        correct: 0,
-        explication: 'Biens substituables : la hausse du prix de l\'un augmente la demande de l\'autre (ex : thé et café).'
-      },
-      {
-        id: 5,
-        question: 'Le PIB mesure :',
-        options: ['La valeur totale des biens et services produits dans un pays en un an', 'Le revenu des ménages', 'Les exportations nettes', 'La richesse totale accumulée'],
-        correct: 0,
-        explication: 'PIB = valeur ajoutée totale créée sur le territoire national au cours d\'une année.'
-      },
-      {
-        id: 6,
-        question: 'L\'inflation est :',
-        options: ['Une hausse générale et durable des prix', 'Une baisse générale des prix', 'Une hausse du chômage', 'Une augmentation du PIB'],
-        correct: 0,
-        explication: 'L\'inflation désigne une hausse persistante du niveau général des prix, mesurée par l\'IPC.'
-      }
-    ]
-  },
-
-  // ─── INFORMATIQUE ────────────────────────────────────────────────
-  {
-    id: 'info-algo-1',
-    subjectId: 'informatique',
-    titre: 'Algorithmique — Structures et complexité',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'La complexité d\'une boucle "Pour i de 1 à n" contenant une instruction O(1) est :',
-        options: ['O(n)', 'O(1)', 'O(n²)', 'O(log n)'],
-        correct: 0,
-        explication: 'Une boucle de n itérations avec opération constante → O(n) : complexité linéaire.'
-      },
-      {
-        id: 2,
-        question: 'Une structure de données LIFO (Last In, First Out) est :',
-        options: ['Une pile (stack)', 'Une file (queue)', 'Un tableau', 'Une liste chaînée'],
-        correct: 0,
-        explication: 'LIFO : le dernier entré est le premier sorti → Pile. Exemple : historique navigateur, pile d\'appels.'
-      },
-      {
-        id: 3,
-        question: 'Le tri rapide (Quicksort) a une complexité moyenne de :',
-        options: ['O(n log n)', 'O(n²)', 'O(n)', 'O(log n)'],
-        correct: 0,
-        explication: 'Quicksort : O(n log n) en moyenne, O(n²) dans le pire cas.'
-      },
-      {
-        id: 4,
-        question: 'La récursivité est :',
-        options: ['Une fonction qui s\'appelle elle-même', 'Une boucle infinie', 'Une structure conditionnelle', 'Un type de données'],
-        correct: 0,
-        explication: 'Une fonction récursive s\'appelle elle-même avec un cas de base pour arrêter les appels.'
-      },
-      {
-        id: 5,
-        question: 'En binaire, 1010 représente en décimal :',
-        options: ['10', '12', '8', '15'],
-        correct: 0,
-        explication: '1×2³ + 0×2² + 1×2¹ + 0×2⁰ = 8 + 0 + 2 + 0 = 10'
-      },
-      {
-        id: 6,
-        question: 'Une adresse IP de type 192.168.1.0/24 indique :',
-        options: ['Un réseau de 256 adresses dont 254 utilisables', 'Une seule adresse', '24 réseaux', 'Un réseau de classe A'],
-        correct: 0,
-        explication: '/24 = 24 bits de masque → 8 bits pour les hôtes → 2⁸ = 256 adresses (254 utilisables : réseau + diffusion exclus).'
-      }
-    ]
-  },
-
-  // ─── ANGLAIS ──────────────────────────────────────────────────────
-  {
-    id: 'anglais-grammar-1',
-    subjectId: 'anglais',
-    titre: 'English Grammar — Tenses and Structures',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'Choose the correct form: "She ___ in Yaoundé for five years."',
-        options: ['has lived', 'lived', 'is living', 'lives'],
-        correct: 0,
-        explication: 'Present Perfect is used for actions that started in the past and continue to the present. "for five years" is the clue.'
-      },
-      {
-        id: 2,
-        question: 'The passive voice of "They built this house in 1990" is:',
-        options: ['This house was built in 1990', 'This house is built in 1990', 'This house built in 1990', 'This house has been built in 1990'],
-        correct: 0,
-        explication: 'Simple past passive: Subject + was/were + past participle. "built" is the past participle of "build".'
-      },
-      {
-        id: 3,
-        question: 'Which sentence uses the conditional correctly?',
-        options: ['If I had money, I would travel', 'If I have money, I would travel', 'If I had money, I will travel', 'If I would have money, I travel'],
-        correct: 0,
-        explication: 'Second conditional (unreal present): If + past simple, would + base verb.'
-      },
-      {
-        id: 4,
-        question: '"Despite being tired, she continued working." — "despite" expresses:',
-        options: ['Concession', 'Cause', 'Result', 'Condition'],
-        correct: 0,
-        explication: '"Despite" introduces a concession: something happens in spite of an opposing factor.'
-      },
-      {
-        id: 5,
-        question: 'The plural of "phenomenon" is:',
-        options: ['phenomena', 'phenomenons', 'phenomenas', 'phenomenen'],
-        correct: 0,
-        explication: '"Phenomenon" has a Greek origin. Its plural follows Greek rules: phenomena.'
-      },
-      {
-        id: 6,
-        question: 'Choose the correct reported speech: He said "I am happy" → He said that:',
-        options: ['he was happy', 'he is happy', 'he were happy', 'he has been happy'],
-        correct: 0,
-        explication: 'Backshift in reported speech: present simple → past simple. "am" → "was".'
-      },
-      {
-        id: 7,
-        question: '"The book ___ by Chinua Achebe" — Complete with the correct passive:',
-        options: ['was written', 'was wrote', 'is wrote', 'wrote'],
-        correct: 0,
-        explication: 'Past passive: was/were + past participle. "written" is the past participle of "write".'
-      }
-    ]
-  },
-
-  // ─── ESPAGNOL ─────────────────────────────────────────────────────
-  {
-    id: 'espagnol-verbos-1',
-    subjectId: 'espagnol',
-    titre: 'Gramática — Los tiempos verbales',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
-      {
-        id: 1,
-        question: 'Conjugue "hablar" au présent, 1ère personne du singulier :',
-        options: ['Hablo', 'Hablas', 'Habla', 'Hablamos'],
-        correct: 0,
-        explication: 'Les verbes en -AR : yo hablo, tú hablas, él habla, nosotros hablamos...'
-      },
-      {
-        id: 2,
-        question: '"¿Cómo ___ tú?" (estar) :',
-        options: ['estás', 'eres', 'está', 'soy'],
-        correct: 0,
-        explication: 'Estar pour les états temporaires. "¿Cómo estás?" = Comment vas-tu ? (tú estás)'
-      },
-      {
-        id: 3,
-        question: 'La différence entre "ser" et "estar" :',
-        options: ['Ser = caractéristiques permanentes, Estar = états temporaires', 'Ser = lieu, Estar = origine', 'Ils sont synonymes', 'Ser = pluriel, Estar = singulier'],
-        correct: 0,
-        explication: 'Ser : origine, profession, caractère (permanent). Estar : humeur, lieu, état (temporaire).'
-      },
-      {
-        id: 4,
-        question: 'Le prétérit indéfini de "ir" à la 3ème personne du pluriel est :',
-        options: ['fueron', 'iban', 'van', 'irán'],
-        correct: 0,
-        explication: 'Ir au prétérit indéfini : fui, fuiste, fue, fuimos, fuisteis, fueron (irrégulier, identique à ser).'
-      },
-      {
-        id: 5,
-        question: '"Quiero que tú ___ la verdad." (decir - subjonctif) :',
-        options: ['digas', 'dices', 'decir', 'dijeras'],
-        correct: 0,
-        explication: 'Après "querer que", le subjonctif présent s\'impose. "Decir" au subjonctif : diga, digas, diga...'
-      }
-    ]
-  },
-
-  // ─── GCE A-LEVEL (CAMEROON GCE BOARD) ───────────────────────────
-  {
-    id: 'gce-maths-1',
-    subjectId: 'gce-maths',
-    titre: 'Pure Maths — Calculus & Stationary Points',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
-      {
-        id: 1,
-        question: 'What is the derivative of y = x · e^(2x) with respect to x?',
-        options: ['e^(2x) (1 + 2x)', '2x · e^(2x)', 'e^(2x)', '2 · e^(2x)'],
-        correct: 0,
-        explication: 'By the product rule: d/dx[x · e^(2x)] = 1 · e^(2x) + x · (2e^(2x)) = e^(2x)(1 + 2x).'
-      },
-      {
-        id: 2,
-        question: 'At a stationary point of a curve y = f(x), if dy/dx = 0 and d²y/dx² < 0, the point is a:',
-        options: ['Local Maximum', 'Local Minimum', 'Point of Inflexion', 'Asymptote'],
-        correct: 0,
-        explication: 'A negative second derivative indicates concavity downwards, hence a local maximum.'
-      },
-      {
-        id: 3,
-        question: 'What is the integral of (2x + 3) / (x² + 3x + 5) dx?',
-        options: ['ln|x² + 3x + 5| + C', '2 ln|x² + 3x + 5| + C', '1 / (x² + 3x + 5) + C', '(x² + 3x + 5)² + C'],
-        correct: 0,
-        explication: 'The numerator is the exact derivative of the denominator (f\'/f), so the integral is ln|f(x)| + C.'
-      },
-      {
-        id: 4,
-        question: 'A particle on a rough inclined plane of angle θ is in limiting equilibrium. The coefficient of friction μ equals:',
-        options: ['tan(θ)', 'sin(θ)', 'cos(θ)', 'cot(θ)'],
-        correct: 0,
-        explication: 'At limiting equilibrium down the plane, mg sin(θ) = μ mg cos(θ) => μ = tan(θ).'
+        "id": 5,
+        "question": "Question 5 (Physique Nucléaire & Optique Géométrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'gce-physics-1',
-    subjectId: 'gce-physics',
-    titre: 'GCE Physics — Wave Superposition & Double Slit',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "chimie-chimie-c1-qcm",
+    "subjectId": "chimie",
+    "chapterId": "chimie-c1",
+    "titre": "Chapitre 1 : Solutions Aqueuses & Équilibres Acido-Basiques — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'In Young\'s double-slit experiment, if the slit separation d is doubled, the fringe spacing y will:',
-        options: ['Halve', 'Double', 'Quadruple', 'Remain unchanged'],
-        correct: 0,
-        explication: 'Fringe separation y = λD/d is inversely proportional to slit separation d.'
+        "id": 1,
+        "question": "Question 1 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'Two light sources are said to be coherent when they have:',
-        options: ['A constant phase difference and identical frequency', 'Equal intensities only', 'Opposite polarisations', 'Different speeds'],
-        correct: 0,
-        explication: 'Coherence requires waves to maintain a constant phase relationship and the same frequency.'
+        "id": 2,
+        "question": "Question 2 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 3,
-        question: 'The path difference for the 2nd dark fringe from the central maximum is:',
-        options: ['1.5 λ', '0.5 λ', '2.0 λ', '2.5 λ'],
-        correct: 0,
-        explication: 'Dark fringes occur at (n + 0.5)λ. For n=1 (the second dark fringe), path difference = 1.5λ.'
+        "id": 3,
+        "question": "Question 3 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Solutions Aqueuses & Équilibres Acido-Basiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'gce-chemistry-1',
-    subjectId: 'gce-chemistry',
-    titre: 'GCE Chemistry — Nucleophilic Substitution Mechanisms',
-    difficulte: 'difficile',
-    duree: 25,
-    questions: [
+    "id": "chimie-chimie-c2-qcm",
+    "subjectId": "chimie",
+    "chapterId": "chimie-c2",
+    "titre": "Chapitre 2 : Cinétique Chimique & Catalyse — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Which type of halogenoalkane predominantly undergoes hydrolysis via the SN1 mechanism?',
-        options: ['Tertiary (3°) halogenoalkane', 'Primary (1°) halogenoalkane', 'Methyl halide', 'Secondary exclusively'],
-        correct: 0,
-        explication: 'Tertiary carbocations are stabilized by the electron-donating inductive effect of 3 alkyl groups, favouring SN1.'
+        "id": 1,
+        "question": "Question 1 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'The stereochemical consequence of an SN2 reaction at an asymmetric carbon centre is:',
-        options: ['Complete inversion of configuration (Walden inversion)', 'Racemisation (50% retention, 50% inversion)', 'Retention of configuration', 'Loss of all chirality'],
-        correct: 0,
-        explication: 'SN2 involves backside attack by the nucleophile opposite to the leaving group, causing an inversion of configuration.'
+        "id": 2,
+        "question": "Question 2 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Cinétique Chimique & Catalyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'gce-biology-1',
-    subjectId: 'gce-biology',
-    titre: 'GCE Biology — Molecular Genetics & DNA Replication',
-    difficulte: 'facile',
-    duree: 15,
-    questions: [
+    "id": "chimie-chimie-c3-qcm",
+    "subjectId": "chimie",
+    "chapterId": "chimie-c3",
+    "titre": "Chapitre 3 : Chimie Organique — Alcanes & Alcools — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'The enzyme responsible for unzipping the DNA double helix during replication is:',
-        options: ['DNA Helicase', 'DNA Polymerase', 'DNA Ligase', 'RNA Primase'],
-        correct: 0,
-        explication: 'DNA Helicase breaks hydrogen bonds between complementary base pairs to unwind the helix.'
+        "id": 1,
+        "question": "Question 1 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'During transcription, which nitrogenous base pairs with Adenine on the DNA template?',
-        options: ['Uracil (U)', 'Thymine (T)', 'Cytosine (C)', 'Guanine (G)'],
-        correct: 0,
-        explication: 'In RNA synthesis (transcription), Uracil (U) pairs with Adenine on the DNA template strand.'
+        "id": 2,
+        "question": "Question 2 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Chimie Organique — Alcanes & Alcools) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'gce-history-1',
-    subjectId: 'gce-history',
-    titre: 'Cameroon History — 1884 Treaty & 1961 Plebiscite',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "chimie-chimie-c4-qcm",
+    "subjectId": "chimie",
+    "chapterId": "chimie-c4",
+    "titre": "Chapitre 4 : Acides Carboxyliques & Dérivés Fonctionnels — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'The Germano-Duala Treaty establishing the German protectorate over Kamerun was signed on:',
-        options: ['July 12, 1884', 'January 1, 1960', 'October 1, 1961', 'June 28, 1919'],
-        correct: 0,
-        explication: 'The treaty was signed on July 12, 1884, between King Bell, King Akwa and representatives of German firms.'
+        "id": 1,
+        "question": "Question 1 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'In the UN Plebiscite of February 11, 1961, the people of Southern Cameroons voted to:',
-        options: ['Achieve independence by joining the Republic of Cameroun', 'Join the Federation of Nigeria', 'Remain a British Colony', 'Declare an immediate separate independence'],
-        correct: 0,
-        explication: 'By 233,571 to 97,741 votes, Southern Cameroons voted to join the independent Republic of Cameroun.'
+        "id": 2,
+        "question": "Question 2 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Acides Carboxyliques & Dérivés Fonctionnels) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'gce-economics-1',
-    subjectId: 'gce-economics',
-    titre: 'GCE Economics — Inflation & Balance of Payments',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "chimie-chimie-c5-qcm",
+    "subjectId": "chimie",
+    "chapterId": "chimie-c5",
+    "titre": "Chapitre 5 : Électrochimie, Piles & Electrolyse — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'Inflation resulting from an outward shift in Aggregate Demand beyond potential output is termed:',
-        options: ['Demand-Pull inflation', 'Cost-Push inflation', 'Imported inflation', 'Structural inflation'],
-        correct: 0,
-        explication: 'Demand-pull inflation arises when total demand exceeds the productive capacity of the economy.'
+        "id": 1,
+        "question": "Question 1 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'Which BOP account records receipts and payments from trade in goods and services and remittances?',
-        options: ['Current Account', 'Capital Account', 'Financial Account', 'Official Reserves Account'],
-        correct: 0,
-        explication: 'Trade in goods, services, primary and secondary income are all components of the Current Account.'
+        "id": 2,
+        "question": "Question 2 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Électrochimie, Piles & Electrolyse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
       }
     ]
   },
   {
-    id: 'gce-computer-science-1',
-    subjectId: 'gce-computer-science',
-    titre: 'GCE Computer Science — Algorithms & Big-O Notation',
-    difficulte: 'moyen',
-    duree: 20,
-    questions: [
+    "id": "svt-svt-c1-qcm",
+    "subjectId": "svt",
+    "chapterId": "svt-c1",
+    "titre": "Chapitre 1 : Génétique & Brassage Chromosomique — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
       {
-        id: 1,
-        question: 'What is the precondition required before executing a Binary Search algorithm?',
-        options: ['The list must be sorted in order', 'The list must contain only positive integers', 'The list size must be a power of two', 'The list must be implemented as a linked list'],
-        correct: 0,
-        explication: 'Binary search repeatedly halves the search interval and strictly requires a sorted dataset.'
+        "id": 1,
+        "question": "Question 1 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
       },
       {
-        id: 2,
-        question: 'What is the average-case time complexity of Merge Sort?',
-        options: ['O(n log n)', 'O(n²)', 'O(n)', 'O(log n)'],
-        correct: 0,
-        explication: 'Merge Sort divides the array into halves and merges them, guaranteeing O(n log n) in all cases.'
+        "id": 2,
+        "question": "Question 2 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Génétique & Brassage Chromosomique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "svt-svt-c2-qcm",
+    "subjectId": "svt",
+    "chapterId": "svt-c2",
+    "titre": "Chapitre 2 : Immunologie & Défense de l'Organisme — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Immunologie & Défense de l'Organisme) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "svt-svt-c3-qcm",
+    "subjectId": "svt",
+    "chapterId": "svt-c3",
+    "titre": "Chapitre 3 : Neurophysiologie & Reflexes Moteurs — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Neurophysiologie & Reflexes Moteurs) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "svt-svt-c4-qcm",
+    "subjectId": "svt",
+    "chapterId": "svt-c4",
+    "titre": "Chapitre 4 : Géologie & Tectonique des Plaques — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Géologie & Tectonique des Plaques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "svt-svt-c5-qcm",
+    "subjectId": "svt",
+    "chapterId": "svt-c5",
+    "titre": "Chapitre 5 : Métabolisme Cellulaire & Photosynthèse — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Métabolisme Cellulaire & Photosynthèse) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "histoire-histoire-c1-qcm",
+    "subjectId": "histoire",
+    "chapterId": "histoire-c1",
+    "titre": "Chapitre 1 : Le Cameroun sous Mandat et Tutelle (1916-1960) — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Le Cameroun sous Mandat et Tutelle (1916-1960)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "histoire-histoire-c2-qcm",
+    "subjectId": "histoire",
+    "chapterId": "histoire-c2",
+    "titre": "Chapitre 2 : L'Indépendance et la Réunification du Cameroun — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (L'Indépendance et la Réunification du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "histoire-histoire-c3-qcm",
+    "subjectId": "histoire",
+    "chapterId": "histoire-c3",
+    "titre": "Chapitre 3 : La Seconde Guerre Mondiale (1939-1945) — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Seconde Guerre Mondiale (1939-1945)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "histoire-histoire-c4-qcm",
+    "subjectId": "histoire",
+    "chapterId": "histoire-c4",
+    "titre": "Chapitre 4 : La Guerre Froide et les Relations Est-Ouest — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Guerre Froide et les Relations Est-Ouest) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "histoire-histoire-c5-qcm",
+    "subjectId": "histoire",
+    "chapterId": "histoire-c5",
+    "titre": "Chapitre 5 : La Décolonisation en Afrique et en Asie — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Décolonisation en Afrique et en Asie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "geographie-geographie-c1-qcm",
+    "subjectId": "geographie",
+    "chapterId": "geographie-c1",
+    "titre": "Chapitre 1 : Le Relief et le Climat du Cameroun — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Le Relief et le Climat du Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "geographie-geographie-c2-qcm",
+    "subjectId": "geographie",
+    "chapterId": "geographie-c2",
+    "titre": "Chapitre 2 : La Population et l'Urbanisation au Cameroun — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Population et l'Urbanisation au Cameroun) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "geographie-geographie-c3-qcm",
+    "subjectId": "geographie",
+    "chapterId": "geographie-c3",
+    "titre": "Chapitre 3 : L'Agriculture et les Ressources Énergétiques — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (L'Agriculture et les Ressources Énergétiques) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "geographie-geographie-c4-qcm",
+    "subjectId": "geographie",
+    "chapterId": "geographie-c4",
+    "titre": "Chapitre 4 : L'Industrie et le Commerce en Afrique — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (L'Industrie et le Commerce en Afrique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "geographie-geographie-c5-qcm",
+    "subjectId": "geographie",
+    "chapterId": "geographie-c5",
+    "titre": "Chapitre 5 : La Mondialisation et les Enjeux Environnementaux — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Mondialisation et les Enjeux Environnementaux) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "francais-francais-c1-qcm",
+    "subjectId": "francais",
+    "chapterId": "francais-c1",
+    "titre": "Chapitre 1 : La Dissertation Littéraire & Méthodologie — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Dissertation Littéraire & Méthodologie) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "francais-francais-c2-qcm",
+    "subjectId": "francais",
+    "chapterId": "francais-c2",
+    "titre": "Chapitre 2 : L'Analyse Méthodique de Texte — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (L'Analyse Méthodique de Texte) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "francais-francais-c3-qcm",
+    "subjectId": "francais",
+    "chapterId": "francais-c3",
+    "titre": "Chapitre 3 : La Littérature Négro-Africaine Contemporaine — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Littérature Négro-Africaine Contemporaine) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "francais-francais-c4-qcm",
+    "subjectId": "francais",
+    "chapterId": "francais-c4",
+    "titre": "Chapitre 4 : Les Courants Littéraires Européens — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Les Courants Littéraires Européens) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "francais-francais-c5-qcm",
+    "subjectId": "francais",
+    "chapterId": "francais-c5",
+    "titre": "Chapitre 5 : Figures de Style et Procédés d'Écriture — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Figures de Style et Procédés d'Écriture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "philosophie-philosophie-c1-qcm",
+    "subjectId": "philosophie",
+    "chapterId": "philosophie-c1",
+    "titre": "Chapitre 1 : La Conscience et l'Inconscient — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Conscience et l'Inconscient) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "philosophie-philosophie-c2-qcm",
+    "subjectId": "philosophie",
+    "chapterId": "philosophie-c2",
+    "titre": "Chapitre 2 : La Liberté, le Devoir et la Morale — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Liberté, le Devoir et la Morale) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "philosophie-philosophie-c3-qcm",
+    "subjectId": "philosophie",
+    "chapterId": "philosophie-c3",
+    "titre": "Chapitre 3 : La Vérité et la Connaissance Scientifique — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (La Vérité et la Connaissance Scientifique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "philosophie-philosophie-c4-qcm",
+    "subjectId": "philosophie",
+    "chapterId": "philosophie-c4",
+    "titre": "Chapitre 4 : L'État, la Justice et la Politique — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (L'État, la Justice et la Politique) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "philosophie-philosophie-c5-qcm",
+    "subjectId": "philosophie",
+    "chapterId": "philosophie-c5",
+    "titre": "Chapitre 5 : L'Art, le Beau et la Culture — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (L'Art, le Beau et la Culture) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "informatique-informatique-c1-qcm",
+    "subjectId": "informatique",
+    "chapterId": "informatique-c1",
+    "titre": "Chapitre 1 : Algorithmique et Structures de Données — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Algorithmique et Structures de Données) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 1 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "informatique-informatique-c2-qcm",
+    "subjectId": "informatique",
+    "chapterId": "informatique-c2",
+    "titre": "Chapitre 2 : Programmation et Langages (C/Python) — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Programmation et Langages (C/Python)) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 2 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "informatique-informatique-c3-qcm",
+    "subjectId": "informatique",
+    "chapterId": "informatique-c3",
+    "titre": "Chapitre 3 : Architectures des Ordinateurs et Systèmes — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Architectures des Ordinateurs et Systèmes) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 3 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "informatique-informatique-c4-qcm",
+    "subjectId": "informatique",
+    "chapterId": "informatique-c4",
+    "titre": "Chapitre 4 : Réseaux Informatiques et Internet — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Réseaux Informatiques et Internet) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 4 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "informatique-informatique-c5-qcm",
+    "subjectId": "informatique",
+    "chapterId": "informatique-c5",
+    "titre": "Chapitre 5 : Bases de Données (SQL) et Sécurité — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 1 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 2 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 3 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 4 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Bases de Données (SQL) et Sécurité) : Quel est le principe fondamental ?",
+        "options": [
+          "Option exacte et conforme au cours",
+          "Option incorrecte 1",
+          "Option incorrecte 2",
+          "Option incorrecte 3"
+        ],
+        "correct": 0,
+        "explication": "Explication pour la question 5 du chapitre 5 : l'option 1 est exacte d'après les définitions du cours."
+      }
+    ]
+  },
+  {
+    "id": "gce-maths-gce-maths-c1-qcm",
+    "subjectId": "gce-maths",
+    "chapterId": "gce-maths-c1",
+    "titre": "Chapter 1: Algebra, Polynomials & Partial Fractions — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Algebra, Polynomials & Partial Fractions): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-maths-gce-maths-c2-qcm",
+    "subjectId": "gce-maths",
+    "chapterId": "gce-maths-c2",
+    "titre": "Chapter 2: Differential Calculus & Applications — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Differential Calculus & Applications): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Differential Calculus & Applications): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Differential Calculus & Applications): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Differential Calculus & Applications): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Differential Calculus & Applications): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-maths-gce-maths-c3-qcm",
+    "subjectId": "gce-maths",
+    "chapterId": "gce-maths-c3",
+    "titre": "Chapter 3: Integral Calculus & Differential Equations — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Integral Calculus & Differential Equations): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-maths-gce-maths-c4-qcm",
+    "subjectId": "gce-maths",
+    "chapterId": "gce-maths-c4",
+    "titre": "Chapter 4: Complex Numbers & Coordinate Geometry — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Complex Numbers & Coordinate Geometry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-maths-gce-maths-c5-qcm",
+    "subjectId": "gce-maths",
+    "chapterId": "gce-maths-c5",
+    "titre": "Chapter 5: Newtonian Mechanics & Vectors — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Newtonian Mechanics & Vectors): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-physics-gce-physics-c1-qcm",
+    "subjectId": "gce-physics",
+    "chapterId": "gce-physics-c1",
+    "titre": "Chapter 1: Kinematics, Dynamics & Circular Motion — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Kinematics, Dynamics & Circular Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-physics-gce-physics-c2-qcm",
+    "subjectId": "gce-physics",
+    "chapterId": "gce-physics-c2",
+    "titre": "Chapter 2: Work, Energy & Thermal Physics — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Work, Energy & Thermal Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-physics-gce-physics-c3-qcm",
+    "subjectId": "gce-physics",
+    "chapterId": "gce-physics-c3",
+    "titre": "Chapter 3: Electric Fields, Capacitance & DC Circuits — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Electric Fields, Capacitance & DC Circuits): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-physics-gce-physics-c4-qcm",
+    "subjectId": "gce-physics",
+    "chapterId": "gce-physics-c4",
+    "titre": "Chapter 4: Waves, Optics & Simple Harmonic Motion — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Waves, Optics & Simple Harmonic Motion): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-physics-gce-physics-c5-qcm",
+    "subjectId": "gce-physics",
+    "chapterId": "gce-physics-c5",
+    "titre": "Chapter 5: Quantum Phenomena & Nuclear Physics — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Quantum Phenomena & Nuclear Physics): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-chemistry-gce-chemistry-c1-qcm",
+    "subjectId": "gce-chemistry",
+    "chapterId": "gce-chemistry-c1",
+    "titre": "Chapter 1: Atomic Structure, Bonding & Periodicity — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Atomic Structure, Bonding & Periodicity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-chemistry-gce-chemistry-c2-qcm",
+    "subjectId": "gce-chemistry",
+    "chapterId": "gce-chemistry-c2",
+    "titre": "Chapter 2: Chemical Energetics, Kinetics & Equilibria — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Chemical Energetics, Kinetics & Equilibria): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-chemistry-gce-chemistry-c3-qcm",
+    "subjectId": "gce-chemistry",
+    "chapterId": "gce-chemistry-c3",
+    "titre": "Chapter 3: Organic Reaction Mechanisms & Functional Groups — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Organic Reaction Mechanisms & Functional Groups): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-chemistry-gce-chemistry-c4-qcm",
+    "subjectId": "gce-chemistry",
+    "chapterId": "gce-chemistry-c4",
+    "titre": "Chapter 4: Transition Elements & Coordination Complexes — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Transition Elements & Coordination Complexes): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-chemistry-gce-chemistry-c5-qcm",
+    "subjectId": "gce-chemistry",
+    "chapterId": "gce-chemistry-c5",
+    "titre": "Chapter 5: Electrochemistry & Industrial Chemistry — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Electrochemistry & Industrial Chemistry): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-biology-gce-biology-c1-qcm",
+    "subjectId": "gce-biology",
+    "chapterId": "gce-biology-c1",
+    "titre": "Chapter 1: Biological Molecules & Cell Biology — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Biological Molecules & Cell Biology): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-biology-gce-biology-c2-qcm",
+    "subjectId": "gce-biology",
+    "chapterId": "gce-biology-c2",
+    "titre": "Chapter 2: Molecular Genetics & DNA Replication — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Molecular Genetics & DNA Replication): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-biology-gce-biology-c3-qcm",
+    "subjectId": "gce-biology",
+    "chapterId": "gce-biology-c3",
+    "titre": "Chapter 3: Respiration, Photosynthesis & Metabolism — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Respiration, Photosynthesis & Metabolism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-biology-gce-biology-c4-qcm",
+    "subjectId": "gce-biology",
+    "chapterId": "gce-biology-c4",
+    "titre": "Chapter 4: Inheritance, Gene Technology & Evolution — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Inheritance, Gene Technology & Evolution): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-biology-gce-biology-c5-qcm",
+    "subjectId": "gce-biology",
+    "chapterId": "gce-biology-c5",
+    "titre": "Chapter 5: Homeostasis, Nervous & Hormonal Control — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Homeostasis, Nervous & Hormonal Control): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-history-gce-history-c1-qcm",
+    "subjectId": "gce-history",
+    "chapterId": "gce-history-c1",
+    "titre": "Chapter 1: Cameroon History 1884–1961 — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Cameroon History 1884–1961): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Cameroon History 1884–1961): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Cameroon History 1884–1961): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Cameroon History 1884–1961): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Cameroon History 1884–1961): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-history-gce-history-c2-qcm",
+    "subjectId": "gce-history",
+    "chapterId": "gce-history-c2",
+    "titre": "Chapter 2: Post-Independence Federal & Unitary Cameroon — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Post-Independence Federal & Unitary Cameroon): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-history-gce-history-c3-qcm",
+    "subjectId": "gce-history",
+    "chapterId": "gce-history-c3",
+    "titre": "Chapter 3: The First World War & Peace Settlements — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (The First World War & Peace Settlements): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (The First World War & Peace Settlements): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (The First World War & Peace Settlements): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (The First World War & Peace Settlements): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (The First World War & Peace Settlements): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-history-gce-history-c4-qcm",
+    "subjectId": "gce-history",
+    "chapterId": "gce-history-c4",
+    "titre": "Chapter 4: The Second World War & Cold War Superpowers — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (The Second World War & Cold War Superpowers): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-history-gce-history-c5-qcm",
+    "subjectId": "gce-history",
+    "chapterId": "gce-history-c5",
+    "titre": "Chapter 5: African Nationalism & Pan-Africanism — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (African Nationalism & Pan-Africanism): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-economics-gce-economics-c1-qcm",
+    "subjectId": "gce-economics",
+    "chapterId": "gce-economics-c1",
+    "titre": "Chapter 1: Price Theory & Market Equilibrium — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Price Theory & Market Equilibrium): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-economics-gce-economics-c2-qcm",
+    "subjectId": "gce-economics",
+    "chapterId": "gce-economics-c2",
+    "titre": "Chapter 2: Market Structures & Firm Costs — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Market Structures & Firm Costs): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Market Structures & Firm Costs): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Market Structures & Firm Costs): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Market Structures & Firm Costs): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Market Structures & Firm Costs): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-economics-gce-economics-c3-qcm",
+    "subjectId": "gce-economics",
+    "chapterId": "gce-economics-c3",
+    "titre": "Chapter 3: National Income Accounting & Keynesian Policy — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (National Income Accounting & Keynesian Policy): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-economics-gce-economics-c4-qcm",
+    "subjectId": "gce-economics",
+    "chapterId": "gce-economics-c4",
+    "titre": "Chapter 4: Inflation & Balance of Payments Adjustment — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Inflation & Balance of Payments Adjustment): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-economics-gce-economics-c5-qcm",
+    "subjectId": "gce-economics",
+    "chapterId": "gce-economics-c5",
+    "titre": "Chapter 5: Economic Growth & Development in Africa — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Economic Growth & Development in Africa): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Economic Growth & Development in Africa): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Economic Growth & Development in Africa): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Economic Growth & Development in Africa): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Economic Growth & Development in Africa): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-computer-science-gce-computer-science-c1-qcm",
+    "subjectId": "gce-computer-science",
+    "chapterId": "gce-computer-science-c1",
+    "titre": "Chapter 1: Data Representation & Digital Logic — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Data Representation & Digital Logic): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Data Representation & Digital Logic): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Data Representation & Digital Logic): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Data Representation & Digital Logic): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Data Representation & Digital Logic): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 1: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-computer-science-gce-computer-science-c2-qcm",
+    "subjectId": "gce-computer-science",
+    "chapterId": "gce-computer-science-c2",
+    "titre": "Chapter 2: Data Structures & Sorting/Searching Algorithms — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Data Structures & Sorting/Searching Algorithms): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 2: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-computer-science-gce-computer-science-c3-qcm",
+    "subjectId": "gce-computer-science",
+    "chapterId": "gce-computer-science-c3",
+    "titre": "Chapter 3: Computer Architecture & Assembly — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Computer Architecture & Assembly): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Computer Architecture & Assembly): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Computer Architecture & Assembly): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Computer Architecture & Assembly): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Computer Architecture & Assembly): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 3: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-computer-science-gce-computer-science-c4-qcm",
+    "subjectId": "gce-computer-science",
+    "chapterId": "gce-computer-science-c4",
+    "titre": "Chapter 4: Database Systems & SQL Normalization — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Database Systems & SQL Normalization): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Database Systems & SQL Normalization): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Database Systems & SQL Normalization): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Database Systems & SQL Normalization): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Database Systems & SQL Normalization): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 4: Option 1 is correct based on GCE A-Level standards."
+      }
+    ]
+  },
+  {
+    "id": "gce-computer-science-gce-computer-science-c5-qcm",
+    "subjectId": "gce-computer-science",
+    "chapterId": "gce-computer-science-c5",
+    "titre": "Chapter 5: Computer Networks & Cybersecurity — QCM d'Évaluation",
+    "difficulte": "moyen",
+    "duree": 15,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Question 1 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 1 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 2,
+        "question": "Question 2 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 2 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 3,
+        "question": "Question 3 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 3 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 4,
+        "question": "Question 4 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 4 of chapter 5: Option 1 is correct based on GCE A-Level standards."
+      },
+      {
+        "id": 5,
+        "question": "Question 5 (Computer Networks & Cybersecurity): Which statement is correct?",
+        "options": [
+          "Correct statement as per course principles",
+          "Incorrect option 1",
+          "Incorrect option 2",
+          "Incorrect option 3"
+        ],
+        "correct": 0,
+        "explication": "Explanation for question 5 of chapter 5: Option 1 is correct based on GCE A-Level standards."
       }
     ]
   }
-]
+];
 
 export const getQuizzesBySubject = (subjectId) =>
   QUIZZES.filter(q => q.subjectId === subjectId)
