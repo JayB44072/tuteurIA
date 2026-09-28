@@ -68,7 +68,7 @@ export default function AiTutor() {
   const bottomRef = useRef()
   const inputRef = useRef()
 
-const DEFAULT_GROQ_KEY = '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'
+const DEFAULT_GROQ_KEY = ''
 
   const [activeKey, setActiveKey] = useState(() => {
     return import.meta.env.VITE_GROQ_API_KEY || localStorage.getItem('tuteuria_groq_api_key') || DEFAULT_GROQ_KEY
