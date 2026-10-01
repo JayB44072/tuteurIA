@@ -4,10 +4,13 @@ import {
   Users, ShieldCheck, BarChart2, BookOpen, PenSquare,
   Search, Ban, Trash2, Crown, RefreshCw, X, CheckCircle,
   AlertTriangle, Eye, TrendingUp, UserCheck, UserX, ChevronDown, ArrowLeft,
+  Plus, Edit3, RotateCcw, FileText,
 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { supabase } from '../../lib/supabase'
 import { useAuth } from '../../context/AuthContext'
+import { getStoredSubjects, saveCustomSubject, deleteCustomSubject, resetSubjectsToDefault } from '../../data/subjects'
+
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 const fmtDate = (d) => d ? new Date(d).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', year: 'numeric' }) : '—'
@@ -125,6 +128,309 @@ function StatCard({ icon: Icon, label, value, color, sub }) {
   )
 }
 
+// ── Modal de création / édition de matière ─────────────────────────────────────
+function SubjectModal({ initialData, onSave, onClose }) {
+  const isEditing = Boolean(initialData && initialData.id)
+  const [nom, setNom] = useState(initialData?.nom || '')
+  const [id, setId] = useState(initialData?.id || '')
+  const [icon, setIcon] = useState(initialData?.icon || '📚')
+  const [description, setDescription] = useState(initialData?.description || '')
+  const [niveaux, setNiveaux] = useState(initialData?.niveaux || ['Bac'])
+  const [themeColor, setThemeColor] = useState(initialData?.couleur || 'from-blue-600 to-indigo-700')
+  const [chapitres, setChapitres] = useState(initialData?.chapitres || [
+    {
+      id: 'c1',
+      titre: 'Chapitre 1 : Introduction',
+      icon: '📖',
+      lecons: [
+        {
+          id: 'c1-l1',
+          titre: 'Leçon 1 : Généralités et notions de base',
+          duree: '55 min',
+          contenu: '# Introduction\n\nBienvenue dans ce cours. Cette leçon présente les concepts fondamentaux.'
+        }
+      ]
+    }
+  ])
+
+  const COLOR_THEMES = [
+    { name: 'Bleu', value: 'from-blue-600 to-indigo-700', light: 'bg-blue-50 text-blue-700 border-blue-200', dark: 'dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800' },
+    { name: 'Émeraude', value: 'from-emerald-500 to-teal-700', light: 'bg-emerald-50 text-emerald-700 border-emerald-200', dark: 'dark:bg-emerald-900/20 dark:text-emerald-300 dark:border-emerald-800' },
+    { name: 'Ambre', value: 'from-amber-500 to-orange-600', light: 'bg-amber-50 text-amber-700 border-amber-200', dark: 'dark:bg-amber-900/20 dark:text-amber-300 dark:border-amber-800' },
+    { name: 'Violet', value: 'from-violet-600 to-purple-800', light: 'bg-violet-50 text-violet-700 border-violet-200', dark: 'dark:bg-violet-900/20 dark:text-violet-300 dark:border-violet-800' },
+    { name: 'Rose', value: 'from-rose-600 to-red-800', light: 'bg-rose-50 text-rose-700 border-rose-200', dark: 'dark:bg-rose-900/20 dark:text-rose-300 dark:border-rose-800' },
+    { name: 'Teal', value: 'from-teal-600 to-cyan-800', light: 'bg-teal-50 text-teal-700 border-teal-200', dark: 'dark:bg-teal-900/20 dark:text-teal-300 dark:border-teal-800' }
+  ]
+
+  const EMOJI_LIST = ['📐', '⚡', '🧪', '🌱', '📜', '🗺️', '📚', '🤔', '💻', '⚙️', '🚀', '🔬', '🧬', '💡', '🌐', '📊', '🔀', '📈', '🎨', '⚖️']
+
+  const handleNomChange = (e) => {
+    const val = e.target.value
+    setNom(val)
+    if (!isEditing) {
+      const generatedId = val.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+      setId(generatedId)
+    }
+  }
+
+  const toggleNiveau = (niv) => {
+    if (niveaux.includes(niv)) {
+      if (niveaux.length > 1) setNiveaux(niveaux.filter(n => n !== niv))
+    } else {
+      setNiveaux([...niveaux, niv])
+    }
+  }
+
+  const addChapter = () => {
+    const nextIdx = chapitres.length + 1
+    const subId = id || 'matiere'
+    setChapitres([
+      ...chapitres,
+      {
+        id: `${subId}-c${nextIdx}`,
+        titre: `Chapitre ${nextIdx} : Nouveau chapitre`,
+        icon: '📖',
+        lecons: [
+          {
+            id: `${subId}-c${nextIdx}-l1`,
+            titre: `Leçon 1 : Notions fondamentales`,
+            duree: '55 min',
+            contenu: `# Chapitre ${nextIdx}\n\n## I. Introduction\nContenu détaillé du cours...`
+          }
+        ]
+      }
+    ])
+  }
+
+  const removeChapter = (index) => {
+    setChapitres(chapitres.filter((_, i) => i !== index))
+  }
+
+  const updateChapterTitle = (index, title) => {
+    const updated = [...chapitres]
+    updated[index].titre = title
+    setChapitres(updated)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if (!nom.trim() || !id.trim()) return
+
+    const selectedTheme = COLOR_THEMES.find(t => t.value === themeColor) || COLOR_THEMES[0]
+
+    const newSubject = {
+      id: id.trim(),
+      nom: nom.trim(),
+      icon,
+      couleur: themeColor,
+      couleurLight: selectedTheme.light,
+      couleurDark: selectedTheme.dark,
+      niveaux,
+      description: description.trim() || 'Cours complet et exercices pratiques.',
+      chapitres
+    }
+
+    onSave(newSubject)
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto">
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        className="bg-white dark:bg-gray-900 rounded-3xl p-6 sm:p-8 w-full max-w-2xl shadow-2xl border border-gray-200 dark:border-gray-700 my-8 max-h-[90vh] overflow-y-auto"
+      >
+        <div className="flex items-center justify-between mb-6 pb-4 border-b border-gray-100 dark:border-gray-800">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">{icon}</span>
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                {isEditing ? 'Modifier la matière' : 'Ajouter une nouvelle matière'}
+              </h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Définissez les détails, le niveau d'examen et les chapitres
+              </p>
+            </div>
+          </div>
+          <button onClick={onClose} className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+            <X size={20} />
+          </button>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-5">
+          {/* Nom & ID */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                Nom de la matière *
+              </label>
+              <input
+                type="text"
+                required
+                value={nom}
+                onChange={handleNomChange}
+                placeholder="Ex: Génie Logiciel"
+                className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                Identifiant Slug *
+              </label>
+              <input
+                type="text"
+                required
+                disabled={isEditing}
+                value={id}
+                onChange={e => setId(e.target.value)}
+                placeholder="Ex: genie-logiciel"
+                className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 font-mono disabled:opacity-60"
+              />
+            </div>
+          </div>
+
+          {/* Icône & Niveaux */}
+          <div className="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                Icône / Emoji
+              </label>
+              <div className="flex flex-wrap gap-1.5 p-2 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700 max-h-24 overflow-y-auto">
+                {EMOJI_LIST.map(e => (
+                  <button
+                    key={e}
+                    type="button"
+                    onClick={() => setIcon(e)}
+                    className={`w-8 h-8 rounded-lg text-lg flex items-center justify-center transition-all ${icon === e ? 'bg-sky-500 text-white shadow' : 'hover:bg-gray-200 dark:hover:bg-gray-700'}`}
+                  >
+                    {e}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+                Niveau d'examen
+              </label>
+              <div className="flex gap-3 pt-2">
+                {['Bac', 'GCE'].map(n => (
+                  <button
+                    key={n}
+                    type="button"
+                    onClick={() => toggleNiveau(n)}
+                    className={`flex-1 py-2 rounded-xl text-xs font-bold border transition-all ${
+                      niveaux.includes(n)
+                        ? 'bg-sky-500 text-white border-sky-500 shadow-sm'
+                        : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-sky-300'
+                    }`}
+                  >
+                    {n === 'Bac' ? '🎓 Baccalauréat' : '📜 GCE A-Level'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Thème couleur */}
+          <div>
+            <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+              Thème Visuel (Couleur)
+            </label>
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+              {COLOR_THEMES.map(t => (
+                <button
+                  key={t.name}
+                  type="button"
+                  onClick={() => setThemeColor(t.value)}
+                  className={`h-9 rounded-xl bg-gradient-to-r ${t.value} flex items-center justify-center text-white text-xs font-bold transition-all ${themeColor === t.value ? 'ring-2 ring-offset-2 ring-sky-500 shadow-md scale-105' : 'opacity-70 hover:opacity-100'}`}
+                >
+                  {t.name}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Description */}
+          <div>
+            <label className="block text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider mb-2">
+              Description de la matière
+            </label>
+            <textarea
+              rows={2}
+              value={description}
+              onChange={e => setDescription(e.target.value)}
+              placeholder="Présentation des cours, objectifs et programme..."
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 resize-none"
+            />
+          </div>
+
+          {/* Chapitres */}
+          <div className="border-t border-gray-100 dark:border-gray-800 pt-4">
+            <div className="flex items-center justify-between mb-3">
+              <label className="text-xs font-bold text-gray-700 dark:text-gray-300 uppercase tracking-wider">
+                Chapitres ({chapitres.length})
+              </label>
+              <button
+                type="button"
+                onClick={addChapter}
+                className="text-xs font-semibold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1"
+              >
+                + Ajouter un chapitre
+              </button>
+            </div>
+
+            <div className="space-y-3 max-h-48 overflow-y-auto pr-1">
+              {chapitres.map((chap, cIdx) => (
+                <div key={cIdx} className="flex items-center gap-2 bg-gray-50 dark:bg-gray-800/60 p-2.5 rounded-xl border border-gray-200 dark:border-gray-700">
+                  <span className="text-base">{chap.icon || '📖'}</span>
+                  <input
+                    type="text"
+                    value={chap.titre}
+                    onChange={e => updateChapterTitle(cIdx, e.target.value)}
+                    className="flex-1 bg-transparent text-xs font-semibold text-gray-900 dark:text-white focus:outline-none"
+                    placeholder="Titre du chapitre..."
+                  />
+                  <span className="text-[10px] bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 px-2 py-0.5 rounded-full font-mono">
+                    {chap.lecons?.length || 0} leçons
+                  </span>
+                  {chapitres.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => removeChapter(cIdx)}
+                      className="p-1 text-red-400 hover:text-red-600 transition-colors"
+                    >
+                      <Trash2 size={14} />
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Boutons d'action */}
+          <div className="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-800">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex-1 py-3 rounded-xl border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+            >
+              Annuler
+            </button>
+            <button
+              type="submit"
+              className="flex-1 py-3 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:opacity-95 shadow-lg shadow-sky-500/20 transition-opacity"
+            >
+              {isEditing ? 'Enregistrer les modifications' : 'Créer la matière'}
+            </button>
+          </div>
+        </form>
+      </motion.div>
+    </div>
+  )
+}
+
 // ══════════════════════════════════════════════════════════════════════════════
 // COMPOSANT PRINCIPAL
 // ══════════════════════════════════════════════════════════════════════════════
@@ -141,6 +447,12 @@ export default function AdminDashboard() {
   const [blockTarget, setBlockTarget] = useState(null)
   const [stats, setStats]     = useState({ total: 0, active: 0, blocked: 0, admins: 0, quizzes: 0, avgScore: 0 })
   const [expandedId, setExpandedId] = useState(null)
+
+  // ── Matières dynamique (Admin) ─────────────────────────────────────────────
+  const [customSubjects, setCustomSubjects] = useState(() => getStoredSubjects())
+  const [editingSubject, setEditingSubject] = useState(null) // null | object
+  const [contentSearch, setContentSearch]   = useState('')
+
 
   // ── Fetch utilisateurs ───────────────────────────────────────────────────────
   const fetchUsers = useCallback(async () => {
@@ -638,17 +950,19 @@ export default function AdminDashboard() {
       )}
 
       {/* ═══════════════════════════════════════════════════════════════════════ */}
+      {/* ═══════════════════════════════════════════════════════════════════════ */}
       {/* ONGLET CONTENUS                                                       */}
       {/* ═══════════════════════════════════════════════════════════════════════ */}
       {tab === 'content' && (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-6">
+          {/* Cartes métriques */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { icon: BookOpen, label: 'Matières disponibles', value: '12', color: 'from-sky-500 to-blue-600',    sub: 'Bac & GCE A-Level' },
-              { icon: Eye,      label: 'Leçons au catalogue',  value: '50+', color: 'from-emerald-500 to-teal-600', sub: 'Contenu textbook' },
-              { icon: PenSquare,label: 'QCM au catalogue',     value: '200+', color: 'from-orange-500 to-amber-600', sub: 'Questions interactives' },
+              { icon: BookOpen, label: 'Matières enregistrées', value: customSubjects.length, color: 'from-sky-500 to-blue-600', sub: 'Catalogue actif' },
+              { icon: Eye, label: 'Leçons au total', value: customSubjects.reduce((acc, s) => acc + (s.chapitres || []).reduce((a, c) => a + (c.lecons || []).length, 0), 0), color: 'from-emerald-500 to-teal-600', sub: 'Cours structurés' },
+              { icon: PenSquare, label: 'Chapitres au total', value: customSubjects.reduce((acc, s) => acc + (s.chapitres || []).length, 0), color: 'from-orange-500 to-amber-600', sub: 'Modules d\'études' },
             ].map(({ icon: Icon, label, value, color, sub }) => (
-              <div key={label} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5">
+              <div key={label} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 shadow-sm">
                 <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-3 shadow`}>
                   <Icon size={20} className="text-white" />
                 </div>
@@ -658,22 +972,126 @@ export default function AdminDashboard() {
               </div>
             ))}
           </div>
-          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/40 rounded-2xl p-5">
-            <div className="flex items-start gap-3">
-              <AlertTriangle size={18} className="text-amber-500 flex-shrink-0 mt-0.5" />
-              <div>
-                <p className="text-sm font-semibold text-amber-800 dark:text-amber-400">Contenus statiques</p>
-                <p className="text-sm text-amber-700 dark:text-amber-500 mt-1">
-                  Les matières, leçons et QCM sont actuellement définis dans les fichiers <code className="bg-amber-100 dark:bg-amber-900/40 px-1 rounded">src/data/subjects.js</code> et <code className="bg-amber-100 dark:bg-amber-900/40 px-1 rounded">src/data/quizzes.js</code>. Pour les modifier, éditez ces fichiers directement dans le code source.
-                </p>
-              </div>
+
+          {/* Barre d'action et filtres */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white dark:bg-gray-900 p-4 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm">
+            <div className="relative flex-1 w-full">
+              <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                type="text"
+                value={contentSearch}
+                onChange={e => setContentSearch(e.target.value)}
+                placeholder="Rechercher une matière..."
+                className="w-full pl-10 pr-4 py-2 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-sky-500"
+              />
             </div>
+            <div className="flex items-center gap-2 w-full sm:w-auto flex-wrap sm:flex-nowrap">
+              <button
+                onClick={() => setEditingSubject({})}
+                className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold text-sm shadow-md shadow-sky-500/20 hover:opacity-95 transition-opacity"
+              >
+                <Plus size={16} /> Ajouter une matière
+              </button>
+              <button
+                onClick={() => setConfirm({
+                  title: 'Réinitialiser le catalogue ?',
+                  message: 'Cette action restaurera les matières d\'origine du programme d\'études.',
+                  danger: false,
+                  onConfirm: () => {
+                    const res = resetSubjectsToDefault()
+                    setCustomSubjects(res)
+                    setToast({ msg: 'Catalogue réinitialisé au programme par défaut', type: 'success' })
+                    setConfirm(null)
+                  }
+                })}
+                className="px-3 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
+                title="Restaurer le catalogue par défaut"
+              >
+                <RotateCcw size={14} /> Réinitialiser
+              </button>
+            </div>
+          </div>
+
+          {/* Grille des matières */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {customSubjects
+              .filter(s => !contentSearch || s.nom.toLowerCase().includes(contentSearch.toLowerCase()))
+              .map((sub) => {
+                const totalLessons = (sub.chapitres || []).reduce((acc, c) => acc + (c.lecons || []).length, 0)
+                return (
+                  <div key={sub.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-5 shadow-sm flex flex-col justify-between hover:border-sky-300 dark:hover:border-sky-700 transition-all">
+                    <div>
+                      <div className="flex items-start justify-between gap-3 mb-3">
+                        <div className="flex items-center gap-3">
+                          <span className="text-3xl p-2 bg-gray-50 dark:bg-gray-800 rounded-xl">{sub.icon || '📚'}</span>
+                          <div>
+                            <h4 className="font-bold text-gray-900 dark:text-white text-base">{sub.nom}</h4>
+                            <p className="text-xs text-gray-400 font-mono">id: {sub.id}</p>
+                          </div>
+                        </div>
+                        <div className="flex gap-1 flex-wrap justify-end">
+                          {(sub.niveaux || ['Bac']).map(n => (
+                            <span key={n} className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-400">
+                              {n}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-4">
+                        {sub.description}
+                      </p>
+                      <div className="flex items-center gap-3 text-xs text-gray-400 border-t border-gray-100 dark:border-gray-800 pt-3">
+                        <span className="flex items-center gap-1 font-medium"><BookOpen size={13} /> {sub.chapitres?.length || 0} chapitres</span>
+                        <span className="flex items-center gap-1 font-medium"><FileText size={13} /> {totalLessons} leçons</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-2 mt-4 pt-3 border-t border-gray-100 dark:border-gray-800">
+                      <button
+                        onClick={() => setEditingSubject(sub)}
+                        className="flex-1 py-2 px-3 rounded-xl bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-sky-50 dark:hover:bg-sky-900/20 hover:text-sky-600 dark:hover:text-sky-400 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                      >
+                        <Edit3 size={14} /> Modifier
+                      </button>
+                      <button
+                        onClick={() => setConfirm({
+                          title: `Supprimer "${sub.nom}" ?`,
+                          message: 'La matière et l\'ensemble de ses cours et chapitres seront retirés du catalogue.',
+                          danger: true,
+                          onConfirm: () => {
+                            const res = deleteCustomSubject(sub.id)
+                            setCustomSubjects(res)
+                            setToast({ msg: `Matière ${sub.nom} supprimée`, type: 'success' })
+                            setConfirm(null)
+                          }
+                        })}
+                        className="p-2 rounded-xl text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+                        title="Supprimer la matière"
+                      >
+                        <Trash2 size={16} />
+                      </button>
+                    </div>
+                  </div>
+                )
+              })}
           </div>
         </motion.div>
       )}
 
       {/* ── Modals ───────────────────────────────────────────────────────────── */}
       <AnimatePresence>
+        {editingSubject !== null && (
+          <SubjectModal
+            initialData={editingSubject.id ? editingSubject : null}
+            onSave={(subjectData) => {
+              const res = saveCustomSubject(subjectData)
+              setCustomSubjects(res)
+              setEditingSubject(null)
+              setToast({ msg: `Matière "${subjectData.nom}" enregistrée avec succès !`, type: 'success' })
+            }}
+            onClose={() => setEditingSubject(null)}
+          />
+        )}
         {confirm && (
           <ConfirmModal
             title={confirm.title}

@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Search, BookOpen, PenSquare, FileText, ChevronRight } from 'lucide-react'
-import { SUBJECTS } from '../data/subjects'
+import { getStoredSubjects } from '../data/subjects'
 import { getQuizzesBySubject } from '../data/quizzes'
 import BackButton from '../components/BackButton'
 
@@ -15,12 +15,20 @@ const FILTERS = [
 export default function Subjects() {
   const [filter, setFilter] = useState('tous')
   const [search, setSearch] = useState('')
+  const [subjectsList, setSubjectsList] = useState(() => getStoredSubjects())
 
-  const filtered = SUBJECTS.filter(s => {
-    const matchFilter = filter === 'tous' || s.niveaux.includes(filter)
+  useEffect(() => {
+    const handleUpdate = () => setSubjectsList(getStoredSubjects())
+    window.addEventListener('tuteuria_subjects_updated', handleUpdate)
+    return () => window.removeEventListener('tuteuria_subjects_updated', handleUpdate)
+  }, [])
+
+  const filtered = subjectsList.filter(s => {
+    const matchFilter = filter === 'tous' || (s.niveaux && s.niveaux.includes(filter))
     const matchSearch = s.nom.toLowerCase().includes(search.toLowerCase())
     return matchFilter && matchSearch
   })
+
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

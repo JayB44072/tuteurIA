@@ -3189,8 +3189,68 @@ export const SUBJECTS = [
   }
 ];
 
-export const getSubject = (id) => SUBJECTS.find(s => s.id === id);
+export const getStoredSubjects = () => {
+  try {
+    const stored = localStorage.getItem('tuteuria_custom_subjects')
+    if (stored) {
+      const parsed = JSON.parse(stored)
+      if (Array.isArray(parsed) && parsed.length > 0) {
+        return parsed
+      }
+    }
+  } catch (e) {
+    console.warn('LocalStorage error reading subjects:', e)
+  }
+  return SUBJECTS
+}
+
+export const saveSubjectsToStore = (subjectsList) => {
+  try {
+    localStorage.setItem('tuteuria_custom_subjects', JSON.stringify(subjectsList))
+    window.dispatchEvent(new Event('tuteuria_subjects_updated'))
+  } catch (e) {
+    console.warn('LocalStorage error saving subjects:', e)
+  }
+}
+
+export const getSubject = (id) => {
+  const all = getStoredSubjects()
+  return all.find(s => s.id === id)
+}
+
 export const getChapter = (subjectId, chapterId) => {
-  const subject = getSubject(subjectId);
-  return subject?.chapitres.find(c => c.id === chapterId);
-};
+  const subject = getSubject(subjectId)
+  return subject?.chapitres?.find(c => c.id === chapterId)
+}
+
+export const saveCustomSubject = (subjectData) => {
+  const current = getStoredSubjects()
+  const index = current.findIndex(s => s.id === subjectData.id)
+  let updated
+  if (index >= 0) {
+    updated = [...current]
+    updated[index] = subjectData
+  } else {
+    updated = [subjectData, ...current]
+  }
+  saveSubjectsToStore(updated)
+  return updated
+}
+
+export const deleteCustomSubject = (id) => {
+  const current = getStoredSubjects()
+  const updated = current.filter(s => s.id !== id)
+  saveSubjectsToStore(updated)
+  return updated
+}
+
+export const resetSubjectsToDefault = () => {
+  try {
+    localStorage.removeItem('tuteuria_custom_subjects')
+    window.dispatchEvent(new Event('tuteuria_subjects_updated'))
+  } catch (e) {
+    console.warn('LocalStorage error resetting subjects:', e)
+  }
+  return SUBJECTS
+}
+
